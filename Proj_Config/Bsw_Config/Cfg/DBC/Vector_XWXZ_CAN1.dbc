@@ -1,0 +1,470 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: XB_SUP_B XB_SUP_A XB_SUP_C
+
+
+BO_ 1027 SupC_Function_2: 8 XB_SUP_C
+ SG_ Sig_0x403_Used_5 : 55|16@0+ (1,0) [0|65535] ""  XB_SUP_A
+ SG_ Sig_0x403_Used_4 : 39|16@0+ (1,0) [0|65535] ""  XB_SUP_A
+ SG_ Sig_0x403_Used_3 : 23|16@0+ (1,0) [0|65535] ""  XB_SUP_A
+ SG_ Sig_0x403_Used_2 : 3|12@0+ (1,0) [0|4095] ""  XB_SUP_A
+ SG_ Sig_0x403_Used_1 : 7|4@0+ (1,0) [0|15] ""  XB_SUP_A
+
+BO_ 1026 SupC_Function_1: 8 XB_SUP_C
+ SG_ Sig_0x402_Used_5 : 55|16@0+ (1,0) [0|65535] ""  XB_SUP_A
+ SG_ Sig_0x402_Used_4 : 39|16@0+ (1,0) [0|65535] ""  XB_SUP_A
+ SG_ Sig_0x402_Used_3 : 23|16@0+ (1,0) [0|65535] ""  XB_SUP_A
+ SG_ Sig_0x402_Used_2 : 3|12@0+ (1,0) [0|4095] ""  XB_SUP_A
+ SG_ Sig_0x402_Used_1 : 7|4@0+ (1,0) [0|15] ""  XB_SUP_A
+
+BO_ 1025 SupB_Button_Control: 8 XB_SUP_B
+ SG_ Button4_Control : 51|1@0+ (1,0) [0|1] ""  XB_SUP_A
+ SG_ Button3_Control : 50|1@0+ (1,0) [0|1] ""  XB_SUP_A
+ SG_ Button2_Control : 49|1@0+ (1,0) [0|1] ""  XB_SUP_A
+ SG_ Button1_Control : 48|1@0+ (1,0) [0|1] ""  XB_SUP_A
+
+BO_ 1024 SupB_Led_Control: 8 XB_SUP_B
+ SG_ CrcSig_Pack_2 : 47|20@0+ (1,0) [0|1] ""  XB_SUP_A
+ SG_ CrcSig_Pack_1 : 23|24@0+ (1,0) [0|1] ""  XB_SUP_A
+ SG_ CrcSig_Pack_0 : 15|4@0+ (1,0) [0|1] ""  XB_SUP_A
+ SG_ SupB_Counter_0x400 : 59|4@0+ (1,0) [0|14] ""  XB_SUP_A
+ SG_ Led4_Control : 11|1@0+ (1,0) [0|3] ""  XB_SUP_A
+ SG_ Led3_Control : 10|1@0+ (1,0) [0|3] ""  XB_SUP_A
+ SG_ Led2_Control : 9|1@0+ (1,0) [0|3] ""  XB_SUP_A
+ SG_ Led1_Control : 8|1@0+ (1,0) [0|3] ""  XB_SUP_A
+ SG_ SupB_Checksum_0x400 : 7|8@0+ (1,0) [0|255] ""  XB_SUP_A
+
+BO_ 276 SupA_Function_1: 8 XB_SUP_A
+ SG_ Sig_0x114_Used_6 : 63|8@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Sig_0x114_Used_5 : 55|8@0+ (1,0) [0|65535] ""  XB_SUP_B
+ SG_ Sig_0x114_Used_4 : 39|16@0+ (1,0) [0|65535] ""  XB_SUP_B
+ SG_ Sig_0x114_Used_3 : 23|16@0+ (1,0) [0|65535] ""  XB_SUP_B
+ SG_ Sig_0x114_Used_2 : 3|12@0+ (1,0) [0|4095] ""  XB_SUP_B
+ SG_ Sig_0x114_Used_1 : 7|4@0+ (1,0) [0|15] ""  XB_SUP_B
+
+BO_ 275 SupA_Angle: 8 XB_SUP_A
+ SG_ AAA_Angle : 5|6@0+ (0.5,-10) [-10|10] "o"  XB_SUP_B
+
+BO_ 274 SupA_PowerMode: 8 XB_SUP_A
+ SG_ SupA_Counter_0x112 : 59|4@0+ (1,0) [0|14] ""  XB_SUP_B
+ SG_ PowerMode : 10|3@0+ (1,0) [0|7] ""  XB_SUP_B
+ SG_ SupA_Checksum_0x112 : 7|8@0+ (1,0) [0|255] ""  XB_SUP_B
+
+BO_ 273 SupA_Button_State: 8 XB_SUP_A
+ SG_ Button4_State : 35|1@0+ (1,0) [0|1] ""  XB_SUP_B
+ SG_ Button3_State : 34|1@0+ (1,0) [0|1] ""  XB_SUP_B
+ SG_ Button2_State : 33|1@0+ (1,0) [0|1] ""  XB_SUP_B
+ SG_ Button1_State : 32|1@0+ (1,0) [0|1] ""  XB_SUP_B
+
+BO_ 272 SupA_Led_State: 8 XB_SUP_A
+ SG_ Led4_State : 3|1@0+ (1,0) [0|1] ""  XB_SUP_B
+ SG_ Led3_State : 2|1@0+ (1,0) [0|1] ""  XB_SUP_B
+ SG_ Led2_State : 1|1@0+ (1,0) [0|1] ""  XB_SUP_B
+ SG_ Led1_State : 0|1@0+ (1,0) [0|1] ""  XB_SUP_B
+
+BO_ 1537 Meg_NmTx: 8 XB_SUP_A
+ SG_ Sig_NmTx_Nid : 7|8@0+ (1,0) [0|255] ""  XB_SUP_B
+
+BO_ 1536 Meg_NmRx: 8 XB_SUP_B
+ SG_ Sig_NmRx_Nid : 7|8@0+ (1,0) [0|255] ""  XB_SUP_A
+
+BO_ 1873 Meg_ResDiag: 8 XB_SUP_A
+ SG_ Sig_ResDiag : 7|64@0+ (1,0) [0|255] ""  XB_SUP_B
+
+BO_ 1793 Meg_PhyDiag: 8 XB_SUP_B
+ SG_ Sig_PhyDiag : 7|64@0+ (1,0) [0|255] ""  XB_SUP_A
+
+BO_ 2015 Meg_FunDiag: 8 XB_SUP_B
+ SG_ Sig_FunDiag : 7|64@0+ (1,0) [0|255] ""  XB_SUP_A
+
+
+
+BA_DEF_ BU_  "TimeQuantaCANFDMax" INT 4 257;
+BA_DEF_ BU_  "TimeQuantaCANFDMin" INT 4 257;
+BA_DEF_ BU_  "TimeQuantaMax" INT 4 257;
+BA_DEF_ BU_  "TimeQuantaMin" INT 4 257;
+BA_DEF_ BU_  "SSPOffsetCANFDMax" FLOAT 50 99.9;
+BA_DEF_ BU_  "SSPOffsetCANFDMin" FLOAT 50 99.9;
+BA_DEF_ BU_  "SamplePointCANFDMax" FLOAT 50 99.9;
+BA_DEF_ BU_  "SamplePointCANFDMin" FLOAT 50 99.9;
+BA_DEF_ BU_  "SyncJumpWidthCANFDMax" FLOAT 0 50;
+BA_DEF_ BU_  "SyncJumpWidthCANFDMin" FLOAT 0 50;
+BA_DEF_  "BaudrateCANFD" INT 1 16000000;
+BA_DEF_ SG_  "GenSigMissingSourceValue" HEX 0 2147483647;
+BA_DEF_ SG_  "Fehlerwert" HEX 0 2147483647;
+BA_DEF_ SG_  "GenSigSwitchedByIgnition" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigFuncType" ENUM  "NoFunction","MsgCounter","CRC-8","XOR","XOR-2","DatedBit","SW-Kl15","CHK","Constant","Protocol","CRC-8-SAE_J1850","CRC-32","DataLength","DataID","MsgCounter16","SOK-Signatur","Cluster";
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigInactiveValue" INT -2147483648 2147483647;
+BA_DEF_ SG_  "GenSigActiveRepetitions" INT -2147483648 2147483647;
+BA_DEF_ BO_  "VAGTP20_StatConnection" ENUM  "No","Yes";
+BA_DEF_ BO_  "VAGTP20_DynSetup" ENUM  "No","Yes";
+BA_DEF_ BO_  "VAGTP20_DynConnection" ENUM  "No","Yes";
+BA_DEF_ BO_  "VAGTP20_API" HEX 0 255;
+BA_DEF_ BO_  "MsgType" ENUM  "Application","NM ","NMH","TP2.0","ISO-TP ","BAP","EID","KS","XCP_PRE_CONFIGURED","XCP_RUNTIME_CONFIGURED";
+BA_DEF_ BO_  "NmhMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgPDUConstants" STRING ;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_  "GenMsgChkConstant" HEX 0 4095;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 127;
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmhNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "VAGTP20_TargetAddress" HEX 0 127;
+BA_DEF_ BU_  "ECUVariantGroup" STRING ;
+BA_DEF_ BU_  "ECUVariantDefault" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_  "NmhNStart" HEX 0 127;
+BA_DEF_  "NmhLongTimer" INT 0 65535;
+BA_DEF_  "NmhPrepareBusSleepTimer" INT 0 65535;
+BA_DEF_  "NmhWaitBusSleepTimer" INT 0 65535;
+BA_DEF_  "NmhTimeoutTimer" INT 0 65535;
+BA_DEF_  "NBTMax" INT 1 30;
+BA_DEF_  "NBTMin" INT 1 30;
+BA_DEF_  "SyncJumpWidthMax" INT 1 4;
+BA_DEF_  "SyncJumpWidthMin" INT 1 4;
+BA_DEF_  "SamplePointMax" INT 1 100;
+BA_DEF_  "SamplePointMin" INT 1 100;
+BA_DEF_  "Baudrate" INT 1 1000000;
+BA_DEF_  "VersionNumber" INT 0 65535;
+BA_DEF_  "VersionYear" INT 0 99;
+BA_DEF_  "VersionWeek" INT 1 52;
+BA_DEF_  "VersionMonth" INT 1 12;
+BA_DEF_  "VersionDay" INT 1 31;
+BA_DEF_  "VAGTP20_SetupStartAddress" HEX 0 2047;
+BA_DEF_  "VAGTP20_SetupMessageCount" INT 0 255;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "NmhMessageCount" INT 0 1024;
+BA_DEF_  "NmhBaseAddress" HEX 1536 1663;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "GenEnvVarEndingDsp" STRING ;
+BA_DEF_  "GenEnvVarEndingSnd" STRING ;
+BA_DEF_  "GenEnvVarPrefix" STRING ;
+BA_DEF_  "GenNWMApBusSleep" STRING ;
+BA_DEF_  "GenNWMApCanNormal" STRING ;
+BA_DEF_  "GenNWMApCanOff" STRING ;
+BA_DEF_  "GenNWMApCanOn" STRING ;
+BA_DEF_  "GenNWMApCanSleep" STRING ;
+BA_DEF_  "GenNWMApCanWakeUp" STRING ;
+BA_DEF_  "GenNWMGotoMode_Awake" STRING ;
+BA_DEF_  "GenNWMGotoMode_BusSleep" STRING ;
+BA_DEF_  "GenNWMSleepTime" INT 0 65535;
+BA_DEF_  "GenNWMTalkNM" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BO_  "TpApplType" STRING ;
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgMinAcceptLength" INT 0 8;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","CyclicAndSpontanX","Event";
+BA_DEF_ BO_  "TpTxIndex" INT 0 255;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ EV_  "GenEnvAutoGenCtrl" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvIsGeneratedDsp" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvIsGeneratedSnd" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvMsgName" STRING ;
+BA_DEF_ EV_  "GenEnvMsgOffset" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "undef","int","float";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 1215752192;
+BA_DEF_ SG_  "NVM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_REL_ BU_SG_REL_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_DEF_  "TimeQuantaCANFDMax" 40;
+BA_DEF_DEF_  "TimeQuantaCANFDMin" 40;
+BA_DEF_DEF_  "TimeQuantaMax" 160;
+BA_DEF_DEF_  "TimeQuantaMin" 160;
+BA_DEF_DEF_  "SSPOffsetCANFDMax" 75;
+BA_DEF_DEF_  "SSPOffsetCANFDMin" 75;
+BA_DEF_DEF_  "SamplePointCANFDMax" 75;
+BA_DEF_DEF_  "SamplePointCANFDMin" 75;
+BA_DEF_DEF_  "SyncJumpWidthCANFDMax" 50;
+BA_DEF_DEF_  "SyncJumpWidthCANFDMin" 50;
+BA_DEF_DEF_  "BaudrateCANFD" 2000000;
+BA_DEF_DEF_  "GenSigMissingSourceValue" 0;
+BA_DEF_DEF_  "Fehlerwert" 0;
+BA_DEF_DEF_  "GenSigSwitchedByIgnition" "Yes";
+BA_DEF_DEF_  "GenSigFuncType" "NoFunction";
+BA_DEF_DEF_  "NWM-WakeupAllowed" "No";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigActiveRepetitions" 0;
+BA_DEF_DEF_  "VAGTP20_StatConnection" "No";
+BA_DEF_DEF_  "VAGTP20_DynSetup" "No";
+BA_DEF_DEF_  "VAGTP20_DynConnection" "No";
+BA_DEF_DEF_  "VAGTP20_API" 0;
+BA_DEF_DEF_  "MsgType" "Application";
+BA_DEF_DEF_  "NmhMessage" "No";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgPDUConstants" "";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgChkConstant" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "NmhNode" "Yes";
+BA_DEF_DEF_  "VAGTP20_TargetAddress" 0;
+BA_DEF_DEF_  "ECUVariantGroup" "";
+BA_DEF_DEF_  "ECUVariantDefault" "Yes";
+BA_DEF_DEF_  "GenNodAutoGenSnd" "Yes";
+BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
+BA_DEF_DEF_  "NmhNStart" 0;
+BA_DEF_DEF_  "NmhLongTimer" 0;
+BA_DEF_DEF_  "NmhPrepareBusSleepTimer" 2000;
+BA_DEF_DEF_  "NmhWaitBusSleepTimer" 5000;
+BA_DEF_DEF_  "NmhTimeoutTimer" 2000;
+BA_DEF_DEF_  "NBTMax" 20;
+BA_DEF_DEF_  "NBTMin" 10;
+BA_DEF_DEF_  "SyncJumpWidthMax" 1;
+BA_DEF_DEF_  "SyncJumpWidthMin" 1;
+BA_DEF_DEF_  "SamplePointMax" 1;
+BA_DEF_DEF_  "SamplePointMin" 1;
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "VersionNumber" 0;
+BA_DEF_DEF_  "VersionYear" 19;
+BA_DEF_DEF_  "VersionWeek" 45;
+BA_DEF_DEF_  "VersionMonth" 11;
+BA_DEF_DEF_  "VersionDay" 8;
+BA_DEF_DEF_  "VAGTP20_SetupStartAddress" 0;
+BA_DEF_DEF_  "VAGTP20_SetupMessageCount" 0;
+BA_DEF_DEF_  "NmType" "None";
+BA_DEF_DEF_  "NmhMessageCount" 1;
+BA_DEF_DEF_  "NmhBaseAddress" 1536;
+BA_DEF_DEF_  "Manufacturer" "GWM";
+BA_DEF_DEF_  "DBName" "V51EV_for_PT_CANFD V1_0濞存嚎鍊栫粊锕傛偋";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenEnvVarEndingDsp" "_d";
+BA_DEF_DEF_  "GenEnvVarEndingSnd" "_s";
+BA_DEF_DEF_  "GenEnvVarPrefix" "c";
+BA_DEF_DEF_  "GenNWMApBusSleep" "apBusSleep()";
+BA_DEF_DEF_  "GenNWMApCanNormal" "apCanNormal()";
+BA_DEF_DEF_  "GenNWMApCanOff" "apCanOff()";
+BA_DEF_DEF_  "GenNWMApCanOn" "apCanOn()";
+BA_DEF_DEF_  "GenNWMApCanSleep" "apCanSleep()";
+BA_DEF_DEF_  "GenNWMApCanWakeUp" "apCanWakeUp()";
+BA_DEF_DEF_  "GenNWMGotoMode_Awake" "GotoMode_Awake()";
+BA_DEF_DEF_  "GenNWMGotoMode_BusSleep" "GotoMode_BusSleep()";
+BA_DEF_DEF_  "GenNWMSleepTime" 0;
+BA_DEF_DEF_  "GenNWMTalkNM" "TalkNM()";
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "TpApplType" "";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTime" 10;
+BA_DEF_DEF_  "GenMsgMinAcceptLength" 8;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "GenEnvAutoGenCtrl" "";
+BA_DEF_DEF_  "GenEnvIsGeneratedDsp" "";
+BA_DEF_DEF_  "GenEnvIsGeneratedSnd" "";
+BA_DEF_DEF_  "GenEnvMsgName" "";
+BA_DEF_DEF_  "GenEnvMsgOffset" 0;
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NVM-WakeupAllowed" "";
+BA_DEF_DEF_REL_ "GenSigTimeoutTime" 0;
+BA_ "BusType" "CAN";
+BA_ "NmhBaseAddress" 1536;
+BA_ "NmhMessageCount" 256;
+BA_ "SyncJumpWidthMin" 2;
+BA_ "SyncJumpWidthMax" 4;
+BA_ "NmhTimeoutTimer" 2000;
+BA_ "NmhWaitBusSleepTimer" 2000;
+BA_ "NmhPrepareBusSleepTimer" 100;
+BA_ "NmhLongTimer" 200;
+BA_ "DBName" "DBCNetWork";
+BA_ "NmStationAddress" BU_ XB_SUP_A 1;
+BA_ "GenMsgSendType" BO_ 1027 0;
+BA_ "VFrameFormat" BO_ 1027 0;
+BA_ "GenMsgCycleTime" BO_ 1027 10;
+BA_ "GenMsgSendType" BO_ 1026 0;
+BA_ "VFrameFormat" BO_ 1026 0;
+BA_ "GenMsgCycleTime" BO_ 1026 10;
+BA_ "GenMsgSendType" BO_ 1025 0;
+BA_ "VFrameFormat" BO_ 1025 0;
+BA_ "GenMsgCycleTime" BO_ 1025 10;
+BA_ "GenMsgSendType" BO_ 1024 0;
+BA_ "VFrameFormat" BO_ 1024 0;
+BA_ "GenMsgCycleTime" BO_ 1024 10;
+BA_ "GenMsgSendType" BO_ 276 0;
+BA_ "VFrameFormat" BO_ 276 0;
+BA_ "GenMsgCycleTime" BO_ 276 10;
+BA_ "GenMsgSendType" BO_ 275 0;
+BA_ "VFrameFormat" BO_ 275 0;
+BA_ "GenMsgCycleTime" BO_ 275 10;
+BA_ "GenMsgSendType" BO_ 274 0;
+BA_ "VFrameFormat" BO_ 274 0;
+BA_ "GenMsgCycleTime" BO_ 274 200;
+BA_ "GenMsgSendType" BO_ 273 0;
+BA_ "VFrameFormat" BO_ 273 0;
+BA_ "GenMsgCycleTime" BO_ 273 10;
+BA_ "GenMsgSendType" BO_ 272 0;
+BA_ "VFrameFormat" BO_ 272 0;
+BA_ "GenMsgCycleTime" BO_ 272 10;
+BA_ "GenMsgILSupport" BO_ 1537 0;
+BA_ "NmMessage" BO_ 1537 1;
+BA_ "MsgType" BO_ 1537 1;
+BA_ "GenMsgSendType" BO_ 1537 2;
+BA_ "VFrameFormat" BO_ 1537 0;
+BA_ "GenMsgCycleTime" BO_ 1537 0;
+BA_ "NmhMessage" BO_ 1537 1;
+BA_ "GenMsgILSupport" BO_ 1536 0;
+BA_ "NmMessage" BO_ 1536 1;
+BA_ "MsgType" BO_ 1536 1;
+BA_ "GenMsgSendType" BO_ 1536 2;
+BA_ "VFrameFormat" BO_ 1536 0;
+BA_ "GenMsgCycleTime" BO_ 1536 0;
+BA_ "NmhMessage" BO_ 1536 1;
+BA_ "GenMsgILSupport" BO_ 1873 0;
+BA_ "DiagResponse" BO_ 1873 1;
+BA_ "MsgType" BO_ 1873 4;
+BA_ "GenMsgSendType" BO_ 1873 2;
+BA_ "VFrameFormat" BO_ 1873 0;
+BA_ "GenMsgCycleTime" BO_ 1873 0;
+BA_ "GenMsgILSupport" BO_ 1793 0;
+BA_ "DiagRequest" BO_ 1793 1;
+BA_ "MsgType" BO_ 1793 4;
+BA_ "GenMsgSendType" BO_ 1793 2;
+BA_ "VFrameFormat" BO_ 1793 0;
+BA_ "GenMsgCycleTime" BO_ 1793 0;
+BA_ "GenMsgILSupport" BO_ 2015 0;
+BA_ "DiagState" BO_ 2015 1;
+BA_ "MsgType" BO_ 2015 4;
+BA_ "GenMsgSendType" BO_ 2015 2;
+BA_ "VFrameFormat" BO_ 2015 0;
+BA_ "GenMsgCycleTime" BO_ 2015 0;
+BA_ "GenSigStartValue" SG_ 1027 Sig_0x403_Used_5 0;
+BA_ "GenSigStartValue" SG_ 1027 Sig_0x403_Used_4 0;
+BA_ "GenSigStartValue" SG_ 1027 Sig_0x403_Used_3 0;
+BA_ "GenSigStartValue" SG_ 1027 Sig_0x403_Used_2 0;
+BA_ "GenSigStartValue" SG_ 1027 Sig_0x403_Used_1 0;
+BA_ "GenSigStartValue" SG_ 1026 Sig_0x402_Used_5 0;
+BA_ "GenSigStartValue" SG_ 1026 Sig_0x402_Used_4 0;
+BA_ "GenSigStartValue" SG_ 1026 Sig_0x402_Used_3 0;
+BA_ "GenSigStartValue" SG_ 1026 Sig_0x402_Used_2 0;
+BA_ "GenSigStartValue" SG_ 1026 Sig_0x402_Used_1 0;
+BA_ "GenSigStartValue" SG_ 1025 Button4_Control 0;
+BA_ "GenSigStartValue" SG_ 1025 Button3_Control 0;
+BA_ "GenSigStartValue" SG_ 1025 Button2_Control 0;
+BA_ "GenSigStartValue" SG_ 1025 Button1_Control 0;
+BA_ "GenSigStartValue" SG_ 1024 CrcSig_Pack_2 0;
+BA_ "GenSigStartValue" SG_ 1024 CrcSig_Pack_1 0;
+BA_ "GenSigStartValue" SG_ 1024 CrcSig_Pack_0 0;
+BA_ "GenSigStartValue" SG_ 1024 SupB_Counter_0x400 0;
+BA_ "GenSigStartValue" SG_ 1024 Led4_Control 1;
+BA_ "GenSigStartValue" SG_ 1024 Led3_Control 1;
+BA_ "GenSigStartValue" SG_ 1024 Led2_Control 1;
+BA_ "GenSigStartValue" SG_ 1024 Led1_Control 1;
+BA_ "GenSigStartValue" SG_ 1024 SupB_Checksum_0x400 0;
+BA_ "GenSigStartValue" SG_ 276 Sig_0x114_Used_6 0;
+BA_ "GenSigStartValue" SG_ 276 Sig_0x114_Used_5 0;
+BA_ "GenSigStartValue" SG_ 276 Sig_0x114_Used_4 0;
+BA_ "GenSigStartValue" SG_ 276 Sig_0x114_Used_3 0;
+BA_ "GenSigStartValue" SG_ 276 Sig_0x114_Used_2 0;
+BA_ "GenSigStartValue" SG_ 276 Sig_0x114_Used_1 0;
+BA_ "GenSigStartValue" SG_ 275 AAA_Angle 20;
+BA_ "GenSigStartValue" SG_ 274 SupA_Counter_0x112 0;
+BA_ "GenSigStartValue" SG_ 274 PowerMode 0;
+BA_ "GenSigStartValue" SG_ 274 SupA_Checksum_0x112 0;
+BA_ "GenSigStartValue" SG_ 273 Button4_State 0;
+BA_ "GenSigStartValue" SG_ 273 Button3_State 0;
+BA_ "GenSigStartValue" SG_ 273 Button2_State 0;
+BA_ "GenSigStartValue" SG_ 273 Button1_State 0;
+BA_ "GenSigStartValue" SG_ 272 Led4_State 0;
+BA_ "GenSigStartValue" SG_ 272 Led3_State 0;
+BA_ "GenSigStartValue" SG_ 272 Led2_State 0;
+BA_ "GenSigStartValue" SG_ 272 Led1_State 0;
+BA_ "GenSigStartValue" SG_ 1537 Sig_NmTx_Nid 0;
+BA_ "GenSigStartValue" SG_ 1536 Sig_NmRx_Nid 0;
+BA_ "GenSigStartValue" SG_ 1873 Sig_ResDiag 0;
+BA_ "GenSigStartValue" SG_ 1793 Sig_PhyDiag 0;
+BA_ "GenSigStartValue" SG_ 2015 Sig_FunDiag 0;
+VAL_ 1025 Button4_Control 0 "Button_Enable" 1 "Button_Disable" ;
+VAL_ 1025 Button3_Control 0 "Button_Enable" 1 "Button_Disable" ;
+VAL_ 1025 Button2_Control 0 "Button_Enable" 1 "Button_Disable" ;
+VAL_ 1025 Button1_Control 0 "Button_Enable" 1 "Button_Disable" ;
+VAL_ 1024 Led4_Control 0 "LED_ON" 1 "LED_OFF" ;
+VAL_ 1024 Led3_Control 0 "LED_ON" 1 "LED_OFF" ;
+VAL_ 1024 Led2_Control 0 "LED_ON" 1 "LED_OFF" ;
+VAL_ 1024 Led1_Control 0 "LED_ON" 1 "LED_OFF" ;
+VAL_ 274 PowerMode 0 "OFF" 1 "ON" 2 "Reserve" ;
+VAL_ 273 Button4_State 0 "Button_Push" 1 "Button_Release" ;
+VAL_ 273 Button3_State 0 "Button_Push" 1 "Button_Release" ;
+VAL_ 273 Button2_State 0 "Button_Push" 1 "Button_Release" ;
+VAL_ 273 Button1_State 0 "Button_Push" 1 "Button_Release" ;
+VAL_ 272 Led4_State 0 "LED_ON" 1 "LED_OFF" ;
+VAL_ 272 Led3_State 0 "LED_ON" 1 "LED_OFF" ;
+VAL_ 272 Led2_State 0 "LED_ON" 1 "LED_OFF" ;
+VAL_ 272 Led1_State 0 "LED_ON" 1 "LED_OFF" ;
+SIG_GROUP_ 1027 Sig_Grp_0x403 1 : Sig_0x403_Used_1 Sig_0x403_Used_2 Sig_0x403_Used_3 Sig_0x403_Used_4 Sig_0x403_Used_5;
+SIG_GROUP_ 1026 Sig_Grp_0x402 1 : Sig_0x402_Used_1 Sig_0x402_Used_2 Sig_0x402_Used_3 Sig_0x402_Used_4 Sig_0x402_Used_5;
+SIG_GROUP_ 1025 Sig_Grp_0x401 1 : Button1_Control Button2_Control Button3_Control Button4_Control;
+SIG_GROUP_ 1024 Sig_Grp_0x400 1 : SupB_Checksum_0x400 Led1_Control Led2_Control Led3_Control Led4_Control SupB_Counter_0x400 CrcSig_Pack_0 CrcSig_Pack_1 CrcSig_Pack_2;
+SIG_GROUP_ 1024 Sig_Grp_0x400 1 :;
+SIG_GROUP_ 276 Sig_Grp_0x114 1 : Sig_0x114_Used_6 Sig_0x114_Used_1 Sig_0x114_Used_2 Sig_0x114_Used_3 Sig_0x114_Used_4 Sig_0x114_Used_5;
+SIG_GROUP_ 275 Sig_Grp_0x113 1 : AAA_Angle;
+SIG_GROUP_ 274 Sig_Grp_0x112 1 : SupA_Checksum_0x112 PowerMode SupA_Counter_0x112;
+SIG_GROUP_ 273 Sig_Grp_0x111 1 : Button1_State Button2_State Button3_State Button4_State;
+SIG_GROUP_ 272 Sig_Grp_0x110 1 : Led1_State Led2_State Led3_State Led4_State;
+

@@ -1,0 +1,15 @@
+﻿26 Jun 2023 13:00:56 - Saving file AdminDataTemplates.xml (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\AdminDataTemplates.xml)
+26 Jun 2023 13:00:56 - Saving file TC27x.dcf (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\TC27x.dcf)
+26 Jun 2023 13:00:56 - Start import
+26 Jun 2023 13:00:56 - Importing file (C:\Program Files (x86)\Vector DaVinci Developer 4.7 (SP1)\Bin\Predefines\StandardPackages_AR4.arxml).
+26 Jun 2023 13:00:56 - Importing file (C:\Program Files (x86)\Vector DaVinci Developer 4.7 (SP1)\Bin\Predefines\ServicePortInterfaces_4.4.0.arxml).
+26 Jun 2023 13:00:56 - Importing file (C:\Program Files (x86)\Vector DaVinci Developer 4.7 (SP1)\Bin\Predefines\ApplicationPortInterfaces_4.4.0.arxml).
+26 Jun 2023 13:00:56 - Importing file (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\AUTOSAR\PlatformTypes_AR4.arxml).
+26 Jun 2023 13:00:57 - Merging imported data
+26 Jun 2023 13:00:57 - Finished import
+26 Jun 2023 13:00:58 - Saving file ProfileSettings.xml (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\ProfileSettings.xml)
+26 Jun 2023 13:00:58 - Saving file Packages.arxml (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\Packages.arxml)
+26 Jun 2023 13:00:58 - Saving file DataTypes.arxml (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\DataTypes.arxml)
+26 Jun 2023 13:00:58 - Saving file PortInterfaces.arxml (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\PortInterfaces.arxml)
+26 Jun 2023 13:00:58 - Saving file TC27x.arxml (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\ECUProjects\TC27x.arxml)
+26 Jun 2023 13:00:58 - Saving file TC27x.dcf (C:\Users\Administrator\Desktop\TC27x_Platform\Vector\Cfg\Config\Developer\TC27x.dcf)

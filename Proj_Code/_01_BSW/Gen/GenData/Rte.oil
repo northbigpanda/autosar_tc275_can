@@ -1,0 +1,244 @@
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  \verbatim
+ *
+ *                This software is copyright protected and proprietary to Vector Informatik GmbH.
+ *                Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+ *                All other rights remain with Vector Informatik GmbH.
+ *  \endverbatim
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -------------------------------------------------------------------------------------------------------------------
+ *             File:  Rte.oil
+ *           Config:  TC27x.dpa
+ *      ECU-Project:  TC27x
+ *
+ *        Generator:  MICROSAR RTE Generator Version 4.21.0
+ *                    RTE Core Version 1.21.0
+ *          License:  CBD1600956
+ *
+ *      Description:  OIL-File containing project specific OS definitions for the MICROSAR RTE
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *                                              P L E A S E   N O T E
+ *
+ * The attributes in this file must not be changed. Missing mandatory attributes must be set in the including file.
+ * They are presented as a comment in the corresponding object definition containing a list of all legal values.
+ *********************************************************************************************************************/
+
+   TASK OsTask_App10ms_Core0 {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 34:"@RO@";
+      SCHEDULE = NON:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      EVENT = Rte_Ev_Cyclic_OsTask_App10ms_Core0_0_10ms:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_OsTask_App10ms_Core0_0_10ms {
+      COUNTER = SystemTimer_Core0;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_App10ms_Core0;
+         EVENT = Rte_Ev_Cyclic_OsTask_App10ms_Core0_0_10ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   TASK OsTask_App10ms_Core1 {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 42:"@RO@";
+      SCHEDULE = NON:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      EVENT = Rte_Ev_RunS2_EcuM_EcuM_MainFunction:"@RO@";
+      EVENT = Rte_Ev_Run_AppCtrl1_AppCtrl1_MainFuntion:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE2_EcuM_EcuM_MainFunction {
+      COUNTER = SystemTimer_Core1;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_App10ms_Core1;
+         EVENT = Rte_Ev_RunS2_EcuM_EcuM_MainFunction;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_AppCtrl1_AppCtrl1_MainFuntion {
+      COUNTER = SystemTimer_Core1;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_App10ms_Core1;
+         EVENT = Rte_Ev_Run_AppCtrl1_AppCtrl1_MainFuntion;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   TASK OsTask_App10ms_Core2 {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 46:"@RO@";
+      SCHEDULE = NON:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      EVENT = Rte_Ev_Cyclic2_OsTask_App10ms_Core2_0_5ms:"@RO@";
+      EVENT = Rte_Ev_Run_AppCtrl2_AppCtrl2_MainFunction:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE2_OsTask_App10ms_Core2_0_5ms {
+      COUNTER = SystemTimer_Core2;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_App10ms_Core2;
+         EVENT = Rte_Ev_Cyclic2_OsTask_App10ms_Core2_0_5ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_AppCtrl2_AppCtrl2_MainFunction {
+      COUNTER = SystemTimer_Core2;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_App10ms_Core2;
+         EVENT = Rte_Ev_Run_AppCtrl2_AppCtrl2_MainFunction;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+   }:"@RO@@NR@";
+
+   TASK OsTask_App_Init_Task {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 50:"@RO@";
+      SCHEDULE = NON:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   TASK OsTask_Bsw5ms_Core0 {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 0:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      EVENT = Rte_Ev_Cyclic2_OsTask_Bsw5ms_Core0_0_5ms:"@RO@";
+      EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE2_OsTask_Bsw5ms_Core0_0_5ms {
+      COUNTER = SystemTimer_Core0;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_Bsw5ms_Core0;
+         EVENT = Rte_Ev_Cyclic2_OsTask_Bsw5ms_Core0_0_5ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable {
+      COUNTER = SystemTimer_Core0;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_Bsw5ms_Core0;
+         EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore1;
+      ACCESSING_APPLICATION = SystemApplication_OsCore2;
+   }:"@RO@@NR@";
+
+   EVENT Rte_Ev_Cyclic2_OsTask_App10ms_Core2_0_5ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Cyclic2_OsTask_Bsw5ms_Core0_0_5ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Cyclic_OsTask_App10ms_Core0_0_10ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_RunS2_EcuM_EcuM_MainFunction {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Run_AppCtrl1_AppCtrl1_MainFuntion {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Run_AppCtrl2_AppCtrl2_MainFunction {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+
+   APPLICATION SystemApplication_OsCore0 {
+      TRUSTED = TRUE;
+// Add the following four attributes according to your needs.
+// Note: They do not have a default value and are therefore necessary in the configuration.
+//      STARTUPHOOK = FALSE;
+//      SHUTDOWNHOOK = FALSE;
+//      ERRORHOOK = FALSE;
+//      HAS_RESTARTTASK = FALSE;
+      TASK = OsTask_App10ms_Core0;
+      ALARM = Rte_Al_TE_OsTask_App10ms_Core0_0_10ms;
+      TASK = OsTask_App_Init_Task;
+      TASK = OsTask_Bsw5ms_Core0;
+      ALARM = Rte_Al_TE2_OsTask_Bsw5ms_Core0_0_5ms;
+      ALARM = Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable;
+      CORE = 0;
+  };
+
+   APPLICATION SystemApplication_OsCore1 {
+      TRUSTED = TRUE;
+// Add the following four attributes according to your needs.
+// Note: They do not have a default value and are therefore necessary in the configuration.
+//      STARTUPHOOK = FALSE;
+//      SHUTDOWNHOOK = FALSE;
+//      ERRORHOOK = FALSE;
+//      HAS_RESTARTTASK = FALSE;
+      TASK = OsTask_App10ms_Core1;
+      ALARM = Rte_Al_TE2_EcuM_EcuM_MainFunction;
+      ALARM = Rte_Al_TE_AppCtrl1_AppCtrl1_MainFuntion;
+      CORE = 1;
+  };
+
+   APPLICATION SystemApplication_OsCore2 {
+      TRUSTED = TRUE;
+// Add the following four attributes according to your needs.
+// Note: They do not have a default value and are therefore necessary in the configuration.
+//      STARTUPHOOK = FALSE;
+//      SHUTDOWNHOOK = FALSE;
+//      ERRORHOOK = FALSE;
+//      HAS_RESTARTTASK = FALSE;
+      TASK = OsTask_App10ms_Core2;
+      ALARM = Rte_Al_TE2_OsTask_App10ms_Core2_0_5ms;
+      ALARM = Rte_Al_TE_AppCtrl2_AppCtrl2_MainFunction;
+      CORE = 2;
+  };

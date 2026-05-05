@@ -1,0 +1,84 @@
+/** Generated code, do not change!
+ ** Written by Protection Wrapper Generator (V 2.0.1)
+ ** Module: E2EPW_CheckDeserial_SG_Sig_Grp_0x400.c
+ ** Mon, 29-Jan-2024, 22:59:46
+ **/
+
+/******************************************************************
+ * MISRA RULE 19.1 VIOLATION:
+ * Error Message : Msg(4:5087) #include statements in a file
+ *   should only be preceded by other preprocessor directives or
+ *   comments.
+ * Justification : Inclusion of MemMap.h is AUTOSAR specific.
+ ******************************************************************/
+/* PRQA S 5087 EOF */
+
+#include "Rte_AppComRx.h"
+#include "E2EPW_CheckDeserial_SG_Sig_Grp_0x400.h"
+
+#define E2EPW_START_SEC_CODE_LIB
+#include "MemMap.h"
+
+/******************************************************************
+ * Function name      : E2EPW_CheckDeserial_SG_Sig_Grp_0x400
+ * Description        : Checks if the signals in the de-serialized
+ *                      protected data element are in a valid
+ *                      range, considering their bit length in the
+ *                      protected pdu area.
+ * Parameter pde (in) : pointer to protected data element
+ * Return value       : 0                    deserial check passed
+ *                      E2EPW_DESERIAL_ERR   deserial check failed
+ * Remarks            : none
+ ******************************************************************/
+FUNC (uint8, E2EPW_CODE) E2EPW_CheckDeserial_SG_Sig_Grp_0x400
+    ( P2CONST (SG_Sig_Grp_0x400, AUTOMATIC, E2EPW_APPL_DATA) pde )
+{
+    VAR (uint8, AUTOMATIC) ret = 0;
+
+    if ((pde->CrcSig_Pack_0 & 0xf0u) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    if ((pde->CrcSig_Pack_1 & 0xff000000u) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    if ((pde->CrcSig_Pack_2 & 0xfff00000u) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    if ((pde->Led1_Control & 0xfeu) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    if ((pde->Led2_Control & 0xfeu) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    if ((pde->Led3_Control & 0xfeu) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    if ((pde->Led4_Control & 0xfeu) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    if ((pde->SupB_Counter_0x400 & 0xf0u) != 0)
+    {
+        ret = E2EPW_DESERIAL_ERR;
+    }
+
+    return ret;
+}
+
+#define E2EPW_STOP_SEC_CODE_LIB
+#include "MemMap.h"
+
+/*  << EOF >>  */

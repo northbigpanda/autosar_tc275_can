@@ -1,0 +1,23 @@
+# 编译输出
+Debug/
+Release/
+*.src
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.lst
+*.map
+
+# IDE 配置
+.metadata/
+.settings/
+*.tresoslog
+.project
+.cproject
+
+# 临时文件
+*.tmp
+*.bak
+*~

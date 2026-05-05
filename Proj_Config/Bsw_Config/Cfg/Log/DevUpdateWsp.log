@@ -1,0 +1,36 @@
+﻿05 May 2026 10:59:44 - Opening workspace 'C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.dcf'...
+05 May 2026 10:59:46 - Loading file PlatformTypes_AR4.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
+05 May 2026 10:59:46 - Loading file BswM_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\BswM_swc.arxml)
+05 May 2026 10:59:46 - Loading file ComM_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\ComM_swc.arxml)
+05 May 2026 10:59:46 - Loading file Dcm_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\Dcm_swc.arxml)
+05 May 2026 10:59:46 - Loading file Dem_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\Dem_swc.arxml)
+05 May 2026 10:59:46 - Loading file Det_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\Det_swc.arxml)
+05 May 2026 10:59:46 - Loading file EcuM_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\EcuM_swc.arxml)
+05 May 2026 10:59:46 - Loading file IoHwAb_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\IoHwAb_swc.arxml)
+05 May 2026 10:59:46 - Loading file Os_swc.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\ServiceComponents\Os_swc.arxml)
+05 May 2026 10:59:46 - Loading file Communication.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Update\DevData\Communication.arxml)
+05 May 2026 10:59:47 - Loading file AppButtonCtrl.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppButtonCtrl.arxml)
+05 May 2026 10:59:47 - Loading file AppComRx.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppComRx.arxml)
+05 May 2026 10:59:47 - Loading file AppComTx.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppComTx.arxml)
+05 May 2026 10:59:47 - Loading file AppCtrl.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppCtrl.arxml)
+05 May 2026 10:59:47 - Loading file AppCtrl1_1.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppCtrl1_1.arxml)
+05 May 2026 10:59:47 - Loading file AppCtrl2.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppCtrl2.arxml)
+05 May 2026 10:59:47 - Loading file AppLedCtrl.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppLedCtrl.arxml)
+05 May 2026 10:59:47 - Loading file AppWakeUpCtrl.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\AppWakeUpCtrl.arxml)
+05 May 2026 10:59:47 - Loading file DataTypes.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\DataTypes.arxml)
+05 May 2026 10:59:47 - Loading file IcuCdd.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\IcuCdd.arxml)
+05 May 2026 10:59:47 - Loading file Packages.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\Packages.arxml)
+05 May 2026 10:59:47 - Loading file PortInterfaces.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\PortInterfaces.arxml)
+05 May 2026 10:59:47 - Loading file TC27x.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.arxml)
+05 May 2026 10:59:49 - Opened workspace 'C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.dcf' successfully.
+05 May 2026 10:59:50 - Start import
+05 May 2026 10:59:50 - Importing file (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\System\SystemExtract.arxml).
+05 May 2026 10:59:50 - Merging imported data
+05 May 2026 10:59:50 - Finished import
+05 May 2026 10:59:50 - Saving workspace 'C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.dcf'...
+05 May 2026 10:59:50 - Saving file TC27x.dvg (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.dvg)
+05 May 2026 10:59:51 - Saving file DataTypes.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\DataTypes.arxml)
+05 May 2026 10:59:51 - Saving file TC27x.arxml (C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.arxml)
+05 May 2026 10:59:51 - Saved workspace 'C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.dcf' successfully.
+05 May 2026 10:59:51 - Closing workspace 'C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.dcf'...
+05 May 2026 10:59:51 - Closed workspace 'C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\Workflow\1777949920019-0\Config\Developer\TC27x.dcf' successfully.
