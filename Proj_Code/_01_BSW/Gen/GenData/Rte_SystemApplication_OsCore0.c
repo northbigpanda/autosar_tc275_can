@@ -166,8 +166,11 @@ VAR(SG_Sig_Grp_0x113, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(SG_Sig_Grp_0x114, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 = {
-  0U, 0U, 0U, 0U, 0U, 0U
+  0U, 0U, 0U, 0U, 0U
 };
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(Sig_0x114_Used_6, RTE_VAR_INIT) Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 = 0U;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(SG_Sig_Grp_0x110, RTE_VAR_INIT) Rte_AppLedCtrl_SG_Sig_Grp_0x110_SR_S_SG_Sig_Grp_0x110 = {
@@ -345,6 +348,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
   Rte_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112 = Rte_C_SG_Sig_Grp_0x112_0;
   Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113 = Rte_C_SG_Sig_Grp_0x113_0;
   Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 = Rte_C_SG_Sig_Grp_0x114_0;
+  Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 = 0U;
   Rte_AppLedCtrl_SG_Sig_Grp_0x110_SR_S_SG_Sig_Grp_0x110 = Rte_C_SG_Sig_Grp_0x110_0;
   Rte_AppWakeUpCtrl_App_ComM_Mode_Request_Request_Mode = 0U;
 
@@ -465,8 +469,16 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x
   ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx, &(*(data)).Sig_0x114_Used_3); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
   ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx, &(*(data)).Sig_0x114_Used_4); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
   ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx, &(*(data)).Sig_0x114_Used_5); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
-  ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx, &(*(data)).Sig_0x114_Used_6); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
   ret |= Com_SendSignalGroup(ComConf_ComSignalGroup_SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_MSR_RetVal */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */

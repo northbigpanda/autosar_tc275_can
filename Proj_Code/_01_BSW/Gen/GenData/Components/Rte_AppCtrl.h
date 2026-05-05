@@ -45,6 +45,30 @@ extern "C"
 # include "Rte_AppCtrl_Type.h"
 # include "Rte_DataHandleType.h"
 
+# ifndef RTE_CORE
+
+/**********************************************************************************************************************
+ * extern declaration of RTE buffers for optimized macro implementation
+ *********************************************************************************************************************/
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(Sig_0x114_Used_6, RTE_VAR_INIT) Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+# endif /* !defined(RTE_CORE) */
+
+
+# ifndef RTE_CORE
+/**********************************************************************************************************************
+ * Init Values for unqueued S/R communication (primitive types only)
+ *********************************************************************************************************************/
+
+#  define Rte_InitValue_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 (0U)
+# endif
+
 
 # define RTE_START_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -81,6 +105,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Gr
 #  define Rte_Write_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112 Rte_Write_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112
 #  define Rte_Write_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113 Rte_Write_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113
 #  define Rte_Write_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114
+#  define Rte_Write_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 Rte_Write_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6
+#  define Rte_Write_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6(data) (Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 = (data), ((Std_ReturnType)RTE_E_OK)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
 
 /**********************************************************************************************************************

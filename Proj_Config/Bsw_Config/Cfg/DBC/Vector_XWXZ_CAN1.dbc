@@ -462,7 +462,7 @@ SIG_GROUP_ 1026 Sig_Grp_0x402 1 : Sig_0x402_Used_1 Sig_0x402_Used_2 Sig_0x402_Us
 SIG_GROUP_ 1025 Sig_Grp_0x401 1 : Button1_Control Button2_Control Button3_Control Button4_Control;
 SIG_GROUP_ 1024 Sig_Grp_0x400 1 : SupB_Checksum_0x400 Led1_Control Led2_Control Led3_Control Led4_Control SupB_Counter_0x400 CrcSig_Pack_0 CrcSig_Pack_1 CrcSig_Pack_2;
 SIG_GROUP_ 1024 Sig_Grp_0x400 1 :;
-SIG_GROUP_ 276 Sig_Grp_0x114 1 : Sig_0x114_Used_6 Sig_0x114_Used_1 Sig_0x114_Used_2 Sig_0x114_Used_3 Sig_0x114_Used_4 Sig_0x114_Used_5;
+SIG_GROUP_ 276 Sig_Grp_0x114 1 : Sig_0x114_Used_1 Sig_0x114_Used_2 Sig_0x114_Used_3 Sig_0x114_Used_4 Sig_0x114_Used_5;
 SIG_GROUP_ 275 Sig_Grp_0x113 1 : AAA_Angle;
 SIG_GROUP_ 274 Sig_Grp_0x112 1 : SupA_Checksum_0x112 PowerMode SupA_Counter_0x112;
 SIG_GROUP_ 273 Sig_Grp_0x111 1 : Button1_State Button2_State Button3_State Button4_State;

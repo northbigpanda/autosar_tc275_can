@@ -186,7 +186,7 @@ FUNC(void, AppComTx_CODE) AppComTx_MainFunction(void) /* PRQA S 0624, 3206 */ /*
   SG_Sig_Grp_0x112 SG_Sig_Grp_0x112_ComTx;
   SG_Sig_Grp_0x113 SG_Sig_Grp_0x113_ComTx;
   SG_Sig_Grp_0x114 SG_Sig_Grp_0x114_ComTx;
- 
+  Sig_0x114_Used_6 Sig_0x114_Used_6_ComTx;
 
 
   Rte_Read_SG_Sig_Grp_0x110_SR_R_SG_Sig_Grp_0x110(&SG_Sig_Grp_0x110_ComTx);
@@ -194,6 +194,7 @@ FUNC(void, AppComTx_CODE) AppComTx_MainFunction(void) /* PRQA S 0624, 3206 */ /*
   Rte_Read_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112(&SG_Sig_Grp_0x112_ComTx);
   Rte_Read_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113(&SG_Sig_Grp_0x113_ComTx);
   Rte_Read_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114(&SG_Sig_Grp_0x114_ComTx);
+  Rte_Read_Sig_0x114_Used_SR_R_Sig_0x114_Used_6(&Sig_0x114_Used_6_ComTx);
 
 
 
@@ -205,6 +206,7 @@ FUNC(void, AppComTx_CODE) AppComTx_MainFunction(void) /* PRQA S 0624, 3206 */ /*
   E2EPW_Write_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112(&SG_Sig_Grp_0x112_ComTx);
   Rte_Write_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113(&SG_Sig_Grp_0x113_ComTx);
   Rte_Write_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114(&SG_Sig_Grp_0x114_ComTx);
+  Rte_Write_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6_ComTx);
   
 
   

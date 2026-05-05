@@ -180,7 +180,7 @@ CONST(SG_Sig_Grp_0x113, RTE_CONST) Rte_C_SG_Sig_Grp_0x113_0 = {
 /* PRQA L:L1 */
 /* PRQA S 1514, 1533 L1 */ /* MD_Rte_1514, MD_Rte_1533 */
 CONST(SG_Sig_Grp_0x114, RTE_CONST) Rte_C_SG_Sig_Grp_0x114_0 = {
-  0U, 0U, 0U, 0U, 0U, 0U
+  0U, 0U, 0U, 0U, 0U
 };
 /* PRQA L:L1 */
 /* PRQA S 1514, 1533 L1 */ /* MD_Rte_1514, MD_Rte_1533 */

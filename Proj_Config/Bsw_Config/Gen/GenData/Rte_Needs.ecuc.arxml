@@ -220,16 +220,6 @@
                                                 </ECUC-TEXTUAL-PARAM-VALUE>
                                             </PARAMETER-VALUES>
                                         </ECUC-CONTAINER-VALUE>
-                                        <ECUC-CONTAINER-VALUE>
-                                            <SHORT-NAME>Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx</SHORT-NAME>
-                                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal</DEFINITION-REF>
-                                            <PARAMETER-VALUES>
-                                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                                    <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal/ComSignalType</DEFINITION-REF>
-                                                    <VALUE>UINT8</VALUE>
-                                                </ECUC-TEXTUAL-PARAM-VALUE>
-                                            </PARAMETER-VALUES>
-                                        </ECUC-CONTAINER-VALUE>
                                     </SUB-CONTAINERS>
                                 </ECUC-CONTAINER-VALUE>
                                 <ECUC-CONTAINER-VALUE>
@@ -497,6 +487,16 @@
                                             </PARAMETER-VALUES>
                                         </ECUC-CONTAINER-VALUE>
                                     </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                    <SHORT-NAME>Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx</SHORT-NAME>
+                                    <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignal</DEFINITION-REF>
+                                    <PARAMETER-VALUES>
+                                        <ECUC-TEXTUAL-PARAM-VALUE>
+                                            <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignal/ComSignalType</DEFINITION-REF>
+                                            <VALUE>UINT8</VALUE>
+                                        </ECUC-TEXTUAL-PARAM-VALUE>
+                                    </PARAMETER-VALUES>
                                 </ECUC-CONTAINER-VALUE>
                             </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>

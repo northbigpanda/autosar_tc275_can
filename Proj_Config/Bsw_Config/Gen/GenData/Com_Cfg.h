@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cfg.h
- *   Generation Time: 2026-05-05 14:33:41
+ *   Generation Time: 2026-05-05 21:30:34
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -1692,9 +1692,9 @@
 #define ComConf_ComGroupSignal_Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx 14u
 #define ComConf_ComGroupSignal_Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx 15u
 #define ComConf_ComGroupSignal_Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx 16u
-#define ComConf_ComGroupSignal_Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx 17u
 #define ComConf_ComGroupSignal_SupA_Checksum_0x112_oSupA_PowerMode_oDBCNetWork_3f776c50_Tx 9u
 #define ComConf_ComGroupSignal_SupA_Counter_0x112_oSupA_PowerMode_oDBCNetWork_5e5c6751_Tx 10u
+#define ComConf_ComSignal_Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx 17u
 /**\} */
 
 
@@ -1816,7 +1816,7 @@
 #define Com_GetSizeOfTmpRxShdBufferUInt16OfPCConfig()                                               4u  /**< the number of accomplishable value elements in Com_TmpRxShdBufferUInt16 */
 #define Com_GetSizeOfTmpRxShdBufferUInt32OfPCConfig()                                               2u  /**< the number of accomplishable value elements in Com_TmpRxShdBufferUInt32 */
 #define Com_GetSizeOfTmpRxShdBufferUInt8OfPCConfig()                                                7u  /**< the number of accomplishable value elements in Com_TmpRxShdBufferUInt8 */
-#define Com_GetSizeOfTxBufferOfPCConfig()                                                           59u  /**< the number of accomplishable value elements in Com_TxBuffer */
+#define Com_GetSizeOfTxBufferOfPCConfig()                                                           58u  /**< the number of accomplishable value elements in Com_TxBuffer */
 #define Com_GetSizeOfTxModeFalseOfPCConfig()                                                        2u  /**< the number of accomplishable value elements in Com_TxModeFalse */
 #define Com_GetSizeOfTxModeInfoOfPCConfig()                                                         5u  /**< the number of accomplishable value elements in Com_TxModeInfo */
 #define Com_GetSizeOfTxModeTrueOfPCConfig()                                                         2u  /**< the number of accomplishable value elements in Com_TxModeTrue */
@@ -1825,7 +1825,7 @@
 #define Com_GetSizeOfTxPduInitValueOfPCConfig()                                                     40u  /**< the number of accomplishable value elements in Com_TxPduInitValue */
 #define Com_GetSizeOfTxSigGrpInfoIndOfPCConfig()                                                    5u  /**< the number of accomplishable value elements in Com_TxSigGrpInfoInd */
 #define Com_GetSizeOfTxSigGrpInfoOfPCConfig()                                                       5u  /**< the number of accomplishable value elements in Com_TxSigGrpInfo */
-#define Com_GetSizeOfTxSigGrpMaskOfPCConfig()                                                       16u  /**< the number of accomplishable value elements in Com_TxSigGrpMask */
+#define Com_GetSizeOfTxSigGrpMaskOfPCConfig()                                                       15u  /**< the number of accomplishable value elements in Com_TxSigGrpMask */
 #define Com_GetSizeOfTxSigInfoOfPCConfig()                                                          18u  /**< the number of accomplishable value elements in Com_TxSigInfo */
 #define Com_GetTmpRxShdBufferUInt16OfPCConfig()                                                     Com_TmpRxShdBufferUInt16  /**< the pointer to Com_TmpRxShdBufferUInt16 */
 #define Com_GetTmpRxShdBufferUInt32OfPCConfig()                                                     Com_TmpRxShdBufferUInt32.raw  /**< the pointer to Com_TmpRxShdBufferUInt32 */
@@ -1967,7 +1967,6 @@
 #define Com_GetTxBufferStartIdxOfTxSigInfo(Index)                                                   (Com_GetTxSigInfoOfPCConfig()[(Index)].TxBufferStartIdxOfTxSigInfo)
 #define Com_GetTxPduInfoIdxOfTxSigInfo(Index)                                                       (Com_GetTxSigInfoOfPCConfig()[(Index)].TxPduInfoIdxOfTxSigInfo)
 #define Com_GetTxSigGrpInfoIdxOfTxSigInfo(Index)                                                    (Com_GetTxSigInfoOfPCConfig()[(Index)].TxSigGrpInfoIdxOfTxSigInfo)
-#define Com_IsTxSigGrpInfoUsedOfTxSigInfo(Index)                                                    ((Com_GetTxSigInfoOfPCConfig()[(Index)].TxSigGrpInfoUsedOfTxSigInfo) != FALSE)
 /** 
   \}
 */ 
@@ -2065,7 +2064,8 @@
 #define Com_IsTxBufferUsedOfTxSigGrpInfo(Index)                                                     Com_IsTxSigGrpMaskUsedOfTxSigGrpInfo(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxBuffer */
 #define Com_GetTxSigGrpMaskLengthOfTxSigGrpInfo(Index)                                              ((Com_TxSigGrpMaskLengthOfTxSigGrpInfoType)((Com_GetTxSigGrpMaskEndIdxOfTxSigGrpInfo(Index) - Com_GetTxSigGrpMaskStartIdxOfTxSigGrpInfo(Index))))  /**< the number of relations pointing to Com_TxSigGrpMask */
 #define Com_GetTxBufferLengthOfTxSigInfo(Index)                                                     ((Com_TxBufferLengthOfTxSigInfoType)((Com_GetTxBufferEndIdxOfTxSigInfo(Index) - Com_GetTxBufferStartIdxOfTxSigInfo(Index))))  /**< the number of relations pointing to Com_TxBuffer */
-#define Com_IsTxBufferUsedOfTxSigInfo(Index)                                                        Com_IsTxSigGrpInfoUsedOfTxSigInfo(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxBuffer */
+#define Com_IsTxBufferUsedOfTxSigInfo(Index)                                                        (((boolean)(Com_GetTxBufferLengthOfTxSigInfo(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxBuffer */
+#define Com_IsTxSigGrpInfoUsedOfTxSigInfo(Index)                                                    (((boolean)(Com_GetTxSigGrpInfoIdxOfTxSigInfo(Index) != COM_NO_TXSIGGRPINFOIDXOFTXSIGINFO)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_TxSigGrpInfo */
 /** 
   \}
 */ 
@@ -3313,7 +3313,6 @@ typedef struct sCom_TxSigGrpInfoType
 /**   \brief  type used in Com_TxSigInfo */
 typedef struct sCom_TxSigInfoType
 {
-  Com_TxSigGrpInfoUsedOfTxSigInfoType TxSigGrpInfoUsedOfTxSigInfo;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_TxSigGrpInfo */
   Com_ApplTypeOfTxSigInfoType ApplTypeOfTxSigInfo;  /**< Application data type. */
   Com_BitLengthOfTxSigInfoType BitLengthOfTxSigInfo;  /**< Bit length of the signal or group signal. */
   Com_BitPositionOfTxSigInfoType BitPositionOfTxSigInfo;  /**< Little endian bit position of the signal or group signal within the I-PDU. */
@@ -3958,7 +3957,7 @@ extern CONST(Com_TxSigGrpInfoIndType, COM_CONST) Com_TxSigGrpInfoInd[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_TxSigGrpMaskType, COM_CONST) Com_TxSigGrpMask[16];
+extern CONST(Com_TxSigGrpMaskType, COM_CONST) Com_TxSigGrpMask[15];
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3972,7 +3971,6 @@ extern CONST(Com_TxSigGrpMaskType, COM_CONST) Com_TxSigGrpMask[16];
   \brief  Contains all relevant information for Tx signals and group signals.
   \details
   Element                   Description
-  TxSigGrpInfoUsed          TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_TxSigGrpInfo
   ApplType                  Application data type.
   BitLength                 Bit length of the signal or group signal.
   BitPosition               Little endian bit position of the signal or group signal within the I-PDU.
@@ -4304,7 +4302,7 @@ extern VAR(Com_TransmitRequestType, COM_VAR_NOINIT) Com_TransmitRequest[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[59];
+extern VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[58];
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

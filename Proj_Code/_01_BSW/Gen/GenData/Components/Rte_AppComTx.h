@@ -45,6 +45,31 @@ extern "C"
 # include "Rte_AppComTx_Type.h"
 # include "Rte_DataHandleType.h"
 
+# ifndef RTE_CORE
+
+/**********************************************************************************************************************
+ * extern declaration of RTE buffers for optimized macro implementation
+ *********************************************************************************************************************/
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(Sig_0x114_Used_6, RTE_VAR_INIT) Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+# endif /* !defined(RTE_CORE) */
+
+
+# ifndef RTE_CORE
+/**********************************************************************************************************************
+ * Init Values for unqueued S/R communication (primitive types only)
+ *********************************************************************************************************************/
+
+#  define Rte_InitValue_Sig_0x114_Used_6_Sig_0x114_Used_6 (0U)
+#  define Rte_InitValue_Sig_0x114_Used_SR_R_Sig_0x114_Used_6 (0U)
+# endif
+
 
 # define RTE_START_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -62,6 +87,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x111_SG_Sig_Grp_0x
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112(P2CONST(SG_Sig_Grp_0x112, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113(P2CONST(SG_Sig_Grp_0x113, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114(P2CONST(SG_Sig_Grp_0x114, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define RTE_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -77,6 +103,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x
 #  define Rte_Read_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112 Rte_Read_AppComTx_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112
 #  define Rte_Read_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113 Rte_Read_AppComTx_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113
 #  define Rte_Read_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114 Rte_Read_AppComTx_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114
+#  define Rte_Read_Sig_0x114_Used_SR_R_Sig_0x114_Used_6 Rte_Read_AppComTx_Sig_0x114_Used_SR_R_Sig_0x114_Used_6
+#  define Rte_Read_AppComTx_Sig_0x114_Used_SR_R_Sig_0x114_Used_6(data) (*(data) = Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6, ((Std_ReturnType)RTE_E_OK)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
 
 /**********************************************************************************************************************
@@ -87,6 +115,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x
 #  define Rte_Write_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112 Rte_Write_AppComTx_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112
 #  define Rte_Write_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113 Rte_Write_AppComTx_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113
 #  define Rte_Write_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114 Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114
+#  define Rte_Write_Sig_0x114_Used_6_Sig_0x114_Used_6 Rte_Write_AppComTx_Sig_0x114_Used_6_Sig_0x114_Used_6
 
 
 # endif /* !defined(RTE_CORE) */

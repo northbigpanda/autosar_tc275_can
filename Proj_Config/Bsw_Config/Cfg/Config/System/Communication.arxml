@@ -3428,7 +3428,6 @@
             <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork</I-SIGNAL-REF>
             <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork</I-SIGNAL-REF>
             <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork</I-SIGNAL-REF>
-            <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork</I-SIGNAL-REF>
           </I-SIGNAL-REFS>
           <SYSTEM-SIGNAL-GROUP-REF DEST="SYSTEM-SIGNAL-GROUP">/Signal/SG_Sig_Grp_0x114</SYSTEM-SIGNAL-GROUP-REF>
         </I-SIGNAL-GROUP>
@@ -4004,7 +4003,6 @@
             <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_3</SYSTEM-SIGNAL-REF>
             <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_4</SYSTEM-SIGNAL-REF>
             <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_5</SYSTEM-SIGNAL-REF>
-            <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_6</SYSTEM-SIGNAL-REF>
           </SYSTEM-SIGNAL-REFS>
         </SYSTEM-SIGNAL-GROUP>
         <SYSTEM-SIGNAL-GROUP>

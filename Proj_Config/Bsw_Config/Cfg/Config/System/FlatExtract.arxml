@@ -396,44 +396,6 @@
                                     <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
                                       <DATA-ELEMENT-IREF>
                                         <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x114</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SIGNAL-GROUP-REF DEST="SYSTEM-SIGNAL-GROUP">/Signal/SG_Sig_Grp_0x114</SIGNAL-GROUP-REF>
-                                      <TYPE-MAPPING>
-                                        <SENDER-REC-RECORD-TYPE-MAPPING>
-                                          <RECORD-ELEMENT-MAPPINGS>
-                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_1</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_1</SYSTEM-SIGNAL-REF>
-                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_2</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_2</SYSTEM-SIGNAL-REF>
-                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_3</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_3</SYSTEM-SIGNAL-REF>
-                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_4</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_4</SYSTEM-SIGNAL-REF>
-                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_5</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_5</SYSTEM-SIGNAL-REF>
-                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_6</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_6</SYSTEM-SIGNAL-REF>
-                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                                          </RECORD-ELEMENT-MAPPINGS>
-                                        </SENDER-REC-RECORD-TYPE-MAPPING>
-                                      </TYPE-MAPPING>
-                                    </SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
                                         <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x400</CONTEXT-PORT-REF>
                                         <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x400/SG_Sig_Grp_0x400</TARGET-DATA-PROTOTYPE-REF>
                                       </DATA-ELEMENT-IREF>
@@ -574,6 +536,48 @@
                                             <SENDER-REC-RECORD-ELEMENT-MAPPING>
                                               <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x403/Sig_0x403_Used_5</IMPLEMENTATION-RECORD-ELEMENT-REF>
                                               <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x403_Used_5</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                          </RECORD-ELEMENT-MAPPINGS>
+                                        </SENDER-REC-RECORD-TYPE-MAPPING>
+                                      </TYPE-MAPPING>
+                                    </SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Sig_0x114_Used_6</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Sig_0x114_Used_6/Sig_0x114_Used_6</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_6</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x114</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114_1/SG_Sig_Grp_0x114</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SIGNAL-GROUP-REF DEST="SYSTEM-SIGNAL-GROUP">/Signal/SG_Sig_Grp_0x114</SIGNAL-GROUP-REF>
+                                      <TYPE-MAPPING>
+                                        <SENDER-REC-RECORD-TYPE-MAPPING>
+                                          <RECORD-ELEMENT-MAPPINGS>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_1</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_1</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_2</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_2</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_3</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_3</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_4</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_4</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_5</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_5</SYSTEM-SIGNAL-REF>
                                             </SENDER-REC-RECORD-ELEMENT-MAPPING>
                                           </RECORD-ELEMENT-MAPPINGS>
                                         </SENDER-REC-RECORD-TYPE-MAPPING>
@@ -777,7 +781,7 @@
                                   </ANNOTATIONS>
                                   <PROVIDED-COM-SPECS>
                                     <NONQUEUED-SENDER-COM-SPEC>
-                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</DATA-ELEMENT-REF>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114_1/SG_Sig_Grp_0x114</DATA-ELEMENT-REF>
                                       <INIT-VALUE>
                                         <RECORD-VALUE-SPECIFICATION>
                                           <FIELDS>
@@ -801,16 +805,12 @@
                                               <SHORT-LABEL>Sig_0x114_Used_5</SHORT-LABEL>
                                               <VALUE>0</VALUE>
                                             </NUMERICAL-VALUE-SPECIFICATION>
-                                            <NUMERICAL-VALUE-SPECIFICATION>
-                                              <SHORT-LABEL>Sig_0x114_Used_6</SHORT-LABEL>
-                                              <VALUE>0</VALUE>
-                                            </NUMERICAL-VALUE-SPECIFICATION>
                                           </FIELDS>
                                         </RECORD-VALUE-SPECIFICATION>
                                       </INIT-VALUE>
                                     </NONQUEUED-SENDER-COM-SPEC>
                                   </PROVIDED-COM-SPECS>
-                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x114</PROVIDED-INTERFACE-TREF>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x114_1</PROVIDED-INTERFACE-TREF>
                                 </P-PORT-PROTOTYPE>
                                 <R-PORT-PROTOTYPE UUID="c7aecb92-4a9d-4a8f-814d-03d5a3753e3a">
                                   <SHORT-NAME>SG_Sig_Grp_0x400</SHORT-NAME>
@@ -1023,6 +1023,32 @@
                                   </REQUIRED-COM-SPECS>
                                   <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x403</REQUIRED-INTERFACE-TREF>
                                 </R-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="43d98314-4c70-412d-8c9b-c2c992ae33dc">
+                                  <SHORT-NAME>Sig_0x114_Used_6</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Sig_0x114_Used_6/Sig_0x114_Used_6</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/Sig_0x114_Used_6</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
                               </PORTS>
                               <COMPONENTS>
                                 <SW-COMPONENT-PROTOTYPE UUID="70c0fc1c-35b8-44ce-9efe-99236bd23f1a">
@@ -1966,6 +1992,49 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114_SR_R</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="892566e1-6e34-403d-85ca-5f287fcf8f4a">
+                                  <SHORT-NAME>AppCtrl_Sig_0x114_Used_SR_S_AppComTx_Sig_0x114_Used_SR_R</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/AppCtrl</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/Sig_0x114_Used_SR_S</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/AppComTx</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/Sig_0x114_Used_SR_R</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="1e038441-8ef8-4a92-a372-7f9349bb9fbe">
+                                  <SHORT-NAME>AppComTx_Sig_0x114_Used_6_Sig_0x114_Used_6</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/AppComTx</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppComTx/Sig_0x114_Used_6</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Sig_0x114_Used_6</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="11644e08-6081-41b9-bc02-234f7dba3fd4">
@@ -2100,6 +2169,7 @@
                                     <SD GID="3f35c4b6-cb5f-4bdf-a1aa-031c1707c8a0">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x401</SD>
                                     <SD GID="292533fb-898d-4b04-ae05-a57d8c3a0f0f">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x402</SD>
                                     <SD GID="43d279af-7d14-4bc5-902f-b0a21ffd3763">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x403</SD>
+                                    <SD GID="43d98314-4c70-412d-8c9b-c2c992ae33dc">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Sig_0x114_Used_6</SD>
                                     <SD GID="d15d044e-fb29-49e2-aae8-5a7bd99e46fe">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/FLATMAP</SD>
                                     <SD GID="99bdba4e-3e6b-457d-9e05-0cf1d808aa34">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM</SD>
                                     <SD GID="472cd6b0-dae9-44fa-959a-391611411746">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</SD>
@@ -2137,8 +2207,10 @@
                                     <SD GID="A31A0194-E983-4C6E-927A-507EC41975DE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x112_SR_R</SD>
                                     <SD GID="7CFE4230-0F8B-41A6-8E5C-42DD7D49CBE7">/ComponentTypes/AppComTx/SG_Sig_Grp_0x113</SD>
                                     <SD GID="F1E1A798-28DF-4CB3-B349-ABBACA9A379A">/ComponentTypes/AppComTx/SG_Sig_Grp_0x113_SR_R</SD>
-                                    <SD GID="EAEDD730-1408-48CA-89EC-38194EA2936A">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114</SD>
-                                    <SD GID="B329BFE1-D999-42C8-A652-608F1283DF12">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114_SR_R</SD>
+                                    <SD GID="3C494FBD-EE57-4E12-9C02-D279E22BEFEC">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114</SD>
+                                    <SD GID="02A6AB29-6DCD-415A-B73E-05A625CE640B">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114_SR_R</SD>
+                                    <SD GID="26647254-4696-4B24-804B-0A3A5B73B73B">/ComponentTypes/AppComTx/Sig_0x114_Used_6</SD>
+                                    <SD GID="AF30BD36-8912-4971-8319-C6B617998E3B">/ComponentTypes/AppComTx/Sig_0x114_Used_SR_R</SD>
                                     <SD GID="6C50F277-040F-4DCA-869C-ADEB18EF70F4">/ComponentTypes/AppComTx_Implementation</SD>
                                     <SD GID="12BFB369-9786-4E2C-87C1-F306A1230F97">/ComponentTypes/AppCtrl</SD>
                                     <SD GID="22F7223D-784B-4BFA-AB59-608AE1F038CE">/ComponentTypes/AppCtrl/AppCtrl_InternalBehavior/AppCtrl_InitEvent</SD>
@@ -2146,11 +2218,12 @@
                                     <SD GID="0930E81A-0F6E-43AE-8FFC-AFF835A9F4FB">/ComponentTypes/AppCtrl/IoHwAbCS_KL15</SD>
                                     <SD GID="1B2DB371-46FB-466C-A38F-7EF1A44C2D30">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x112_SR_S</SD>
                                     <SD GID="6476EC3A-33EE-4149-A0EE-7B05FD5A8D9E">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x113_SR_S</SD>
-                                    <SD GID="5D318964-CEE3-484D-94B5-1AFF75D06A9E">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x114_SR_S</SD>
+                                    <SD GID="19E2A56F-B0A1-44E4-812C-0A9EFB13EAF1">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x114_SR_S</SD>
                                     <SD GID="D409A95D-7431-4B69-9A26-6F707747C3D5">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x400_SR_R</SD>
                                     <SD GID="F2FBC1DB-7381-48E9-B67B-E467887F4DB0">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x401_SR_R</SD>
                                     <SD GID="4C9D8750-5BFC-4972-9857-BE0B8BD2AFC2">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x402_SR_R</SD>
                                     <SD GID="EBE17548-08BC-4DC2-A1C4-DB2EA4155D7A">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x403_SR_R</SD>
+                                    <SD GID="1775A982-D578-419E-8C05-87EB5D78B70C">/ComponentTypes/AppCtrl/Sig_0x114_Used_SR_S</SD>
                                     <SD GID="EB2D86F5-FE56-434B-9C00-68956E9FEF1F">/ComponentTypes/AppCtrl1</SD>
                                     <SD GID="9CDC3824-6108-4EA7-8B3B-9FE293E68733">/ComponentTypes/AppCtrl1/AppCtrl1_InternalBehavior/TMT_AppCtrl1_MainFuntion</SD>
                                     <SD GID="9C642B15-5037-45AA-BB25-CB211350D523">/ComponentTypes/AppCtrl1_Implementation</SD>
@@ -2199,7 +2272,6 @@
                                     <SD GID="52043426-76F4-4237-9107-6AA4801EBC85">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_3</SD>
                                     <SD GID="8C84E2DB-9DA9-419A-8CB8-0934448C807F">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_4</SD>
                                     <SD GID="9C26AE7D-129D-45F3-AA92-853F10758831">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_5</SD>
-                                    <SD GID="1F046AF1-B615-4142-9AD0-6E2C30969BA5">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_6</SD>
                                     <SD GID="8324A9D1-41F1-4048-828B-2B2828155192">/DataTypes/SG_Sig_Grp_0x400/CrcSig_Pack_0</SD>
                                     <SD GID="2C658A53-9C04-4385-9D01-E7DEC3B886CC">/DataTypes/SG_Sig_Grp_0x400/CrcSig_Pack_1</SD>
                                     <SD GID="E7882A3C-B5E9-43F8-96EB-E4ABF94BAC2D">/DataTypes/SG_Sig_Grp_0x400/CrcSig_Pack_2</SD>
@@ -2238,11 +2310,12 @@
                                     <SD GID="0663F8EE-A60F-4267-B60B-038088F88B87">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x111</SD>
                                     <SD GID="BC8CE5E5-76D1-4DE9-9138-3EF03556AE0B">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x112</SD>
                                     <SD GID="3512D42F-32FE-4B2F-A4D1-06792042576D">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x113</SD>
-                                    <SD GID="0CC754B7-454F-4BB9-9292-8C906A04EA3D">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x114</SD>
+                                    <SD GID="6AAD88F7-E756-4462-A80C-7963FC6E3A01">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x114</SD>
                                     <SD GID="FA75F081-2D52-4576-8734-0BAE6FBC856C">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x400</SD>
                                     <SD GID="4DCBC404-83A9-476C-8650-F5447FDBCE73">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x401</SD>
                                     <SD GID="DAD54824-5318-4A2E-8AD2-E9E2520DCBAE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x402</SD>
                                     <SD GID="2F7D9798-2957-4C0C-91E4-BD0794961C00">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x403</SD>
+                                    <SD GID="F558084C-56EF-4CBF-A498-D5D7798080C5">/ECUCompositionTypes/ECU_Composition/Sig_0x114_Used_6</SD>
                                     <SD GID="8d9a7840-f2f2-4031-b4f7-ab2eddfb5a13">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior</SD>
                                     <SD GID="0f192f4d-bf0a-4ae2-a8ca-8e3c8ccc48b2">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BSWM_EXCLUSIVE_AREA_0</SD>
                                     <SD GID="aaf281c6-aba8-428d-863c-45f1a794728c">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction</SD>
@@ -2758,6 +2831,8 @@
                                     <SD GID="6562F9FD-873A-48E4-B865-C1C12329E524">/PortInterfaces/SG_Sig_Grp_0x113/SG_Sig_Grp_0x113</SD>
                                     <SD GID="4DF89864-AB3C-4A0B-8B2C-81167E8D7D25">/PortInterfaces/SG_Sig_Grp_0x114</SD>
                                     <SD GID="733C2177-F1DC-480F-95C9-BC333992FC7F">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</SD>
+                                    <SD GID="8CA0F17A-548D-400C-81A7-5ED0153B75C7">/PortInterfaces/SG_Sig_Grp_0x114_1</SD>
+                                    <SD GID="E90C0EFA-B8A6-479F-89FC-7B1A9BA0F655">/PortInterfaces/SG_Sig_Grp_0x114_1/SG_Sig_Grp_0x114</SD>
                                     <SD GID="EC61E0D7-83D3-4FBE-9B67-03BA8D03D7B3">/PortInterfaces/SG_Sig_Grp_0x400</SD>
                                     <SD GID="27BB2B0F-F536-47E6-B6C8-6C4C6B6BD297">/PortInterfaces/SG_Sig_Grp_0x400/SG_Sig_Grp_0x400</SD>
                                     <SD GID="D000E949-664A-4E24-BF74-DEC9B668CDFD">/PortInterfaces/SG_Sig_Grp_0x401</SD>
@@ -2766,6 +2841,8 @@
                                     <SD GID="B72FE3BC-6837-4B56-A9BC-B7BBED07D83B">/PortInterfaces/SG_Sig_Grp_0x402/SG_Sig_Grp_0x402</SD>
                                     <SD GID="8E3DBCA1-0B39-475A-ADF5-346890805A49">/PortInterfaces/SG_Sig_Grp_0x403</SD>
                                     <SD GID="F738F44A-59D0-4943-B2F3-CCC3E10979C7">/PortInterfaces/SG_Sig_Grp_0x403/SG_Sig_Grp_0x403</SD>
+                                    <SD GID="8B0445BD-4459-4A99-BED7-A2A6D171B338">/PortInterfaces/Sig_0x114_Used_6</SD>
+                                    <SD GID="821B4F9E-1DCB-442B-A223-91BA8AD37EC4">/PortInterfaces/Sig_0x114_Used_6/Sig_0x114_Used_6</SD>
                                     <SD GID="{AF35D1D4-4362-4055-B014-780FA6F9E75B}">/Predefined_DEV/CompuMethods/Dem_UdsStatusByteType</SD>
                                     <SD GID="F2570AA0-D6E5-4217-80F7-5F60B8778133">/Predefined_DEV/CompuMethods/NvM_RequestResultType</SD>
                                     <SD GID="007B24D3-5C46-4986-B3CA-31D71FEDD510">/Predefined_DEV/CompuMethods/NvM_ServiceIdType</SD>
