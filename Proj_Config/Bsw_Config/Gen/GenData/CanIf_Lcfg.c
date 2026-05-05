@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Lcfg.c
- *   Generation Time: 2024-01-29 21:13:43
+ *   Generation Time: 2026-05-05 14:33:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -192,7 +192,7 @@ CONST(CanIf_CtrlModeIndicationFctType, CANIF_CONST) CanIf_CtrlModeIndicationFctP
 /*lint -restore */
 CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    CtrlStatesIdx                                                                           PduIdFirst                           PduIdLast                           TxBufferCfgIdx                                                                              TxBufferHandlingType                     MailBoxType                    Referable Keys */
-  { /*     0 */            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,         0u  /* Unused, TxPduId 0 */,        0u  /* Unused, TxPduId 7 */,                                     0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */, CANIF_TXBUFFER_HANDLINGTYPE_PRIOBYCANID, CANIF_TxBasicCANMailbox },  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx] */
+  { /*     0 */            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,         0u  /* Unused, TxPduId 0 */,        0u  /* Unused, TxPduId 6 */,                                     0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */, CANIF_TXBUFFER_HANDLINGTYPE_PRIOBYCANID, CANIF_TxBasicCANMailbox },  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx] */
   { /*     1 */            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,         1u  /* RxPduId */          ,        6u  /* RxPduId  */         , CANIF_NO_TXBUFFERCFGIDXOFMAILBOXCONFIG  /* unusedIndex1 */                                , CANIF_TXBUFFER_HANDLINGTYPE_NONE       , CANIF_RxBasicCANMailbox }   /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx] */
 };
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
@@ -336,7 +336,7 @@ CONST(CanIf_TrcvToCtrlMapType, CANIF_CONST) CanIf_TrcvToCtrlMap[1] = {  /* PRQA 
 /*lint -restore */
 CONST(CanIf_TxBufferPrioByCanIdByteQueueConfigType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxBufferPrioByCanIdBaseIdx                                                      TxBufferPrioByCanIdByteQueueMappedTxPdusEndIdx                                                      TxBufferPrioByCanIdByteQueueMappedTxPdusLength                                                      TxBufferPrioByCanIdByteQueueMappedTxPdusStartIdx                                                            Referable Keys */
-  { /*     0 */                         0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */,                                             8u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */,                                             8u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */,                                               0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */ }   /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
+  { /*     0 */                         0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */,                                             7u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */,                                             7u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */,                                               0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034 */ }   /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
 };
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -357,16 +357,15 @@ CONST(CanIf_TxBufferPrioByCanIdByteQueueConfigType, CANIF_CONST) CanIf_TxBufferP
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdusType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdusType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxPduConfigIdx                                                                                        Referable Keys */
   { /*     0 */             0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx */    },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
   { /*     1 */             1u  /* /ActiveEcuC/CanIf/CanIfInitCfg/Meg_NmTx_oDBCNetWork_c0e25960_Tx */          },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
-  { /*     2 */             2u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_2_oDBCNetWork_c7f1c344_Tx */   },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
-  { /*     3 */             3u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx */   },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
-  { /*     4 */             4u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx */        },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
-  { /*     5 */             5u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx */    },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
-  { /*     6 */             6u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx */ },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
-  { /*     7 */             7u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx */    }   /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
+  { /*     2 */             2u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx */   },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
+  { /*     3 */             3u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx */        },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
+  { /*     4 */             4u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx */    },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
+  { /*     5 */             5u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx */ },  /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
+  { /*     6 */             6u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx */    }   /* [/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_50204034] */
 };
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -416,16 +415,15 @@ CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctList[4] =
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    CanId    UpperLayerTxPduId                                               IsTxPduTruncation  CtrlStatesIdx                                                                           MailBoxConfigIdx                                                                TxConfirmationFctListIdx                                  TxPduLength        Comment                                                      Referable Keys */
   { /*     0 */ 0x0751u, CanTpConf_CanTpTxNPdu_CanTpTxNPdu_eb22513d                    , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       2u  /* CanTp_TxConfirmation */    ,          8u },  /* [PDU: Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx] */
   { /*     1 */ 0x0601u, CanNmConf_CanNmTxPdu_Meg_NmTx_oDBCNetWork_5d9e34f5_Tx         , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       1u  /* CanNm_TxConfirmation */    ,          8u },  /* [PDU: Meg_NmTx_oDBCNetWork_c0e25960_Tx]          */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/Meg_NmTx_oDBCNetWork_c0e25960_Tx] */
-  { /*     2 */ 0x0115u, PduRConf_PduRDestPdu_SupA_Function_2_oDBCNetWork_4ba02fa7_Tx  , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_Function_2_oDBCNetWork_c7f1c344_Tx]   */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_2_oDBCNetWork_c7f1c344_Tx] */
-  { /*     3 */ 0x0114u, PduRConf_PduRDestPdu_SupA_Function_1_oDBCNetWork_10b79eb2_Tx  , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_Function_1_oDBCNetWork_7707e452_Tx]   */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx] */
-  { /*     4 */ 0x0113u, PduRConf_PduRDestPdu_SupA_Angle_oDBCNetWork_418b1596_Tx       , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_Angle_oDBCNetWork_8a58a84d_Tx]        */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx] */
-  { /*     5 */ 0x0112u, PduRConf_PduRDestPdu_SupA_PowerMode_oDBCNetWork_910ccf57_Tx   , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_PowerMode_oDBCNetWork_d8135f5e_Tx]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx] */
-  { /*     6 */ 0x0111u, PduRConf_PduRDestPdu_SupA_Button_State_oDBCNetWork_eea6565b_Tx, TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_Button_State_oDBCNetWork_cea719eb_Tx] */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx] */
-  { /*     7 */ 0x0110u, PduRConf_PduRDestPdu_SupA_Led_State_oDBCNetWork_e7f688d3_Tx   , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u }   /* [PDU: SupA_Led_State_oDBCNetWork_f5d8795b_Tx]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx] */
+  { /*     2 */ 0x0114u, PduRConf_PduRDestPdu_SupA_Function_1_oDBCNetWork_10b79eb2_Tx  , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_Function_1_oDBCNetWork_7707e452_Tx]   */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx] */
+  { /*     3 */ 0x0113u, PduRConf_PduRDestPdu_SupA_Angle_oDBCNetWork_418b1596_Tx       , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_Angle_oDBCNetWork_8a58a84d_Tx]        */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx] */
+  { /*     4 */ 0x0112u, PduRConf_PduRDestPdu_SupA_PowerMode_oDBCNetWork_910ccf57_Tx   , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_PowerMode_oDBCNetWork_d8135f5e_Tx]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx] */
+  { /*     5 */ 0x0111u, PduRConf_PduRDestPdu_SupA_Button_State_oDBCNetWork_eea6565b_Tx, TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u },  /* [PDU: SupA_Button_State_oDBCNetWork_cea719eb_Tx] */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx] */
+  { /*     6 */ 0x0110u, PduRConf_PduRDestPdu_SupA_Led_State_oDBCNetWork_e7f688d3_Tx   , TRUE             ,            0u  /* /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94 */,               0u  /* /ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx */,                       3u  /* PduR_CanIfTxConfirmation */,          8u }   /* [PDU: SupA_Led_State_oDBCNetWork_f5d8795b_Tx]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx] */
 };
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -446,16 +444,15 @@ CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[8] = {  /* PRQA S 15
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanIf_TxPduQueueIndexType, CANIF_CONST) CanIf_TxPduQueueIndex[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanIf_TxPduQueueIndexType, CANIF_CONST) CanIf_TxPduQueueIndex[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxQueueIdx                                                                                        Comment                                                                                Referable Keys */
   { /*     0 */         0u  /* /ActiveEcuC/CanIf/CanIfInitCfg/Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx */    },  /* [Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx, BasicCAN TxPdu with Tx-buffer]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
   { /*     1 */         1u  /* /ActiveEcuC/CanIf/CanIfInitCfg/Meg_NmTx_oDBCNetWork_c0e25960_Tx */          },  /* [Meg_NmTx_oDBCNetWork_c0e25960_Tx, BasicCAN TxPdu with Tx-buffer]          */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/Meg_NmTx_oDBCNetWork_c0e25960_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
-  { /*     2 */         2u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_2_oDBCNetWork_c7f1c344_Tx */   },  /* [SupA_Function_2_oDBCNetWork_c7f1c344_Tx, BasicCAN TxPdu with Tx-buffer]   */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_2_oDBCNetWork_c7f1c344_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
-  { /*     3 */         3u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx */   },  /* [SupA_Function_1_oDBCNetWork_7707e452_Tx, BasicCAN TxPdu with Tx-buffer]   */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
-  { /*     4 */         4u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx */        },  /* [SupA_Angle_oDBCNetWork_8a58a84d_Tx, BasicCAN TxPdu with Tx-buffer]        */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
-  { /*     5 */         5u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx */    },  /* [SupA_PowerMode_oDBCNetWork_d8135f5e_Tx, BasicCAN TxPdu with Tx-buffer]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
-  { /*     6 */         6u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx */ },  /* [SupA_Button_State_oDBCNetWork_cea719eb_Tx, BasicCAN TxPdu with Tx-buffer] */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
-  { /*     7 */         7u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx */    }   /* [SupA_Led_State_oDBCNetWork_f5d8795b_Tx, BasicCAN TxPdu with Tx-buffer]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
+  { /*     2 */         2u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx */   },  /* [SupA_Function_1_oDBCNetWork_7707e452_Tx, BasicCAN TxPdu with Tx-buffer]   */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
+  { /*     3 */         3u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx */        },  /* [SupA_Angle_oDBCNetWork_8a58a84d_Tx, BasicCAN TxPdu with Tx-buffer]        */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
+  { /*     4 */         4u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx */    },  /* [SupA_PowerMode_oDBCNetWork_d8135f5e_Tx, BasicCAN TxPdu with Tx-buffer]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
+  { /*     5 */         5u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx */ },  /* [SupA_Button_State_oDBCNetWork_cea719eb_Tx, BasicCAN TxPdu with Tx-buffer] */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
+  { /*     6 */         6u  /* /ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx */    }   /* [SupA_Led_State_oDBCNetWork_f5d8795b_Tx, BasicCAN TxPdu with Tx-buffer]    */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx, /ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_DBCNetWork_78f82e94] */
 };
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -560,12 +557,11 @@ VAR(CanIf_TxQueueUType, CANIF_VAR_NOINIT) CanIf_TxQueue;  /* PRQA S 0759, 1514, 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx] */
   /*     1 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/Meg_NmTx_oDBCNetWork_c0e25960_Tx] */
-  /*     2 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_2_oDBCNetWork_c7f1c344_Tx] */
-  /*     3 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx] */
-  /*     4 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx] */
-  /*     5 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx] */
-  /*     6 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx] */
-  /*     7 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx] */
+  /*     2 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Function_1_oDBCNetWork_7707e452_Tx] */
+  /*     3 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Angle_oDBCNetWork_8a58a84d_Tx] */
+  /*     4 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_PowerMode_oDBCNetWork_d8135f5e_Tx] */
+  /*     5 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Button_State_oDBCNetWork_cea719eb_Tx] */
+  /*     6 */  /* [/ActiveEcuC/CanIf/CanIfInitCfg/SupA_Led_State_oDBCNetWork_f5d8795b_Tx] */
 
 #define CANIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

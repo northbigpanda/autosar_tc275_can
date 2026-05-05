@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2024-01-27 15:33:54
+ *   Generation Time: 2026-05-05 14:33:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -62,6 +62,7 @@
  * ECUM_WKSOURCE_INTERNAL_WDG           (EcuM_WakeupSourceType)(8uL) 
  * ECUM_WKSOURCE_EXTERNAL_WDG           (EcuM_WakeupSourceType)(16uL) 
  * ECUM_WKSOURCE_CN_DBCNetWork_9ed72b09 (EcuM_WakeupSourceType)(32uL) 
+ * ECUM_WKSOURCE_KL15                   (EcuM_WakeupSourceType)(64uL) 
  */
 
 /**********************************************************************************************************************
@@ -536,14 +537,7 @@ FUNC(void, ECUM_CODE) EcuM_CheckWakeup(EcuM_WakeupSourceType wakeupSource) /* CO
   /* Do not remove the following function call. It is necessary for the CheckWakeup timeout mechanism */
   EcuM_StartCheckWakeup(wakeupSource);
 #endif
-  if((wakeupSource & ECUM_WKSOURCE_CN_DBCNetWork_9ed72b09) == ECUM_WKSOURCE_CN_DBCNetWork_9ed72b09)
-  {
-	  EcuM_SetWakeupEvent(wakeupSource);
-  }
-  else
-  {
-	  
-  }
+
 #if (ECUM_ALARM_CLOCK_PRESENT == STD_ON)
   if((ECUM_ALARM_WKSOURCE & wakeupSource) != 0u)
   {

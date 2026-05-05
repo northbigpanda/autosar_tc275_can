@@ -103,7 +103,6 @@
                 <CLIENT-COM-SPEC>
                   <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_KL15/IoHwAbOp_KL15_Read</OPERATION-REF>
                 </CLIENT-COM-SPEC>
-                <CLIENT-COM-SPEC />
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_KL15</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
@@ -120,7 +119,6 @@
                 <CLIENT-COM-SPEC>
                   <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button1/IoHwAbOp_Button1_Read</OPERATION-REF>
                 </CLIENT-COM-SPEC>
-                <CLIENT-COM-SPEC />
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button1</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
@@ -137,7 +135,6 @@
                 <CLIENT-COM-SPEC>
                   <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button2/IoHwAbOp_Button2_Read</OPERATION-REF>
                 </CLIENT-COM-SPEC>
-                <CLIENT-COM-SPEC />
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button2</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
@@ -154,7 +151,6 @@
                 <CLIENT-COM-SPEC>
                   <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button3/IoHwAbOp_Button3_Read</OPERATION-REF>
                 </CLIENT-COM-SPEC>
-                <CLIENT-COM-SPEC />
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button3</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
@@ -171,7 +167,6 @@
                 <CLIENT-COM-SPEC>
                   <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button4/IoHwAbOp_Button4_Read</OPERATION-REF>
                 </CLIENT-COM-SPEC>
-                <CLIENT-COM-SPEC />
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_Button4</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
@@ -262,32 +257,6 @@
                       </SDG>
                     </SDGS>
                   </ADMIN-DATA>
-                  <SERVER-CALL-POINTS>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="C661AA64-1263-4D63-A059-F2B8636C1F41">
-                      <SHORT-NAME>SC_IoHwAbCS_Button1_IoHwAbOp_Button1_Write</SHORT-NAME>
-                      <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppButtonCtrl/IoHwAbCS_Button1</CONTEXT-R-PORT-REF>
-                      </OPERATION-IREF>
-                    </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="F8CFB9C0-10F3-4B09-A489-81ABFEF81D4B">
-                      <SHORT-NAME>SC_IoHwAbCS_Button2_IoHwAbOp_Button2_Write</SHORT-NAME>
-                      <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppButtonCtrl/IoHwAbCS_Button2</CONTEXT-R-PORT-REF>
-                      </OPERATION-IREF>
-                    </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8DA4C852-B698-45F8-93BA-72B39D35E181">
-                      <SHORT-NAME>SC_IoHwAbCS_Button3_IoHwAbOp_Button3_Write</SHORT-NAME>
-                      <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppButtonCtrl/IoHwAbCS_Button3</CONTEXT-R-PORT-REF>
-                      </OPERATION-IREF>
-                    </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="58A294EA-CF40-4FE4-9374-CE88F1991479">
-                      <SHORT-NAME>SC_IoHwAbCS_Button4_IoHwAbOp_Button4_Write</SHORT-NAME>
-                      <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppButtonCtrl/IoHwAbCS_Button4</CONTEXT-R-PORT-REF>
-                      </OPERATION-IREF>
-                    </SYNCHRONOUS-SERVER-CALL-POINT>
-                  </SERVER-CALL-POINTS>
                 </RUNNABLE-ENTITY>
               </RUNNABLES>
               <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>

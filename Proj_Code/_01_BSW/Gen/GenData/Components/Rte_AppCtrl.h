@@ -56,10 +56,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppCtrl_SG_Sig_Grp_0x400_SR_R_SG_Sig_Grp
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppCtrl_SG_Sig_Grp_0x401_SR_R_SG_Sig_Grp_0x401(P2VAR(SG_Sig_Grp_0x401, AUTOMATIC, RTE_APPCTRL_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppCtrl_SG_Sig_Grp_0x402_SR_R_SG_Sig_Grp_0x402(P2VAR(SG_Sig_Grp_0x402, AUTOMATIC, RTE_APPCTRL_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppCtrl_SG_Sig_Grp_0x403_SR_R_SG_Sig_Grp_0x403(P2VAR(SG_Sig_Grp_0x403, AUTOMATIC, RTE_APPCTRL_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112(P2CONST(SG_Sig_Grp_0x112, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113(P2CONST(SG_Sig_Grp_0x113, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114(P2CONST(SG_Sig_Grp_0x114, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115(P2CONST(SG_Sig_Grp_0x115, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112(P2CONST(SG_Sig_Grp_0x112, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113(P2CONST(SG_Sig_Grp_0x113, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114(P2CONST(SG_Sig_Grp_0x114, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define RTE_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -79,10 +78,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Gr
 /**********************************************************************************************************************
  * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
-#  define Rte_Write_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112 Rte_Write_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112
-#  define Rte_Write_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113 Rte_Write_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113
-#  define Rte_Write_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114 Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114
-#  define Rte_Write_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115 Rte_Write_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115
+#  define Rte_Write_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112 Rte_Write_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112
+#  define Rte_Write_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113 Rte_Write_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113
+#  define Rte_Write_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114
 
 
 /**********************************************************************************************************************

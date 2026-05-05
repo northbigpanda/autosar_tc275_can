@@ -57,13 +57,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x111_SR_R_SG_Sig_Gr
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112(P2VAR(SG_Sig_Grp_0x112, AUTOMATIC, RTE_APPCOMTX_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113(P2VAR(SG_Sig_Grp_0x113, AUTOMATIC, RTE_APPCOMTX_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114(P2VAR(SG_Sig_Grp_0x114, AUTOMATIC, RTE_APPCOMTX_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115(P2VAR(SG_Sig_Grp_0x115, AUTOMATIC, RTE_APPCOMTX_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x110_SG_Sig_Grp_0x110(P2CONST(SG_Sig_Grp_0x110, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x111_SG_Sig_Grp_0x111(P2CONST(SG_Sig_Grp_0x111, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112(P2CONST(SG_Sig_Grp_0x112, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113(P2CONST(SG_Sig_Grp_0x113, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114(P2CONST(SG_Sig_Grp_0x114, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x115_SG_Sig_Grp_0x115(P2CONST(SG_Sig_Grp_0x115, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define RTE_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -79,7 +77,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x115_SG_Sig_Grp_0x
 #  define Rte_Read_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112 Rte_Read_AppComTx_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112
 #  define Rte_Read_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113 Rte_Read_AppComTx_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113
 #  define Rte_Read_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114 Rte_Read_AppComTx_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114
-#  define Rte_Read_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115 Rte_Read_AppComTx_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115
 
 
 /**********************************************************************************************************************
@@ -90,7 +87,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x115_SG_Sig_Grp_0x
 #  define Rte_Write_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112 Rte_Write_AppComTx_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112
 #  define Rte_Write_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113 Rte_Write_AppComTx_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113
 #  define Rte_Write_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114 Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114
-#  define Rte_Write_SG_Sig_Grp_0x115_SG_Sig_Grp_0x115 Rte_Write_AppComTx_SG_Sig_Grp_0x115_SG_Sig_Grp_0x115
 
 
 # endif /* !defined(RTE_CORE) */

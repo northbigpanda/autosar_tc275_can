@@ -145,90 +145,6 @@
               </PROVIDED-COM-SPECS>
               <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x112</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
-            <P-PORT-PROTOTYPE UUID="4691FCE2-D8E9-4C8C-A198-AF19D6FC8E94">
-              <SHORT-NAME>SG_Sig_Grp_0x115</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <PROVIDED-COM-SPECS>
-                <NONQUEUED-SENDER-COM-SPEC>
-                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x115/SG_Sig_Grp_0x115</DATA-ELEMENT-REF>
-                  <INIT-VALUE>
-                    <RECORD-VALUE-SPECIFICATION>
-                      <FIELDS>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_1</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_2</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_3</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_4</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_5</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                      </FIELDS>
-                    </RECORD-VALUE-SPECIFICATION>
-                  </INIT-VALUE>
-                </NONQUEUED-SENDER-COM-SPEC>
-              </PROVIDED-COM-SPECS>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x115</PROVIDED-INTERFACE-TREF>
-            </P-PORT-PROTOTYPE>
-            <P-PORT-PROTOTYPE UUID="7448FDB0-54E2-4B32-892F-FE30C6EACB68">
-              <SHORT-NAME>SG_Sig_Grp_0x114</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <PROVIDED-COM-SPECS>
-                <NONQUEUED-SENDER-COM-SPEC>
-                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</DATA-ELEMENT-REF>
-                  <INIT-VALUE>
-                    <RECORD-VALUE-SPECIFICATION>
-                      <FIELDS>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_1</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_2</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_3</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_4</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_5</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                      </FIELDS>
-                    </RECORD-VALUE-SPECIFICATION>
-                  </INIT-VALUE>
-                </NONQUEUED-SENDER-COM-SPEC>
-              </PROVIDED-COM-SPECS>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x114</PROVIDED-INTERFACE-TREF>
-            </P-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="71437627-24EE-4B03-92D1-8F729C844A73">
               <SHORT-NAME>SG_Sig_Grp_0x110_SR_R</SHORT-NAME>
               <ADMIN-DATA>
@@ -389,7 +305,53 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x113</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
-            <R-PORT-PROTOTYPE UUID="620824D9-04BC-40B0-890F-5DCBA9A09C81">
+            <P-PORT-PROTOTYPE UUID="EAEDD730-1408-48CA-89EC-38194EA2936A">
+              <SHORT-NAME>SG_Sig_Grp_0x114</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</DATA-ELEMENT-REF>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_1</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_2</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_3</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_4</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_5</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_6</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x114</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="B329BFE1-D999-42C8-A652-608F1283DF12">
               <SHORT-NAME>SG_Sig_Grp_0x114_SR_R</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
@@ -430,60 +392,16 @@
                           <SHORT-LABEL>Sig_0x114_Used_5</SHORT-LABEL>
                           <VALUE>0</VALUE>
                         </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_6</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
                       </FIELDS>
                     </RECORD-VALUE-SPECIFICATION>
                   </INIT-VALUE>
                 </NONQUEUED-RECEIVER-COM-SPEC>
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x114</REQUIRED-INTERFACE-TREF>
-            </R-PORT-PROTOTYPE>
-            <R-PORT-PROTOTYPE UUID="D54DAD67-00D6-44D9-9773-628152B41BB6">
-              <SHORT-NAME>SG_Sig_Grp_0x115_SR_R</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <REQUIRED-COM-SPECS>
-                <NONQUEUED-RECEIVER-COM-SPEC>
-                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x115/SG_Sig_Grp_0x115</DATA-ELEMENT-REF>
-                  <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
-                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
-                  <FILTER>
-                    <DATA-FILTER-TYPE>ALWAYS</DATA-FILTER-TYPE>
-                  </FILTER>
-                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
-                  <INIT-VALUE>
-                    <RECORD-VALUE-SPECIFICATION>
-                      <FIELDS>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_1</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_2</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_3</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_4</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_5</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                      </FIELDS>
-                    </RECORD-VALUE-SPECIFICATION>
-                  </INIT-VALUE>
-                </NONQUEUED-RECEIVER-COM-SPEC>
-              </REQUIRED-COM-SPECS>
-              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x115</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
@@ -550,21 +468,12 @@
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS UUID="6104E580-9582-450C-8E0A-11A0294A1546">
+                    <VARIABLE-ACCESS UUID="1FB09ABB-585C-425C-BE47-A9624B96C0E2">
                       <SHORT-NAME>REC_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
                           <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114_SR_R</PORT-PROTOTYPE-REF>
                           <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</TARGET-DATA-PROTOTYPE-REF>
-                        </AUTOSAR-VARIABLE-IREF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS UUID="0E63D4EA-191B-445B-B4F9-F2B58E305E62">
-                      <SHORT-NAME>REC_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <AUTOSAR-VARIABLE-IREF>
-                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x115_SR_R</PORT-PROTOTYPE-REF>
-                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x115/SG_Sig_Grp_0x115</TARGET-DATA-PROTOTYPE-REF>
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
@@ -606,21 +515,12 @@
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS UUID="EBFE7106-7CCD-461B-9114-3F8667C889D4">
+                    <VARIABLE-ACCESS UUID="AE767305-D5D2-4275-A7F2-8B1633805D52">
                       <SHORT-NAME>SEND_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
                           <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114</PORT-PROTOTYPE-REF>
                           <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</TARGET-DATA-PROTOTYPE-REF>
-                        </AUTOSAR-VARIABLE-IREF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS UUID="26121553-E1B7-40EB-AB5E-3A9BC84DCEE9">
-                      <SHORT-NAME>SEND_SG_Sig_Grp_0x115_SG_Sig_Grp_0x115</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <AUTOSAR-VARIABLE-IREF>
-                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x115</PORT-PROTOTYPE-REF>
-                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x115/SG_Sig_Grp_0x115</TARGET-DATA-PROTOTYPE-REF>
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>

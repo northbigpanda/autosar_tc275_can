@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2024-01-29 21:13:42
+ *   Generation Time: 2026-05-05 14:33:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -158,10 +158,9 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_9c32056b                       0u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_045a4163                       3u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_a13e3769                       6u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_b69f844e                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_a13e3769                       5u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_c6b821a9                       1u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_de6a18d2                       5u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_de6a18d2                       4u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_ed18513b                       2u
 /**\} */
 
@@ -176,9 +175,8 @@
 #define PduRConf_PduRDestPdu_SupA_Angle_oDBCNetWork_418b1596_Tx       0u
 #define PduRConf_PduRDestPdu_SupA_Button_State_oDBCNetWork_eea6565b_Tx 1u
 #define PduRConf_PduRDestPdu_SupA_Function_1_oDBCNetWork_10b79eb2_Tx  2u
-#define PduRConf_PduRDestPdu_SupA_Function_2_oDBCNetWork_4ba02fa7_Tx  3u
-#define PduRConf_PduRDestPdu_SupA_Led_State_oDBCNetWork_e7f688d3_Tx   4u
-#define PduRConf_PduRDestPdu_SupA_PowerMode_oDBCNetWork_910ccf57_Tx   5u
+#define PduRConf_PduRDestPdu_SupA_Led_State_oDBCNetWork_e7f688d3_Tx   3u
+#define PduRConf_PduRDestPdu_SupA_PowerMode_oDBCNetWork_910ccf57_Tx   4u
 /**\} */
 
 /**

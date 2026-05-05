@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2024-01-29 21:13:42
+ *   Generation Time: 2026-05-05 14:33:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -73,9 +73,8 @@
 #define ComConf_ComIPdu_SupA_Angle_oDBCNetWork_e5909e4f_Tx            0u
 #define ComConf_ComIPdu_SupA_Button_State_oDBCNetWork_390399bb_Tx     1u
 #define ComConf_ComIPdu_SupA_Function_1_oDBCNetWork_312706bd_Tx       2u
-#define ComConf_ComIPdu_SupA_Function_2_oDBCNetWork_8ced6a73_Tx       3u
-#define ComConf_ComIPdu_SupA_Led_State_oDBCNetWork_43576f7c_Tx        4u
-#define ComConf_ComIPdu_SupA_PowerMode_oDBCNetWork_b77edafa_Tx        5u
+#define ComConf_ComIPdu_SupA_Led_State_oDBCNetWork_43576f7c_Tx        3u
+#define ComConf_ComIPdu_SupA_PowerMode_oDBCNetWork_b77edafa_Tx        4u
 /**\} */
 
 /**********************************************************************************************************************

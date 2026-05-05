@@ -37,7 +37,6 @@
                 <CLIENT-COM-SPEC>
                   <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_KL15/IoHwAbOp_KL15_Read</OPERATION-REF>
                 </CLIENT-COM-SPEC>
-                <CLIENT-COM-SPEC />
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_KL15</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
@@ -77,12 +76,6 @@
                       <OPERATION-IREF>
                         <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppWakeUpCtrl/IoHwAbCS_KL15</CONTEXT-R-PORT-REF>
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSIf_KL15/IoHwAbOp_KL15_Read</TARGET-REQUIRED-OPERATION-REF>
-                      </OPERATION-IREF>
-                    </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="874FF9F8-4A99-4841-BA5B-11F9D4E18C6F">
-                      <SHORT-NAME>SC_IoHwAbCS_KL15_IoHwAbOp_KL15_Write</SHORT-NAME>
-                      <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppWakeUpCtrl/IoHwAbCS_KL15</CONTEXT-R-PORT-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
                   </SERVER-CALL-POINTS>

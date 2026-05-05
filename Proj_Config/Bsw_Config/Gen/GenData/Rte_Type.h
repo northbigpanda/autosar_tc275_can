@@ -96,35 +96,23 @@ typedef boolean Led4_State;
 # define Rte_TypeDef_PowerMode
 typedef uint8 PowerMode;
 
-# define Rte_TypeDef_Sig_0x114_Used_10
-typedef uint16 Sig_0x114_Used_10;
+# define Rte_TypeDef_Sig_0x114_Used_1
+typedef uint8 Sig_0x114_Used_1;
+
+# define Rte_TypeDef_Sig_0x114_Used_2
+typedef uint16 Sig_0x114_Used_2;
+
+# define Rte_TypeDef_Sig_0x114_Used_3
+typedef uint16 Sig_0x114_Used_3;
+
+# define Rte_TypeDef_Sig_0x114_Used_4
+typedef uint16 Sig_0x114_Used_4;
+
+# define Rte_TypeDef_Sig_0x114_Used_5
+typedef uint8 Sig_0x114_Used_5;
 
 # define Rte_TypeDef_Sig_0x114_Used_6
 typedef uint8 Sig_0x114_Used_6;
-
-# define Rte_TypeDef_Sig_0x114_Used_7
-typedef uint16 Sig_0x114_Used_7;
-
-# define Rte_TypeDef_Sig_0x114_Used_8
-typedef uint16 Sig_0x114_Used_8;
-
-# define Rte_TypeDef_Sig_0x114_Used_9
-typedef uint16 Sig_0x114_Used_9;
-
-# define Rte_TypeDef_Sig_0x115_Used_1
-typedef uint8 Sig_0x115_Used_1;
-
-# define Rte_TypeDef_Sig_0x115_Used_2
-typedef uint16 Sig_0x115_Used_2;
-
-# define Rte_TypeDef_Sig_0x115_Used_3
-typedef uint16 Sig_0x115_Used_3;
-
-# define Rte_TypeDef_Sig_0x115_Used_4
-typedef uint16 Sig_0x115_Used_4;
-
-# define Rte_TypeDef_Sig_0x115_Used_5
-typedef uint16 Sig_0x115_Used_5;
 
 # define Rte_TypeDef_Sig_0x402_Used_1
 typedef uint8 Sig_0x402_Used_1;
@@ -209,22 +197,13 @@ typedef struct
 # define Rte_TypeDef_SG_Sig_Grp_0x114
 typedef struct
 {
-  Sig_0x114_Used_6 Sig_0x114_Used_1;
-  Sig_0x114_Used_7 Sig_0x114_Used_2;
-  Sig_0x114_Used_8 Sig_0x114_Used_3;
-  Sig_0x114_Used_9 Sig_0x114_Used_4;
-  Sig_0x114_Used_10 Sig_0x114_Used_5;
+  Sig_0x114_Used_1 Sig_0x114_Used_1;
+  Sig_0x114_Used_2 Sig_0x114_Used_2;
+  Sig_0x114_Used_3 Sig_0x114_Used_3;
+  Sig_0x114_Used_4 Sig_0x114_Used_4;
+  Sig_0x114_Used_5 Sig_0x114_Used_5;
+  Sig_0x114_Used_6 Sig_0x114_Used_6;
 } SG_Sig_Grp_0x114;
-
-# define Rte_TypeDef_SG_Sig_Grp_0x115
-typedef struct
-{
-  Sig_0x115_Used_1 Sig_0x115_Used_1;
-  Sig_0x115_Used_2 Sig_0x115_Used_2;
-  Sig_0x115_Used_3 Sig_0x115_Used_3;
-  Sig_0x115_Used_4 Sig_0x115_Used_4;
-  Sig_0x115_Used_5 Sig_0x115_Used_5;
-} SG_Sig_Grp_0x115;
 
 # define Rte_TypeDef_SG_Sig_Grp_0x400
 typedef struct
@@ -425,20 +404,41 @@ typedef boolean Led3_Control;
 #  define Rte_TypeDef_Led4_Control
 typedef boolean Led4_Control;
 
-#  define Rte_TypeDef_Sig_0x114_Used_1
-typedef uint8 Sig_0x114_Used_1;
+#  define Rte_TypeDef_Sig_0x114_Used_11
+typedef uint8 Sig_0x114_Used_11;
 
-#  define Rte_TypeDef_Sig_0x114_Used_2
-typedef uint16 Sig_0x114_Used_2;
+#  define Rte_TypeDef_Sig_0x114_Used_12
+typedef uint16 Sig_0x114_Used_12;
 
-#  define Rte_TypeDef_Sig_0x114_Used_3
-typedef uint16 Sig_0x114_Used_3;
+#  define Rte_TypeDef_Sig_0x114_Used_13
+typedef uint16 Sig_0x114_Used_13;
 
-#  define Rte_TypeDef_Sig_0x114_Used_4
-typedef uint16 Sig_0x114_Used_4;
+#  define Rte_TypeDef_Sig_0x114_Used_14
+typedef uint16 Sig_0x114_Used_14;
 
-#  define Rte_TypeDef_Sig_0x114_Used_5
-typedef uint16 Sig_0x114_Used_5;
+#  define Rte_TypeDef_Sig_0x114_Used_15
+typedef uint8 Sig_0x114_Used_15;
+
+#  define Rte_TypeDef_Sig_0x114_Used_16
+typedef uint8 Sig_0x114_Used_16;
+
+#  define Rte_TypeDef_Sig_0x114_Used_17
+typedef uint8 Sig_0x114_Used_17;
+
+#  define Rte_TypeDef_Sig_0x114_Used_18
+typedef uint16 Sig_0x114_Used_18;
+
+#  define Rte_TypeDef_Sig_0x114_Used_19
+typedef uint16 Sig_0x114_Used_19;
+
+#  define Rte_TypeDef_Sig_0x114_Used_20
+typedef uint16 Sig_0x114_Used_20;
+
+#  define Rte_TypeDef_Sig_0x114_Used_21
+typedef uint8 Sig_0x114_Used_21;
+
+#  define Rte_TypeDef_Sig_0x114_Used_22
+typedef uint8 Sig_0x114_Used_22;
 
 #  define Rte_TypeDef_SupB_Checksum_0x400
 typedef uint8 SupB_Checksum_0x400;
@@ -489,8 +489,6 @@ extern CONST(SG_Sig_Grp_0x112, RTE_CONST) Rte_C_SG_Sig_Grp_0x112_0;
 extern CONST(SG_Sig_Grp_0x113, RTE_CONST) Rte_C_SG_Sig_Grp_0x113_0;
 
 extern CONST(SG_Sig_Grp_0x114, RTE_CONST) Rte_C_SG_Sig_Grp_0x114_0;
-
-extern CONST(SG_Sig_Grp_0x115, RTE_CONST) Rte_C_SG_Sig_Grp_0x115_0;
 
 extern CONST(SG_Sig_Grp_0x400, RTE_CONST) Rte_C_SG_Sig_Grp_0x400_0;
 
@@ -560,10 +558,9 @@ extern VAR(SG_Sig_Grp_0x400, RTE_VAR_INIT) Rte_AppComRx_SG_Sig_Grp_0x400_SR_S_SG
 extern VAR(SG_Sig_Grp_0x401, RTE_VAR_INIT) Rte_AppComRx_SG_Sig_Grp_0x401_SR_S_SG_Sig_Grp_0x401; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(SG_Sig_Grp_0x402, RTE_VAR_INIT) Rte_AppComRx_SG_Sig_Grp_0x402_SR_S_SG_Sig_Grp_0x402; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(SG_Sig_Grp_0x403, RTE_VAR_INIT) Rte_AppComRx_SG_Sig_Grp_0x403_SR_S_SG_Sig_Grp_0x403; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
-extern VAR(SG_Sig_Grp_0x112, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
-extern VAR(SG_Sig_Grp_0x113, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
-extern VAR(SG_Sig_Grp_0x114, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
-extern VAR(SG_Sig_Grp_0x115, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(SG_Sig_Grp_0x112, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(SG_Sig_Grp_0x113, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(SG_Sig_Grp_0x114, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(SG_Sig_Grp_0x110, RTE_VAR_INIT) Rte_AppLedCtrl_SG_Sig_Grp_0x110_SR_S_SG_Sig_Grp_0x110; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(ComM_ModeType, RTE_VAR_INIT) Rte_AppWakeUpCtrl_App_ComM_Mode_Request_Request_Mode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 

@@ -155,23 +155,18 @@ VAR(SG_Sig_Grp_0x403, RTE_VAR_INIT) Rte_AppComRx_SG_Sig_Grp_0x403_SR_S_SG_Sig_Gr
 };
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(SG_Sig_Grp_0x112, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112 = {
+VAR(SG_Sig_Grp_0x112, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112 = {
   0U, 0U, 0U
 };
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(SG_Sig_Grp_0x113, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113 = {
+VAR(SG_Sig_Grp_0x113, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113 = {
   20U
 };
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(SG_Sig_Grp_0x114, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114 = {
-  0U, 0U, 0U, 0U, 0U
-};
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(SG_Sig_Grp_0x115, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115 = {
-  0U, 0U, 0U, 0U, 0U
+VAR(SG_Sig_Grp_0x114, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 = {
+  0U, 0U, 0U, 0U, 0U, 0U
 };
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
@@ -347,10 +342,9 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
   Rte_AppComRx_SG_Sig_Grp_0x401_SR_S_SG_Sig_Grp_0x401 = Rte_C_SG_Sig_Grp_0x401_0;
   Rte_AppComRx_SG_Sig_Grp_0x402_SR_S_SG_Sig_Grp_0x402 = Rte_C_SG_Sig_Grp_0x402_0;
   Rte_AppComRx_SG_Sig_Grp_0x403_SR_S_SG_Sig_Grp_0x403 = Rte_C_SG_Sig_Grp_0x403_0;
-  Rte_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112 = Rte_C_SG_Sig_Grp_0x112_0;
-  Rte_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113 = Rte_C_SG_Sig_Grp_0x113_0;
-  Rte_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114 = Rte_C_SG_Sig_Grp_0x114_0;
-  Rte_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115 = Rte_C_SG_Sig_Grp_0x115_0;
+  Rte_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112 = Rte_C_SG_Sig_Grp_0x112_0;
+  Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113 = Rte_C_SG_Sig_Grp_0x113_0;
+  Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 = Rte_C_SG_Sig_Grp_0x114_0;
   Rte_AppLedCtrl_SG_Sig_Grp_0x110_SR_S_SG_Sig_Grp_0x110 = Rte_C_SG_Sig_Grp_0x110_0;
   Rte_AppWakeUpCtrl_App_ComM_Mode_Request_Request_Mode = 0U;
 
@@ -471,57 +465,35 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x
   ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx, &(*(data)).Sig_0x114_Used_3); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
   ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx, &(*(data)).Sig_0x114_Used_4); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
   ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx, &(*(data)).Sig_0x114_Used_5); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx, &(*(data)).Sig_0x114_Used_6); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
   ret |= Com_SendSignalGroup(ComConf_ComSignalGroup_SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_MSR_RetVal */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppComTx_SG_Sig_Grp_0x115_SG_Sig_Grp_0x115(P2CONST(SG_Sig_Grp_0x115, AUTOMATIC, RTE_APPCOMTX_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112(P2CONST(SG_Sig_Grp_0x112, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x115_Used_1_oSupA_Function_2_oDBCNetWork_510009a2_Tx, &(*(data)).Sig_0x115_Used_1); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
-  ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x115_Used_2_oSupA_Function_2_oDBCNetWork_15a12cba_Tx, &(*(data)).Sig_0x115_Used_2); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
-  ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x115_Used_3_oSupA_Function_2_oDBCNetWork_29c1cfb2_Tx, &(*(data)).Sig_0x115_Used_3); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
-  ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x115_Used_4_oSupA_Function_2_oDBCNetWork_9ce3668a_Tx, &(*(data)).Sig_0x115_Used_4); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
-  ret |= Com_SendSignal(ComConf_ComGroupSignal_Sig_0x115_Used_5_oSupA_Function_2_oDBCNetWork_a0838582_Tx, &(*(data)).Sig_0x115_Used_5); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_MSR_RetVal */
-  ret |= Com_SendSignalGroup(ComConf_ComSignalGroup_SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_MSR_RetVal */
+  Rte_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112 = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112(P2CONST(SG_Sig_Grp_0x112, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113(P2CONST(SG_Sig_Grp_0x113, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  Rte_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112 = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113 = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113(P2CONST(SG_Sig_Grp_0x113, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114(P2CONST(SG_Sig_Grp_0x114, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  Rte_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113 = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
-
-  return ret;
-} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114(P2CONST(SG_Sig_Grp_0x114, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Rte_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114 = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
-
-  return ret;
-} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115(P2CONST(SG_Sig_Grp_0x115, AUTOMATIC, RTE_APPCTRL_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Rte_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115 = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -633,7 +605,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x112_SR_R_SG_Sig_Gr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  *(data) = Rte_AppCtrl_SG_Sig_Grp_0x112_SR_R_SG_Sig_Grp_0x112; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  *(data) = Rte_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_Sig_Grp_0x112; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -642,7 +614,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x113_SR_R_SG_Sig_Gr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  *(data) = Rte_AppCtrl_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  *(data) = Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -651,16 +623,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x114_SR_R_SG_Sig_Gr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  *(data) = Rte_AppCtrl_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
-
-  return ret;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_AppComTx_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115(P2VAR(SG_Sig_Grp_0x115, AUTOMATIC, RTE_APPCOMTX_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  *(data) = Rte_AppCtrl_SG_Sig_Grp_0x115_SR_R_SG_Sig_Grp_0x115; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  *(data) = Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

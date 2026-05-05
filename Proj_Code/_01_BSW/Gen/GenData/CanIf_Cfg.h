@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2024-01-29 21:13:43
+ *   Generation Time: 2026-05-05 14:33:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -232,12 +232,11 @@ typedef uint8 CanIf_TxBufferSizeType;
 
 #define CanIfTxPduHnd_Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx                                        0u
 #define CanIfTxPduHnd_Meg_NmTx_oDBCNetWork_c0e25960_Tx                                              1u
-#define CanIfTxPduHnd_SupA_Function_2_oDBCNetWork_c7f1c344_Tx                                       2u
-#define CanIfTxPduHnd_SupA_Function_1_oDBCNetWork_7707e452_Tx                                       3u
-#define CanIfTxPduHnd_SupA_Angle_oDBCNetWork_8a58a84d_Tx                                            4u
-#define CanIfTxPduHnd_SupA_PowerMode_oDBCNetWork_d8135f5e_Tx                                        5u
-#define CanIfTxPduHnd_SupA_Button_State_oDBCNetWork_cea719eb_Tx                                     6u
-#define CanIfTxPduHnd_SupA_Led_State_oDBCNetWork_f5d8795b_Tx                                        7u
+#define CanIfTxPduHnd_SupA_Function_1_oDBCNetWork_7707e452_Tx                                       2u
+#define CanIfTxPduHnd_SupA_Angle_oDBCNetWork_8a58a84d_Tx                                            3u
+#define CanIfTxPduHnd_SupA_PowerMode_oDBCNetWork_d8135f5e_Tx                                        4u
+#define CanIfTxPduHnd_SupA_Button_State_oDBCNetWork_cea719eb_Tx                                     5u
+#define CanIfTxPduHnd_SupA_Led_State_oDBCNetWork_f5d8795b_Tx                                        6u
 
 
 /**********************************************************************************************************************
@@ -265,12 +264,11 @@ typedef uint8 CanIf_TxBufferSizeType;
 
 #define CanIfConf_CanIfTxPduCfg_Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx                              0u
 #define CanIfConf_CanIfTxPduCfg_Meg_NmTx_oDBCNetWork_c0e25960_Tx                                    1u
-#define CanIfConf_CanIfTxPduCfg_SupA_Function_2_oDBCNetWork_c7f1c344_Tx                             2u
-#define CanIfConf_CanIfTxPduCfg_SupA_Function_1_oDBCNetWork_7707e452_Tx                             3u
-#define CanIfConf_CanIfTxPduCfg_SupA_Angle_oDBCNetWork_8a58a84d_Tx                                  4u
-#define CanIfConf_CanIfTxPduCfg_SupA_PowerMode_oDBCNetWork_d8135f5e_Tx                              5u
-#define CanIfConf_CanIfTxPduCfg_SupA_Button_State_oDBCNetWork_cea719eb_Tx                           6u
-#define CanIfConf_CanIfTxPduCfg_SupA_Led_State_oDBCNetWork_f5d8795b_Tx                              7u
+#define CanIfConf_CanIfTxPduCfg_SupA_Function_1_oDBCNetWork_7707e452_Tx                             2u
+#define CanIfConf_CanIfTxPduCfg_SupA_Angle_oDBCNetWork_8a58a84d_Tx                                  3u
+#define CanIfConf_CanIfTxPduCfg_SupA_PowerMode_oDBCNetWork_d8135f5e_Tx                              4u
+#define CanIfConf_CanIfTxPduCfg_SupA_Button_State_oDBCNetWork_cea719eb_Tx                           5u
+#define CanIfConf_CanIfTxPduCfg_SupA_Led_State_oDBCNetWork_f5d8795b_Tx                              6u
 
 
 /**********************************************************************************************************************
@@ -759,11 +757,11 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetSizeOfTrcvToCtrlMapOfPCConfig()                      1u  /**< the number of accomplishable value elements in CanIf_TrcvToCtrlMap */
 #define CanIf_GetSizeOfTxBufferPrioByCanIdBaseOfPCConfig()            1u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdBase */
 #define CanIf_GetSizeOfTxBufferPrioByCanIdByteQueueConfigOfPCConfig() 1u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdByteQueueConfig */
-#define CanIf_GetSizeOfTxBufferPrioByCanIdByteQueueMappedTxPdusOfPCConfig() 8u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus */
+#define CanIf_GetSizeOfTxBufferPrioByCanIdByteQueueMappedTxPdusOfPCConfig() 7u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus */
 #define CanIf_GetSizeOfTxConfirmationFctListOfPCConfig()              4u  /**< the number of accomplishable value elements in CanIf_TxConfirmationFctList */
-#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                        8u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
-#define CanIf_GetSizeOfTxPduQueueIndexOfPCConfig()                    8u  /**< the number of accomplishable value elements in CanIf_TxPduQueueIndex */
-#define CanIf_GetSizeOfTxQueueOfPCConfig()                            8u  /**< the number of accomplishable value elements in CanIf_TxQueue */
+#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                        7u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
+#define CanIf_GetSizeOfTxPduQueueIndexOfPCConfig()                    7u  /**< the number of accomplishable value elements in CanIf_TxPduQueueIndex */
+#define CanIf_GetSizeOfTxQueueOfPCConfig()                            7u  /**< the number of accomplishable value elements in CanIf_TxQueue */
 #define CanIf_GetSizeOfWakeUpConfigOfPCConfig()                       1u  /**< the number of accomplishable value elements in CanIf_WakeUpConfig */
 #define CanIf_GetTrcvModeIndicationFctPtrOfPCConfig()                 CanIf_TrcvModeIndicationFctPtr  /**< the pointer to CanIf_TrcvModeIndicationFctPtr */
 #define CanIf_GetTrcvToCtrlMapOfPCConfig()                            CanIf_TrcvToCtrlMap  /**< the pointer to CanIf_TrcvToCtrlMap */
@@ -1435,7 +1433,6 @@ typedef struct CanIf_TxQueueStructSTag
 {
   CanIf_TxPrioByCanIdByteQueueType Meg_ResDiag_Tp_oDBCNetWork_d97dd71a_Tx;
   CanIf_TxPrioByCanIdByteQueueType Meg_NmTx_oDBCNetWork_c0e25960_Tx;
-  CanIf_TxPrioByCanIdByteQueueType SupA_Function_2_oDBCNetWork_c7f1c344_Tx;
   CanIf_TxPrioByCanIdByteQueueType SupA_Function_1_oDBCNetWork_7707e452_Tx;
   CanIf_TxPrioByCanIdByteQueueType SupA_Angle_oDBCNetWork_8a58a84d_Tx;
   CanIf_TxPrioByCanIdByteQueueType SupA_PowerMode_oDBCNetWork_d8135f5e_Tx;
@@ -1469,7 +1466,7 @@ typedef union CanIf_TxBufferPrioByCanIdBaseUTag
 /**   \brief  type to access CanIf_TxQueue in an index and symbol based style. */
 typedef union CanIf_TxQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanIf_TxPrioByCanIdByteQueueType raw[8];
+  CanIf_TxPrioByCanIdByteQueueType raw[7];
   CanIf_TxQueueStructSType str;
 } CanIf_TxQueueUType;
 
@@ -1780,7 +1777,7 @@ extern CONST(CanIf_TxBufferPrioByCanIdByteQueueConfigType, CANIF_CONST) CanIf_Tx
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdusType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus[8];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdusType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus[7];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1823,7 +1820,7 @@ extern CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctLi
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[8];
+extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[7];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1843,7 +1840,7 @@ extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[8];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxPduQueueIndexType, CANIF_CONST) CanIf_TxPduQueueIndex[8];
+extern CONST(CanIf_TxPduQueueIndexType, CANIF_CONST) CanIf_TxPduQueueIndex[7];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

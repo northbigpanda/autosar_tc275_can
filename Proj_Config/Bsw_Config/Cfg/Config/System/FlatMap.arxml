@@ -304,22 +304,6 @@
                                     <TARGET-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x114</TARGET-REF>
                                   </ECU-EXTRACT-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="454f7c62-82dc-422f-8a2a-73e7deea837e">
-                                  <SHORT-NAME>SG_Sig_Grp_0x115</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x115</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_Sig_Grp_0x115</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="f83bcdc8-3193-425c-b5ef-9ae6b02dd549">
                                   <SHORT-NAME>SG_Sig_Grp_0x400</SHORT-NAME>
                                   <ADMIN-DATA>

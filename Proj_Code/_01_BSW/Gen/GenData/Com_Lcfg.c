@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.c
- *   Generation Time: 2024-01-29 23:00:00
+ *   Generation Time: 2026-05-05 14:33:42
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -394,16 +394,18 @@ CONST(Com_RxSigGrpInfoIndType, COM_CONST) Com_RxSigGrpInfoInd[4] = {  /* PRQA S 
   \var    Com_TxModeFalse
   \brief  Contains all relevant information for transmission mode false.
   \details
-  Element     Description
-  Periodic    TRUE if transmission mode contains a cyclic part.
+  Element       Description
+  Periodic      TRUE if transmission mode contains a cyclic part.
+  TimePeriod    Cycle time factor.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Periodic        Referable Keys */
-  { /*     0 */     TRUE }   /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    Periodic  TimePeriod        Referable Keys */
+  { /*     0 */     TRUE,        40u },  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  { /*     1 */     TRUE,         2u }   /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -425,14 +427,13 @@ CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[1] = {  /* PRQA S 1514, 15
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InitMode  TxModeTrueIdx        Referable Keys */
-  { /*     0 */     TRUE,            0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
-  { /*     1 */     TRUE,            0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
-  { /*     2 */     TRUE,            0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  { /*     3 */     TRUE,            0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  { /*     4 */     TRUE,            0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  { /*     5 */     TRUE,            0u }   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  { /*     0 */     TRUE,            1u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
+  { /*     1 */     TRUE,            1u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
+  { /*     2 */     TRUE,            1u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
+  { /*     3 */     TRUE,            1u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  { /*     4 */     TRUE,            0u }   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -446,16 +447,18 @@ CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[6] = {  /* PRQA S 1514, 1533
   \var    Com_TxModeTrue
   \brief  Contains all relevant information for transmission mode true.
   \details
-  Element     Description
-  Periodic    TRUE if transmission mode contains a cyclic part.
+  Element       Description
+  Periodic      TRUE if transmission mode contains a cyclic part.
+  TimePeriod    Cycle time factor.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Periodic        Referable Keys */
-  { /*     0 */     TRUE }   /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    Periodic  TimePeriod        Referable Keys */
+  { /*     0 */     TRUE,        40u },  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  { /*     1 */     TRUE,         2u }   /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -476,14 +479,13 @@ CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[1] = {  /* PRQA S 1514, 1533
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxPduGrpInfoType, COM_CONST) Com_TxPduGrpInfo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxPduGrpInfoType, COM_CONST) Com_TxPduGrpInfo[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PduGrpVectorStartIdx */
   { /*     0 */                   1u },
   { /*     1 */                   1u },
   { /*     2 */                   1u },
   { /*     3 */                   1u },
-  { /*     4 */                   1u },
-  { /*     5 */                   1u }
+  { /*     4 */                   1u }
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -507,14 +509,13 @@ CONST(Com_TxPduGrpInfoType, COM_CONST) Com_TxPduGrpInfo[6] = {  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxPduInitValueUsed  TxBufferLength  TxPduInitValueEndIdx  TxPduInitValueStartIdx        Referable Keys */
   { /*     0 */               TRUE,             8u,                   8u,                     0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   { /*     1 */               TRUE,             8u,                  16u,                     8u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   { /*     2 */               TRUE,             8u,                  24u,                    16u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  { /*     3 */               TRUE,             8u,                  32u,                    24u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  { /*     4 */               TRUE,             8u,                  40u,                    32u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  { /*     5 */               TRUE,             8u,                  48u,                    40u }   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  { /*     3 */               TRUE,             8u,                  32u,                    24u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  { /*     4 */               TRUE,             8u,                  40u,                    32u }   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -532,7 +533,7 @@ CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[6] = {  /* PRQA S 1514, 1533 *
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[48] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[40] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     TxPduInitValue      Referable Keys */
   /*     0 */           0x14u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
   /*     1 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
@@ -558,30 +559,22 @@ CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[48] = {  /* PRQA S 1
   /*    21 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
   /*    22 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
   /*    23 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  /*    24 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    25 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    26 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    27 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    28 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    29 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    30 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    31 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*    32 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    33 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    34 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    35 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    36 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    37 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    38 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    39 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    40 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  /*    41 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  /*    42 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  /*    43 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  /*    44 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  /*    45 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  /*    46 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  /*    47 */           0x00u   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    24 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    25 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    26 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    27 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    28 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    29 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    30 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    31 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    32 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    33 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    34 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    35 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    36 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    37 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    38 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*    39 */           0x00u   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
 };
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -611,14 +604,13 @@ CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[48] = {  /* PRQA S 1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxSigGrpInfoType, COM_CONST) Com_TxSigGrpInfo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxSigGrpInfoType, COM_CONST) Com_TxSigGrpInfo[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxSigGrpMaskUsed  PduOffset  TransferProperty                            TxBufferEndIdx  TxBufferSigGrpInTxIPDUEndIdx  TxBufferSigGrpInTxIPDUStartIdx  TxBufferStartIdx  TxPduInfoIdx  TxSigGrpMaskEndIdx  TxSigGrpMaskStartIdx        Referable Keys */
-  { /*     0 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            49u,                          33u,                            32u,              48u,           4u,                16u,                  15u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led3_State_oSupA_Led_State_oDBCNetWork_dc39af74_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led4_State_oSupA_Led_State_oDBCNetWork_df70c2cf_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led2_State_oSupA_Led_State_oDBCNetWork_13a7b8bc_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led1_State_oSupA_Led_State_oDBCNetWork_987486a5_Tx] */
-  { /*     1 */             TRUE,        4u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            50u,                          13u,                            12u,              49u,           1u,                16u,                  15u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button4_State_oSupA_Button_State_oDBCNetWork_2704068b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button2_State_oSupA_Button_State_oDBCNetWork_bcd40645_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button3_State_oSupA_Button_State_oDBCNetWork_315cfba7_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button1_State_oSupA_Button_State_oDBCNetWork_f13c0622_Tx] */
-  { /*     2 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            58u,                          48u,                            40u,              50u,           5u,                16u,                   8u },  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Checksum_0x112_oSupA_PowerMode_oDBCNetWork_3f776c50_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Counter_0x112_oSupA_PowerMode_oDBCNetWork_5e5c6751_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/PowerMode_oSupA_PowerMode_oDBCNetWork_c3b722c7_Tx] */
-  { /*     3 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            59u,                           1u,                             0u,              58u,           0u,                 1u,                   0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx/System_Run_Time_oSupA_Angle_oDBCNetWork_4f55a4f3_Tx] */
-  { /*     4 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            67u,                          24u,                            16u,              59u,           2u,                 9u,                   1u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_1_oSupA_Function_1_oDBCNetWork_6c3a7273_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx] */
-  { /*     5 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            75u,                          32u,                            24u,              67u,           3u,                 9u,                   1u }   /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_4_oSupA_Function_2_oDBCNetWork_9ce3668a_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_1_oSupA_Function_2_oDBCNetWork_510009a2_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_2_oSupA_Function_2_oDBCNetWork_15a12cba_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_5_oSupA_Function_2_oDBCNetWork_a0838582_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_3_oSupA_Function_2_oDBCNetWork_29c1cfb2_Tx] */
+  { /*     0 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            41u,                          25u,                            24u,              40u,           3u,                16u,                  15u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led3_State_oSupA_Led_State_oDBCNetWork_dc39af74_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led4_State_oSupA_Led_State_oDBCNetWork_df70c2cf_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led2_State_oSupA_Led_State_oDBCNetWork_13a7b8bc_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led1_State_oSupA_Led_State_oDBCNetWork_987486a5_Tx] */
+  { /*     1 */             TRUE,        4u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            42u,                          13u,                            12u,              41u,           1u,                16u,                  15u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button4_State_oSupA_Button_State_oDBCNetWork_2704068b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button2_State_oSupA_Button_State_oDBCNetWork_bcd40645_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button3_State_oSupA_Button_State_oDBCNetWork_315cfba7_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button1_State_oSupA_Button_State_oDBCNetWork_f13c0622_Tx] */
+  { /*     2 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            50u,                          40u,                            32u,              42u,           4u,                16u,                   8u },  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Checksum_0x112_oSupA_PowerMode_oDBCNetWork_3f776c50_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Counter_0x112_oSupA_PowerMode_oDBCNetWork_5e5c6751_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/PowerMode_oSupA_PowerMode_oDBCNetWork_c3b722c7_Tx] */
+  { /*     3 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            51u,                           1u,                             0u,              50u,           0u,                 1u,                   0u },  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx/AAA_Angle_oSupA_Angle_oDBCNetWork_1adb3bf0_Tx] */
+  { /*     4 */             TRUE,        0u, COM_PENDING_TRANSFERPROPERTYOFTXSIGGRPINFO,            59u,                          24u,                            16u,              51u,           2u,                 9u,                   1u }   /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_1_oSupA_Function_1_oDBCNetWork_6c3a7273_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -636,14 +628,13 @@ CONST(Com_TxSigGrpInfoType, COM_CONST) Com_TxSigGrpInfo[6] = {  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxSigGrpInfoIndType, COM_CONST) Com_TxSigGrpInfoInd[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxSigGrpInfoIndType, COM_CONST) Com_TxSigGrpInfoInd[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     TxSigGrpInfoInd      Referable Keys */
   /*     0 */               3u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
   /*     1 */               1u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
   /*     2 */               4u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  /*     3 */               5u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  /*     4 */               0u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*     5 */               2u   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  /*     3 */               0u,  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*     4 */               2u   /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
 };
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -664,14 +655,14 @@ CONST(Com_TxSigGrpInfoIndType, COM_CONST) Com_TxSigGrpInfoInd[6] = {  /* PRQA S 
 CONST(Com_TxSigGrpMaskType, COM_CONST) Com_TxSigGrpMask[16] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     TxSigGrpMask      Referable Keys */
   /*     0 */         0x3Fu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx] */
-  /*     1 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
-  /*     2 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
-  /*     3 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
-  /*     4 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
-  /*     5 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
-  /*     6 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
-  /*     7 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
-  /*     8 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx] */
+  /*     1 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
+  /*     2 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
+  /*     3 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
+  /*     4 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
+  /*     5 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
+  /*     6 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
+  /*     7 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
+  /*     8 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx] */
   /*     9 */         0x07u,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
   /*    10 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
   /*    11 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
@@ -710,30 +701,26 @@ CONST(Com_TxSigGrpMaskType, COM_CONST) Com_TxSigGrpMask[16] = {  /* PRQA S 1514,
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[22] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[18] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxSigGrpInfoUsed  ApplType                        BitLength  BitPosition  BusAcc                              ByteLength  BytePosition  StartByteInPduPosition  TxBufferEndIdx  TxBufferStartIdx  TxPduInfoIdx  TxSigGrpInfoIdx        Referable Keys */
-  { /*     0 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          0u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            49u,              48u,           4u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led1_State_oSupA_Led_State_oDBCNetWork_987486a5_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  { /*     1 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          1u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            49u,              48u,           4u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led2_State_oSupA_Led_State_oDBCNetWork_13a7b8bc_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  { /*     2 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          2u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            49u,              48u,           4u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led3_State_oSupA_Led_State_oDBCNetWork_dc39af74_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  { /*     3 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          3u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            49u,              48u,           4u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led4_State_oSupA_Led_State_oDBCNetWork_df70c2cf_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  { /*     4 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         32u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            50u,              49u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button1_State_oSupA_Button_State_oDBCNetWork_f13c0622_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
-  { /*     5 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         33u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            50u,              49u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button2_State_oSupA_Button_State_oDBCNetWork_bcd40645_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
-  { /*     6 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         34u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            50u,              49u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button3_State_oSupA_Button_State_oDBCNetWork_315cfba7_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
-  { /*     7 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         35u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            50u,              49u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button4_State_oSupA_Button_State_oDBCNetWork_2704068b_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
-  { /*     8 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        3u,          8u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           1u,                     1u,            52u,              51u,           5u,              2u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/PowerMode_oSupA_PowerMode_oDBCNetWork_c3b722c7_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  { /*     9 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          0u,         COM_BYTE_BUSACCOFTXSIGINFO,         1u,           0u,                     0u,            51u,              50u,           5u,              2u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Checksum_0x112_oSupA_PowerMode_oDBCNetWork_3f776c50_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  { /*    10 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        4u,         56u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           7u,                     7u,            58u,              57u,           5u,              2u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Counter_0x112_oSupA_PowerMode_oDBCNetWork_5e5c6751_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
-  { /*    11 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        6u,          0u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            59u,              58u,           0u,              3u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx/System_Run_Time_oSupA_Angle_oDBCNetWork_4f55a4f3_Tx, /ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
-  { /*    12 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        4u,          4u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            60u,              59u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_1_oSupA_Function_1_oDBCNetWork_6c3a7273_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  { /*    13 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       12u,          8u, COM_NBITNBYTE_SW_BUSACCOFTXSIGINFO,         1u,           1u,                     0u,            61u,              59u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  { /*    14 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         24u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           3u,                     2u,            63u,              61u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  { /*    15 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         40u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           5u,                     4u,            65u,              63u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  { /*    16 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         56u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           7u,                     6u,            67u,              65u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
-  { /*    17 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        4u,          4u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            68u,              67u,           3u,              5u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_1_oSupA_Function_2_oDBCNetWork_510009a2_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  { /*    18 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       12u,          8u, COM_NBITNBYTE_SW_BUSACCOFTXSIGINFO,         1u,           1u,                     0u,            69u,              67u,           3u,              5u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_2_oSupA_Function_2_oDBCNetWork_15a12cba_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  { /*    19 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         24u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           3u,                     2u,            71u,              69u,           3u,              5u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_3_oSupA_Function_2_oDBCNetWork_29c1cfb2_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  { /*    20 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         40u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           5u,                     4u,            73u,              71u,           3u,              5u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_4_oSupA_Function_2_oDBCNetWork_9ce3668a_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
-  { /*    21 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         56u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           7u,                     6u,            75u,              73u,           3u,              5u }   /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_5_oSupA_Function_2_oDBCNetWork_a0838582_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx] */
+  { /*     0 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          0u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            41u,              40u,           3u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led1_State_oSupA_Led_State_oDBCNetWork_987486a5_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  { /*     1 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          1u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            41u,              40u,           3u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led2_State_oSupA_Led_State_oDBCNetWork_13a7b8bc_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  { /*     2 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          2u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            41u,              40u,           3u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led3_State_oSupA_Led_State_oDBCNetWork_dc39af74_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  { /*     3 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          3u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            41u,              40u,           3u,              0u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led4_State_oSupA_Led_State_oDBCNetWork_df70c2cf_Tx, /ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  { /*     4 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         32u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            42u,              41u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button1_State_oSupA_Button_State_oDBCNetWork_f13c0622_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
+  { /*     5 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         33u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            42u,              41u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button2_State_oSupA_Button_State_oDBCNetWork_bcd40645_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
+  { /*     6 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         34u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            42u,              41u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button3_State_oSupA_Button_State_oDBCNetWork_315cfba7_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
+  { /*     7 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         35u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           4u,                     4u,            42u,              41u,           1u,              1u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button4_State_oSupA_Button_State_oDBCNetWork_2704068b_Tx, /ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx] */
+  { /*     8 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        3u,          8u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           1u,                     1u,            44u,              43u,           4u,              2u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/PowerMode_oSupA_PowerMode_oDBCNetWork_c3b722c7_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  { /*     9 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          0u,         COM_BYTE_BUSACCOFTXSIGINFO,         1u,           0u,                     0u,            43u,              42u,           4u,              2u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Checksum_0x112_oSupA_PowerMode_oDBCNetWork_3f776c50_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  { /*    10 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        4u,         56u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           7u,                     7u,            50u,              49u,           4u,              2u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Counter_0x112_oSupA_PowerMode_oDBCNetWork_5e5c6751_Tx, /ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx] */
+  { /*    11 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        6u,          0u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            51u,              50u,           0u,              3u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx/AAA_Angle_oSupA_Angle_oDBCNetWork_1adb3bf0_Tx, /ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
+  { /*    12 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        4u,          4u,         COM_NBIT_BUSACCOFTXSIGINFO,         0u,           0u,                     0u,            52u,              51u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_1_oSupA_Function_1_oDBCNetWork_6c3a7273_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
+  { /*    13 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       12u,          8u, COM_NBITNBYTE_SW_BUSACCOFTXSIGINFO,         1u,           1u,                     0u,            53u,              51u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
+  { /*    14 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         24u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           3u,                     2u,            55u,              53u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
+  { /*    15 */             TRUE, COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         40u,     COM_NBYTE_SW_BUSACCOFTXSIGINFO,         2u,           5u,                     4u,            57u,              55u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
+  { /*    16 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,         48u,         COM_BYTE_BUSACCOFTXSIGINFO,         1u,           6u,                     6u,            58u,              57u,           2u,              4u },  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
+  { /*    17 */             TRUE,  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,         56u,         COM_BYTE_BUSACCOFTXSIGINFO,         1u,           7u,                     7u,            59u,              58u,           2u,              4u }   /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx, /ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -751,14 +738,13 @@ CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[22] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_CurrentTxModeType, COM_VAR_NOINIT) Com_CurrentTxMode[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_CurrentTxModeType, COM_VAR_NOINIT) Com_CurrentTxMode[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     2 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -776,14 +762,13 @@ VAR(Com_CurrentTxModeType, COM_VAR_NOINIT) Com_CurrentTxMode[6];  /* PRQA S 1514
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_CycleTimeCntType, COM_VAR_NOINIT) Com_CycleTimeCnt[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_CycleTimeCntType, COM_VAR_NOINIT) Com_CycleTimeCnt[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     2 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -801,14 +786,13 @@ VAR(Com_CycleTimeCntType, COM_VAR_NOINIT) Com_CycleTimeCnt[6];  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_CyclicSendRequestType, COM_VAR_NOINIT) Com_CyclicSendRequest[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_CyclicSendRequestType, COM_VAR_NOINIT) Com_CyclicSendRequest[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     2 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1066,7 +1050,7 @@ VAR(Com_RxSigBufferUInt8Type, COM_VAR_NOINIT) Com_RxSigBufferUInt8[26];  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_SigGrpEventFlagType, COM_VAR_NOINIT) Com_SigGrpEventFlag[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_SigGrpEventFlagType, COM_VAR_NOINIT) Com_SigGrpEventFlag[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1153,14 +1137,13 @@ VAR(Com_TmpRxShdBufferUInt8Type, COM_VAR_NOINIT) Com_TmpRxShdBufferUInt8[7];  /*
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TransmitRequestType, COM_VAR_NOINIT) Com_TransmitRequest[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TransmitRequestType, COM_VAR_NOINIT) Com_TransmitRequest[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     2 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1178,7 +1161,7 @@ VAR(Com_TransmitRequestType, COM_VAR_NOINIT) Com_TransmitRequest[6];  /* PRQA S 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[75];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[59];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_TxSigGrpInTxIPDU] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx] */
@@ -1194,41 +1177,30 @@ VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[75];  /* PRQA S 1514, 1533 */
   /*    16 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_TxSigGrpInTxIPDU] */
   /*   ... */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_TxSigGrpInTxIPDU] */
   /*    23 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_TxSigGrpInTxIPDU] */
-  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_TxSigGrpInTxIPDU] */
-  /*   ... */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_TxSigGrpInTxIPDU] */
-  /*    31 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_TxSigGrpInTxIPDU] */
-  /*    32 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_TxSigGrpInTxIPDU] */
-  /*    33 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_TxSigGrpInTxIPDU] */
+  /*    25 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
   /*   ... */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    39 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
-  /*    40 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_TxSigGrpInTxIPDU] */
+  /*    31 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx] */
+  /*    32 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_TxSigGrpInTxIPDU] */
   /*   ... */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_TxSigGrpInTxIPDU] */
-  /*    47 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_TxSigGrpInTxIPDU] */
-  /*    48 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led3_State_oSupA_Led_State_oDBCNetWork_dc39af74_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led4_State_oSupA_Led_State_oDBCNetWork_df70c2cf_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led2_State_oSupA_Led_State_oDBCNetWork_13a7b8bc_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led1_State_oSupA_Led_State_oDBCNetWork_987486a5_Tx] */
-  /*    49 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button4_State_oSupA_Button_State_oDBCNetWork_2704068b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button2_State_oSupA_Button_State_oDBCNetWork_bcd40645_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button3_State_oSupA_Button_State_oDBCNetWork_315cfba7_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button1_State_oSupA_Button_State_oDBCNetWork_f13c0622_Tx] */
-  /*    50 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Checksum_0x112_oSupA_PowerMode_oDBCNetWork_3f776c50_Tx] */
-  /*    51 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/PowerMode_oSupA_PowerMode_oDBCNetWork_c3b722c7_Tx] */
-  /*    52 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
+  /*    39 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_TxSigGrpInTxIPDU] */
+  /*    40 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led3_State_oSupA_Led_State_oDBCNetWork_dc39af74_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led4_State_oSupA_Led_State_oDBCNetWork_df70c2cf_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led2_State_oSupA_Led_State_oDBCNetWork_13a7b8bc_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x110_oSupA_Led_State_oDBCNetWork_89d57c9b_Tx/Led1_State_oSupA_Led_State_oDBCNetWork_987486a5_Tx] */
+  /*    41 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button4_State_oSupA_Button_State_oDBCNetWork_2704068b_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button2_State_oSupA_Button_State_oDBCNetWork_bcd40645_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button3_State_oSupA_Button_State_oDBCNetWork_315cfba7_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x111_oSupA_Button_State_oDBCNetWork_062df960_Tx/Button1_State_oSupA_Button_State_oDBCNetWork_f13c0622_Tx] */
+  /*    42 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Checksum_0x112_oSupA_PowerMode_oDBCNetWork_3f776c50_Tx] */
+  /*    43 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/PowerMode_oSupA_PowerMode_oDBCNetWork_c3b722c7_Tx] */
+  /*    44 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
   /*   ... */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
-  /*    56 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
-  /*    57 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Counter_0x112_oSupA_PowerMode_oDBCNetWork_5e5c6751_Tx] */
-  /*    58 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx/System_Run_Time_oSupA_Angle_oDBCNetWork_4f55a4f3_Tx] */
-  /*    59 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_1_oSupA_Function_1_oDBCNetWork_6c3a7273_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx] */
-  /*    60 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx] */
-  /*    61 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx] */
-  /*    62 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx] */
-  /*    63 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx] */
-  /*    64 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx] */
-  /*    65 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx] */
-  /*    66 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx] */
-  /*    67 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_1_oSupA_Function_2_oDBCNetWork_510009a2_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_2_oSupA_Function_2_oDBCNetWork_15a12cba_Tx] */
-  /*    68 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_2_oSupA_Function_2_oDBCNetWork_15a12cba_Tx] */
-  /*    69 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_3_oSupA_Function_2_oDBCNetWork_29c1cfb2_Tx] */
-  /*    70 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_3_oSupA_Function_2_oDBCNetWork_29c1cfb2_Tx] */
-  /*    71 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_4_oSupA_Function_2_oDBCNetWork_9ce3668a_Tx] */
-  /*    72 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_4_oSupA_Function_2_oDBCNetWork_9ce3668a_Tx] */
-  /*    73 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_5_oSupA_Function_2_oDBCNetWork_a0838582_Tx] */
-  /*    74 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx/Sig_0x115_Used_5_oSupA_Function_2_oDBCNetWork_a0838582_Tx] */
+  /*    48 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx] */
+  /*    49 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x112_oSupA_PowerMode_oDBCNetWork_bbf37b55_Tx/SupA_Counter_0x112_oSupA_PowerMode_oDBCNetWork_5e5c6751_Tx] */
+  /*    50 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x113_oSupA_Angle_oDBCNetWork_c5c2558a_Tx/AAA_Angle_oSupA_Angle_oDBCNetWork_1adb3bf0_Tx] */
+  /*    51 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_1_oSupA_Function_1_oDBCNetWork_6c3a7273_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx] */
+  /*    52 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_2_oSupA_Function_1_oDBCNetWork_289b576b_Tx] */
+  /*    53 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx] */
+  /*    54 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_3_oSupA_Function_1_oDBCNetWork_14fbb463_Tx] */
+  /*    55 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx] */
+  /*    56 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_4_oSupA_Function_1_oDBCNetWork_a1d91d5b_Tx] */
+  /*    57 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_5_oSupA_Function_1_oDBCNetWork_9db9fe53_Tx] */
+  /*    58 */  /* [/ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx, /ActiveEcuC/Com/ComConfig/SG_Sig_Grp_0x114_oSupA_Function_1_oDBCNetWork_fe007f55_Tx/Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1272,14 +1244,13 @@ VAR(Com_TxIPduGroupISRLockCounterType, COM_VAR_NOINIT) Com_TxIPduGroupISRLockCou
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     2 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1310,14 +1281,13 @@ VAR(Com_TxProcessingISRLockCounterType, COM_VAR_NOINIT) Com_TxProcessingISRLockC
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Angle_oDBCNetWork_e5909e4f_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Button_State_oDBCNetWork_390399bb_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
   /*     2 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_1_oDBCNetWork_312706bd_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Function_2_oDBCNetWork_8ced6a73_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
-  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/SupA_Led_State_oDBCNetWork_43576f7c_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/SupA_PowerMode_oDBCNetWork_b77edafa_Tx, /ActiveEcuC/Com/ComConfig/XB_SUP_A_oDBCNetWork_Tx_859ab3c9] */
 
 #define COM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */

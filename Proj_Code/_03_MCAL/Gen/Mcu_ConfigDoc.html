@@ -33,6 +33,7 @@ table.curvedEdges td, table.curvedEdges th { border-bottom:1px dotted black;over
             Mcu_Init</td>
           <td>
             SCU_RSTSTAT, SCU_RSTCON, SCU_RSTCON2, SCU_PMSWCR1, SCU_ARSTDIS
+                        , GTM SFRs done by Gtm_Init()
                                                 
             </td>
           <td>-</td>
@@ -134,7 +135,20 @@ table.curvedEdges td, table.curvedEdges th { border-bottom:1px dotted black;over
             SCU_PMSWSTATCLR
           <td>-</td>
         </tr>         
-        
+                <tr>
+          <td>
+            Gtm_Init</td>
+          <td>
+            GTM_CLC, GTM_CMU_GCLK_NUM, GTM_CMU_GCLK_DEN, GTM_CMU_CLK_EN, GTM_CMU_CLK0_0_CTRL,
+            GTM_CMU_CLK0_1_CTRL, GTM_CMU_CLK0_2_CTRL, GTM_CMU_CLK0_3_CTRL, GTM_CMU_CLK0_4_CTRL,
+            GTM_CMU_CLK0_5_CTRL, GTM_CMU_CLK0_6_CTRL, GTM_CMU_CLK0_7_CTRL, GTM_CMU_ECLK0_NUM,
+            GTM_CMU_ECLK1_NUM, GTM_CMU_ECLK2_NUM, GTM_CMU_ECLK0_DEN, GTM_CMU_ECLK1_DEN,
+            GTM_CMU_ECLK2_DEN, GTM_CMU_FXCLK_CTRL, GTM_CTRL,GTM_IRQ_EN, GTM_IRQ_MODE, GTM_EIRQ_EN,
+            SRC_GTMAEIIRQ
+          <td>-</td>
+        </tr>
+         
+       
       </tbody>
     </table>    
     <p>
@@ -156,6 +170,14 @@ table.curvedEdges td, table.curvedEdges th { border-bottom:1px dotted black;over
       </thead>
       <tbody>
                                 <tr>
+          <td>
+            GTM_REV</td>
+          <td>
+            GTM_MSCIN1_INLCON</td>
+          <td>
+            GTM Initialization done during MCU Initialization only</td>
+        </tr>
+                <tr>
           <td>
             SMU_CMD</td>
           <td>

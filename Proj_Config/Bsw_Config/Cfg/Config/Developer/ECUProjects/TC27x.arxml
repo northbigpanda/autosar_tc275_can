@@ -113,39 +113,6 @@
                 </SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
                 <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
                   <DATA-ELEMENT-IREF>
-                    <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x114</CONTEXT-PORT-REF>
-                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</TARGET-DATA-PROTOTYPE-REF>
-                  </DATA-ELEMENT-IREF>
-                  <SIGNAL-GROUP-REF DEST="SYSTEM-SIGNAL-GROUP">/Signal/SG_Sig_Grp_0x114</SIGNAL-GROUP-REF>
-                  <TYPE-MAPPING>
-                    <SENDER-REC-RECORD-TYPE-MAPPING>
-                      <RECORD-ELEMENT-MAPPINGS>
-                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_1</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_1</SYSTEM-SIGNAL-REF>
-                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_2</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_2</SYSTEM-SIGNAL-REF>
-                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_3</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_3</SYSTEM-SIGNAL-REF>
-                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_4</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_4</SYSTEM-SIGNAL-REF>
-                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
-                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_5</IMPLEMENTATION-RECORD-ELEMENT-REF>
-                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_5</SYSTEM-SIGNAL-REF>
-                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
-                      </RECORD-ELEMENT-MAPPINGS>
-                    </SENDER-REC-RECORD-TYPE-MAPPING>
-                  </TYPE-MAPPING>
-                </SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
-                <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
-                  <DATA-ELEMENT-IREF>
                     <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x400</CONTEXT-PORT-REF>
                     <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x400/SG_Sig_Grp_0x400</TARGET-DATA-PROTOTYPE-REF>
                   </DATA-ELEMENT-IREF>
@@ -283,6 +250,43 @@
                         <SENDER-REC-RECORD-ELEMENT-MAPPING>
                           <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x403/Sig_0x403_Used_5</IMPLEMENTATION-RECORD-ELEMENT-REF>
                           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x403_Used_5</SYSTEM-SIGNAL-REF>
+                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                      </RECORD-ELEMENT-MAPPINGS>
+                    </SENDER-REC-RECORD-TYPE-MAPPING>
+                  </TYPE-MAPPING>
+                </SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
+                <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
+                  <DATA-ELEMENT-IREF>
+                    <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x114</CONTEXT-PORT-REF>
+                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</TARGET-DATA-PROTOTYPE-REF>
+                  </DATA-ELEMENT-IREF>
+                  <SIGNAL-GROUP-REF DEST="SYSTEM-SIGNAL-GROUP">/Signal/SG_Sig_Grp_0x114</SIGNAL-GROUP-REF>
+                  <TYPE-MAPPING>
+                    <SENDER-REC-RECORD-TYPE-MAPPING>
+                      <RECORD-ELEMENT-MAPPINGS>
+                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_1</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_1</SYSTEM-SIGNAL-REF>
+                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_2</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_2</SYSTEM-SIGNAL-REF>
+                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_3</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_3</SYSTEM-SIGNAL-REF>
+                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_4</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_4</SYSTEM-SIGNAL-REF>
+                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_5</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_5</SYSTEM-SIGNAL-REF>
+                        </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                        <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                          <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_Sig_Grp_0x114/Sig_0x114_Used_6</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Sig_0x114_Used_6</SYSTEM-SIGNAL-REF>
                         </SENDER-REC-RECORD-ELEMENT-MAPPING>
                       </RECORD-ELEMENT-MAPPINGS>
                     </SENDER-REC-RECORD-TYPE-MAPPING>
@@ -442,90 +446,6 @@
                 </NONQUEUED-SENDER-COM-SPEC>
               </PROVIDED-COM-SPECS>
               <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x113</PROVIDED-INTERFACE-TREF>
-            </P-PORT-PROTOTYPE>
-            <P-PORT-PROTOTYPE UUID="350C014E-EAF7-493E-A8C4-CBB9BAB691D5">
-              <SHORT-NAME>SG_Sig_Grp_0x114</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <PROVIDED-COM-SPECS>
-                <NONQUEUED-SENDER-COM-SPEC>
-                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</DATA-ELEMENT-REF>
-                  <INIT-VALUE>
-                    <RECORD-VALUE-SPECIFICATION>
-                      <FIELDS>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_1</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_2</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_3</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_4</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x114_Used_5</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                      </FIELDS>
-                    </RECORD-VALUE-SPECIFICATION>
-                  </INIT-VALUE>
-                </NONQUEUED-SENDER-COM-SPEC>
-              </PROVIDED-COM-SPECS>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x114</PROVIDED-INTERFACE-TREF>
-            </P-PORT-PROTOTYPE>
-            <P-PORT-PROTOTYPE UUID="2A9E9FBD-CE5E-4FEA-9EC2-F58E75F692E5">
-              <SHORT-NAME>SG_Sig_Grp_0x115</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <PROVIDED-COM-SPECS>
-                <NONQUEUED-SENDER-COM-SPEC>
-                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x115/SG_Sig_Grp_0x115</DATA-ELEMENT-REF>
-                  <INIT-VALUE>
-                    <RECORD-VALUE-SPECIFICATION>
-                      <FIELDS>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_1</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_2</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_3</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_4</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                        <NUMERICAL-VALUE-SPECIFICATION>
-                          <SHORT-LABEL>Sig_0x115_Used_5</SHORT-LABEL>
-                          <VALUE>0</VALUE>
-                        </NUMERICAL-VALUE-SPECIFICATION>
-                      </FIELDS>
-                    </RECORD-VALUE-SPECIFICATION>
-                  </INIT-VALUE>
-                </NONQUEUED-SENDER-COM-SPEC>
-              </PROVIDED-COM-SPECS>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x115</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="FA75F081-2D52-4576-8734-0BAE6FBC856C">
               <SHORT-NAME>SG_Sig_Grp_0x400</SHORT-NAME>
@@ -718,6 +638,52 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x403</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="0CC754B7-454F-4BB9-9292-8C906A04EA3D">
+              <SHORT-NAME>SG_Sig_Grp_0x114</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_Sig_Grp_0x114/SG_Sig_Grp_0x114</DATA-ELEMENT-REF>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_1</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_2</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_3</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_4</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_5</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>Sig_0x114_Used_6</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_Sig_Grp_0x114</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
           </PORTS>
           <COMPONENTS>
             <SW-COMPONENT-PROTOTYPE UUID="D92525C9-553F-4D8D-97D3-20F69B6F3D61">
@@ -912,26 +878,6 @@
               </INNER-PORT-IREF>
               <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x113</OUTER-PORT-REF>
             </DELEGATION-SW-CONNECTOR>
-            <DELEGATION-SW-CONNECTOR UUID="A610129F-913A-405B-85D1-E606644B986C">
-              <SHORT-NAME>AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114</SHORT-NAME>
-              <INNER-PORT-IREF>
-                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
-                  <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114</TARGET-P-PORT-REF>
-                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
-              </INNER-PORT-IREF>
-              <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x114</OUTER-PORT-REF>
-            </DELEGATION-SW-CONNECTOR>
-            <DELEGATION-SW-CONNECTOR UUID="2C099914-F9E5-4AD4-87B7-A68358084D5B">
-              <SHORT-NAME>AppComTx_SG_Sig_Grp_0x115_SG_Sig_Grp_0x115</SHORT-NAME>
-              <INNER-PORT-IREF>
-                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
-                  <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x115</TARGET-P-PORT-REF>
-                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
-              </INNER-PORT-IREF>
-              <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x115</OUTER-PORT-REF>
-            </DELEGATION-SW-CONNECTOR>
             <ASSEMBLY-SW-CONNECTOR UUID="ED1FC6CC-D0AC-4DE5-AA8E-D866BC8DF120">
               <SHORT-NAME>AppComRx_SG_Sig_Grp_0x400_SR_S_AppCtrl_SG_Sig_Grp_0x400_SR_R</SHORT-NAME>
               <PROVIDER-IREF>
@@ -980,7 +926,7 @@
               <SHORT-NAME>AppCtrl_SG_Sig_Grp_0x112_SR_R_AppComTx_SG_Sig_Grp_0x112_SR_R</SHORT-NAME>
               <PROVIDER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppCtrl</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x112_SR_R</TARGET-P-PORT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x112_SR_S</TARGET-P-PORT-REF>
               </PROVIDER-IREF>
               <REQUESTER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
@@ -991,33 +937,11 @@
               <SHORT-NAME>AppCtrl_SG_Sig_Grp_0x113_SR_R_AppComTx_SG_Sig_Grp_0x113_SR_R</SHORT-NAME>
               <PROVIDER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppCtrl</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x113_SR_R</TARGET-P-PORT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x113_SR_S</TARGET-P-PORT-REF>
               </PROVIDER-IREF>
               <REQUESTER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
                 <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x113_SR_R</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="52DFD2DC-304A-4D08-B828-6A041A3884FC">
-              <SHORT-NAME>AppCtrl_SG_Sig_Grp_0x114_SR_R_AppComTx_SG_Sig_Grp_0x114_SR_R</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppCtrl</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x114_SR_R</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114_SR_R</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="49C8F9C0-FF98-4CF8-B648-2B537EDAE1BB">
-              <SHORT-NAME>AppCtrl_SG_Sig_Grp_0x115_SR_R_AppComTx_SG_Sig_Grp_0x115_SR_R</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppCtrl</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x115_SR_R</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x115_SR_R</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
             <ASSEMBLY-SW-CONNECTOR UUID="53D9A05B-1A2D-4B2F-9AF5-E82F01DA7272">
@@ -1205,6 +1129,27 @@
               <REQUESTER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/IcuCdd</CONTEXT-COMPONENT-REF>
                 <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/IcuCdd/IoHwAbCS_Button1</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <DELEGATION-SW-CONNECTOR UUID="E90961B3-8DE8-4774-BD23-10541753DE80">
+              <SHORT-NAME>AppComTx_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114</SHORT-NAME>
+              <INNER-PORT-IREF>
+                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
+                  <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114</TARGET-P-PORT-REF>
+                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+              </INNER-PORT-IREF>
+              <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SG_Sig_Grp_0x114</OUTER-PORT-REF>
+            </DELEGATION-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="E5AF1BEC-7639-40D6-BD82-A1803D942164">
+              <SHORT-NAME>AppCtrl_SG_Sig_Grp_0x114_SR_S_AppComTx_SG_Sig_Grp_0x114_SR_R</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppCtrl</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x114_SR_S</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AppComTx</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114_SR_R</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
           </CONNECTORS>

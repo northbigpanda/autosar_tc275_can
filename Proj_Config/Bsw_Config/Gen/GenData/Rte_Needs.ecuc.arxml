@@ -216,65 +216,17 @@
                                             <PARAMETER-VALUES>
                                                 <ECUC-TEXTUAL-PARAM-VALUE>
                                                     <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal/ComSignalType</DEFINITION-REF>
-                                                    <VALUE>UINT16</VALUE>
-                                                </ECUC-TEXTUAL-PARAM-VALUE>
-                                            </PARAMETER-VALUES>
-                                        </ECUC-CONTAINER-VALUE>
-                                    </SUB-CONTAINERS>
-                                </ECUC-CONTAINER-VALUE>
-                                <ECUC-CONTAINER-VALUE>
-                                    <SHORT-NAME>SG_Sig_Grp_0x115_oSupA_Function_2_oDBCNetWork_7faaf093_Tx</SHORT-NAME>
-                                    <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup</DEFINITION-REF>
-                                    <PARAMETER-VALUES>
-                                    </PARAMETER-VALUES>
-                                    <SUB-CONTAINERS>
-                                        <ECUC-CONTAINER-VALUE>
-                                            <SHORT-NAME>Sig_0x115_Used_1_oSupA_Function_2_oDBCNetWork_510009a2_Tx</SHORT-NAME>
-                                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal</DEFINITION-REF>
-                                            <PARAMETER-VALUES>
-                                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                                    <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal/ComSignalType</DEFINITION-REF>
                                                     <VALUE>UINT8</VALUE>
                                                 </ECUC-TEXTUAL-PARAM-VALUE>
                                             </PARAMETER-VALUES>
                                         </ECUC-CONTAINER-VALUE>
                                         <ECUC-CONTAINER-VALUE>
-                                            <SHORT-NAME>Sig_0x115_Used_2_oSupA_Function_2_oDBCNetWork_15a12cba_Tx</SHORT-NAME>
+                                            <SHORT-NAME>Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork_d918db4b_Tx</SHORT-NAME>
                                             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal</DEFINITION-REF>
                                             <PARAMETER-VALUES>
                                                 <ECUC-TEXTUAL-PARAM-VALUE>
                                                     <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal/ComSignalType</DEFINITION-REF>
-                                                    <VALUE>UINT16</VALUE>
-                                                </ECUC-TEXTUAL-PARAM-VALUE>
-                                            </PARAMETER-VALUES>
-                                        </ECUC-CONTAINER-VALUE>
-                                        <ECUC-CONTAINER-VALUE>
-                                            <SHORT-NAME>Sig_0x115_Used_3_oSupA_Function_2_oDBCNetWork_29c1cfb2_Tx</SHORT-NAME>
-                                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal</DEFINITION-REF>
-                                            <PARAMETER-VALUES>
-                                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                                    <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal/ComSignalType</DEFINITION-REF>
-                                                    <VALUE>UINT16</VALUE>
-                                                </ECUC-TEXTUAL-PARAM-VALUE>
-                                            </PARAMETER-VALUES>
-                                        </ECUC-CONTAINER-VALUE>
-                                        <ECUC-CONTAINER-VALUE>
-                                            <SHORT-NAME>Sig_0x115_Used_4_oSupA_Function_2_oDBCNetWork_9ce3668a_Tx</SHORT-NAME>
-                                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal</DEFINITION-REF>
-                                            <PARAMETER-VALUES>
-                                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                                    <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal/ComSignalType</DEFINITION-REF>
-                                                    <VALUE>UINT16</VALUE>
-                                                </ECUC-TEXTUAL-PARAM-VALUE>
-                                            </PARAMETER-VALUES>
-                                        </ECUC-CONTAINER-VALUE>
-                                        <ECUC-CONTAINER-VALUE>
-                                            <SHORT-NAME>Sig_0x115_Used_5_oSupA_Function_2_oDBCNetWork_a0838582_Tx</SHORT-NAME>
-                                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal</DEFINITION-REF>
-                                            <PARAMETER-VALUES>
-                                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                                    <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignalGroup/ComGroupSignal/ComSignalType</DEFINITION-REF>
-                                                    <VALUE>UINT16</VALUE>
+                                                    <VALUE>UINT8</VALUE>
                                                 </ECUC-TEXTUAL-PARAM-VALUE>
                                             </PARAMETER-VALUES>
                                         </ECUC-CONTAINER-VALUE>
