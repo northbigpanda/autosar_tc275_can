@@ -1,4 +1,3 @@
-batch
 @echo off
 chcp 65001 >nul
 setlocal enabledelayedexpansion
@@ -12,11 +11,11 @@ set "ROOT_DIR=%~dp0"
 echo 根目录: %ROOT_DIR%
 
 REM 定义源目录和目标目录
-set "SOURCE_1=Proj_Config\Bsw_Cfg\Gen"
-set "TARGET_1=Proj_Code\01_BSW\Gen"
+set "SOURCE_1=Proj_Config\Bsw_Config\Gen"
+set "TARGET_1=Proj_Code\_01_BSW\Gen"
 
-set "SOURCE_2=Proj_Config\Mcal_Cfg\Gen"
-set "TARGET_2=Proj_Code\03_MCAL\Gen"
+set "SOURCE_2=Proj_Config\Mcal_Config\Gen"
+set "TARGET_2=Proj_Code\_03_MCAL\Gen"
 
 set "ERROR_FLAG=0"
 
@@ -42,14 +41,19 @@ if not exist "%ROOT_DIR%%TARGET_1%" (
 
 echo ✓ 目标目录存在: %ROOT_DIR%%TARGET_1%
 
-REM 执行拷贝操作
-echo 正在拷贝文件...
-xcopy "%ROOT_DIR%%SOURCE_1%\*" "%ROOT_DIR%%TARGET_1%\" /E /Y /I >nul
-if errorlevel 1 (
-    echo ✗ 错误: 拷贝操作失败
+REM 执行拷贝操作，排除指定的文件
+echo 正在拷贝文件（排除 vLinkGen_Template.lsl）...
+
+REM 使用 robocopy 命令实现排除特定文件
+robocopy "%ROOT_DIR%%SOURCE_1%" "%ROOT_DIR%%TARGET_1%" /E /XF "vLinkGen_Template.lsl" /NJH /NJS /NP /NDL
+
+REM 检查 robocopy 执行结果（8及以上表示有错误或异常）
+if errorlevel 8 (
+    echo ✗ 错误: 拷贝操作失败（错误代码 %errorlevel%）
     set "ERROR_FLAG=1"
 ) else (
     echo ✓ 操作1完成
+    echo   （已排除 vLinkGen_Template.lsl 文件）
 )
 
 :CHECK_ERRORS

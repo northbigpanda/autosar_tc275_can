@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2024-01-27 15:22:28
+ *   Generation Time: 2026-05-09 23:13:12
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -299,7 +299,7 @@
 #define CAN_USE_OS_INTERRUPT_CONTROL         STD_ON
 
 /* Optimization */
-#define CAN_RX_FULLCAN_OBJECTS               STD_OFF
+#define CAN_RX_FULLCAN_OBJECTS               STD_ON
 #define CAN_TX_FULLCAN_OBJECTS               STD_OFF
 #define CAN_RX_BASICCAN_OBJECTS              STD_ON
 #define CAN_EXTENDED_ID                      STD_OFF
@@ -359,7 +359,13 @@
 #define CanConf_CanController_CT_DBCNetWork_78f82e94                  0u
 /**\} */
 #define CanConf_CN_DBCNetWork_9ed72b09_Tx 0u
-#define CanConf_CN_DBCNetWork_b9b38c08_Rx 1u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_Meg_FunDiag_Tp 1u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_Meg_PhyDiag_Tp 2u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_NM 7u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupB_Button_Control 5u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupB_Led_Control 6u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupC_Function_1 4u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupC_Function_2 3u
 
 #define CanConf_ControllerBaudrateConfig_CT_DBCNetWork_78f82e94_CanControllerBaudrateConfig 0u
 
@@ -482,10 +488,10 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_MAILBOXRXBASICLENGTHOFCONTROLLERCONFIG                    STD_ON
 #define CAN_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG                  STD_ON
 #define CAN_MAILBOXRXBASICUSEDOFCONTROLLERCONFIG                      STD_ON
-#define CAN_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                     STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullEndIdx' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define CAN_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG                     STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullLength' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define CAN_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG                   STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullStartIdx' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define CAN_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                       STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullUsed' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define CAN_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                     STD_ON
+#define CAN_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG                     STD_ON
+#define CAN_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG                   STD_ON
+#define CAN_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                       STD_ON
 #define CAN_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG                    STD_ON
 #define CAN_MAILBOXTXBASICLENGTHOFCONTROLLERCONFIG                    STD_ON
 #define CAN_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG                  STD_ON
@@ -690,6 +696,8 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_NO_CANCONTROLLERDEFAULTBAUDRATEOFCONTROLLERCONFIG         65535u
 #define CAN_NO_MAILBOXRXBASICENDIDXOFCONTROLLERCONFIG                 255u
 #define CAN_NO_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG               255u
+#define CAN_NO_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                  255u
+#define CAN_NO_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG                255u
 #define CAN_NO_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG                 255u
 #define CAN_NO_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG               255u
 #define CAN_NO_MAILBOXUNUSEDENDIDXOFCONTROLLERCONFIG                  255u
@@ -706,7 +714,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_NO_UNUSEDHWSTOPOFCONTROLLERCONFIG                         255u
 #define CAN_NO_GLOBALINTERRUPTPENDINGMASK                             65535u
 #define CAN_NO_INITBT                                                 65535u
-#define CAN_NO_INITCODEH                                              255u
+#define CAN_NO_INITCODEH                                              65535u
 #define CAN_NO_INITCODEL                                              255u
 #define CAN_NO_INITMASKH                                              65535u
 #define CAN_NO_INITMASKL                                              255u
@@ -728,7 +736,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
   \{
 */ 
 #define CAN_EXISTS_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX              STD_ON
-#define CAN_EXISTS_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_OFF
+#define CAN_EXISTS_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_ON
 #define CAN_EXISTS_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX              STD_ON
 #define CAN_EXISTS_TX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_OFF
 #define CAN_EXISTS_UNUSED_CAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_ON
@@ -744,6 +752,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
   \{
 */ 
 #define CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX                     0x00u
+#define CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX                      0x01u
 #define CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX                     0x02u
 #define CAN_UNUSED_CAN_TYPE_MAILBOXTYPEOFMAILBOX                      0x04u
 /** 
@@ -762,6 +771,10 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_ISDEF_MAILBOXRXBASICLENGTHOFCONTROLLERCONFIG              STD_OFF
 #define CAN_ISDEF_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG            STD_OFF
 #define CAN_ISDEF_MAILBOXRXBASICUSEDOFCONTROLLERCONFIG                STD_OFF
+#define CAN_ISDEF_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG               STD_OFF
+#define CAN_ISDEF_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG               STD_OFF
+#define CAN_ISDEF_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG             STD_OFF
+#define CAN_ISDEF_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                 STD_OFF
 #define CAN_ISDEF_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG              STD_OFF
 #define CAN_ISDEF_MAILBOXTXBASICLENGTHOFCONTROLLERCONFIG              STD_OFF
 #define CAN_ISDEF_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG            STD_OFF
@@ -852,6 +865,10 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_EQ2_MAILBOXRXBASICLENGTHOFCONTROLLERCONFIG                
 #define CAN_EQ2_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG              
 #define CAN_EQ2_MAILBOXRXBASICUSEDOFCONTROLLERCONFIG                  
+#define CAN_EQ2_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                 
+#define CAN_EQ2_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG                 
+#define CAN_EQ2_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG               
+#define CAN_EQ2_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                   
 #define CAN_EQ2_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG                
 #define CAN_EQ2_MAILBOXTXBASICLENGTHOFCONTROLLERCONFIG                
 #define CAN_EQ2_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG              
@@ -1055,7 +1072,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 2u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
 #define Can_GetSizeOfInitPortSelOfPCConfig()                          1u  /**< the number of accomplishable value elements in Can_InitPortSel */
 #define Can_GetSizeOfIsrOsIdOfPCConfig()                              1u  /**< the number of accomplishable value elements in Can_IsrOsId */
-#define Can_GetSizeOfMailboxOfPCConfig()                              3u  /**< the number of accomplishable value elements in Can_Mailbox */
+#define Can_GetSizeOfMailboxOfPCConfig()                              9u  /**< the number of accomplishable value elements in Can_Mailbox */
 #define Can_GetSizeOfMemorySectionInfoOfPCConfig()                    2u  /**< the number of accomplishable value elements in Can_MemorySectionInfo */
 #define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 20u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
 #define Can_GetSizeOfNodeAdrOfPCConfig()                              1u  /**< the number of accomplishable value elements in Can_NodeAdr */
@@ -1096,6 +1113,9 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetMailboxRxBasicEndIdxOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxBasicEndIdxOfControllerConfig)
 #define Can_GetMailboxRxBasicLengthOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxBasicLengthOfControllerConfig)
 #define Can_GetMailboxRxBasicStartIdxOfControllerConfig(Index)        (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxBasicStartIdxOfControllerConfig)
+#define Can_GetMailboxRxFullEndIdxOfControllerConfig(Index)           (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxFullEndIdxOfControllerConfig)
+#define Can_GetMailboxRxFullLengthOfControllerConfig(Index)           (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxFullLengthOfControllerConfig)
+#define Can_GetMailboxRxFullStartIdxOfControllerConfig(Index)         (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxFullStartIdxOfControllerConfig)
 #define Can_GetMailboxTxBasicEndIdxOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxTxBasicEndIdxOfControllerConfig)
 #define Can_GetMailboxTxBasicLengthOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxTxBasicLengthOfControllerConfig)
 #define Can_GetMailboxTxBasicStartIdxOfControllerConfig(Index)        (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxTxBasicStartIdxOfControllerConfig)
@@ -1166,6 +1186,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 */ 
 #define Can_GetBaseDll_GeneratorVersion()                             Can_GetBaseDll_GeneratorVersionOfPCConfig()
 #define Can_IsMailboxRxBasicUsedOfControllerConfig(Index)             (((boolean)(Can_GetMailboxRxBasicLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
+#define Can_IsMailboxRxFullUsedOfControllerConfig(Index)              (((boolean)(Can_GetMailboxRxFullLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
 #define Can_IsMailboxTxBasicUsedOfControllerConfig(Index)             (((boolean)(Can_GetMailboxTxBasicLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
 #define Can_IsMailboxUnusedUsedOfControllerConfig(Index)              (((boolean)(Can_GetMailboxUnusedLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
 #define Can_GetPlatformDll_GeneratorVersion()                         Can_GetPlatformDll_GeneratorVersionOfPCConfig()
@@ -1238,6 +1259,10 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_HasMailboxRxBasicLengthOfControllerConfig()               (TRUE != FALSE)
 #define Can_HasMailboxRxBasicStartIdxOfControllerConfig()             (TRUE != FALSE)
 #define Can_HasMailboxRxBasicUsedOfControllerConfig()                 (TRUE != FALSE)
+#define Can_HasMailboxRxFullEndIdxOfControllerConfig()                (TRUE != FALSE)
+#define Can_HasMailboxRxFullLengthOfControllerConfig()                (TRUE != FALSE)
+#define Can_HasMailboxRxFullStartIdxOfControllerConfig()              (TRUE != FALSE)
+#define Can_HasMailboxRxFullUsedOfControllerConfig()                  (TRUE != FALSE)
 #define Can_HasMailboxTxBasicEndIdxOfControllerConfig()               (TRUE != FALSE)
 #define Can_HasMailboxTxBasicLengthOfControllerConfig()               (TRUE != FALSE)
 #define Can_HasMailboxTxBasicStartIdxOfControllerConfig()             (TRUE != FALSE)
@@ -1616,6 +1641,18 @@ typedef uint8 Can_MailboxRxBasicStartIdxOfControllerConfigType;
 /**   \brief  value based type definition for Can_MailboxRxBasicUsedOfControllerConfig */
 typedef boolean Can_MailboxRxBasicUsedOfControllerConfigType;
 
+/**   \brief  value based type definition for Can_MailboxRxFullEndIdxOfControllerConfig */
+typedef uint8 Can_MailboxRxFullEndIdxOfControllerConfigType;
+
+/**   \brief  value based type definition for Can_MailboxRxFullLengthOfControllerConfig */
+typedef uint8 Can_MailboxRxFullLengthOfControllerConfigType;
+
+/**   \brief  value based type definition for Can_MailboxRxFullStartIdxOfControllerConfig */
+typedef uint8 Can_MailboxRxFullStartIdxOfControllerConfigType;
+
+/**   \brief  value based type definition for Can_MailboxRxFullUsedOfControllerConfig */
+typedef boolean Can_MailboxRxFullUsedOfControllerConfigType;
+
 /**   \brief  value based type definition for Can_MailboxTxBasicEndIdxOfControllerConfig */
 typedef uint8 Can_MailboxTxBasicEndIdxOfControllerConfigType;
 
@@ -1704,7 +1741,7 @@ typedef uint16 Can_GlobalInterruptPendingMaskType;
 typedef uint16 Can_InitBTType;
 
 /**   \brief  value based type definition for Can_InitCodeH */
-typedef uint8 Can_InitCodeHType;
+typedef uint16 Can_InitCodeHType;
 
 /**   \brief  value based type definition for Can_InitCodeL */
 typedef uint8 Can_InitCodeLType;
@@ -1740,7 +1777,7 @@ typedef uint8 Can_HwHandleOfMailboxType;
 typedef uint8 Can_HwHandleStopOfMailboxType;
 
 /**   \brief  value based type definition for Can_IDValueOfMailbox */
-typedef uint8 Can_IDValueOfMailboxType;
+typedef uint16 Can_IDValueOfMailboxType;
 
 /**   \brief  value based type definition for Can_MailboxSizeOfMailbox */
 typedef uint8 Can_MailboxSizeOfMailboxType;
@@ -1896,6 +1933,9 @@ typedef struct sCan_ControllerConfigType
   Can_MailboxRxBasicEndIdxOfControllerConfigType MailboxRxBasicEndIdxOfControllerConfig;  /**< the end index of the 0:n relation pointing to Can_Mailbox */
   Can_MailboxRxBasicLengthOfControllerConfigType MailboxRxBasicLengthOfControllerConfig;  /**< the number of relations pointing to Can_Mailbox */
   Can_MailboxRxBasicStartIdxOfControllerConfigType MailboxRxBasicStartIdxOfControllerConfig;  /**< the start index of the 0:n relation pointing to Can_Mailbox */
+  Can_MailboxRxFullEndIdxOfControllerConfigType MailboxRxFullEndIdxOfControllerConfig;  /**< the end index of the 0:n relation pointing to Can_Mailbox */
+  Can_MailboxRxFullLengthOfControllerConfigType MailboxRxFullLengthOfControllerConfig;  /**< the number of relations pointing to Can_Mailbox */
+  Can_MailboxRxFullStartIdxOfControllerConfigType MailboxRxFullStartIdxOfControllerConfig;  /**< the start index of the 0:n relation pointing to Can_Mailbox */
   Can_MailboxTxBasicEndIdxOfControllerConfigType MailboxTxBasicEndIdxOfControllerConfig;  /**< the end index of the 0:n relation pointing to Can_Mailbox */
   Can_MailboxTxBasicLengthOfControllerConfigType MailboxTxBasicLengthOfControllerConfig;  /**< the number of relations pointing to Can_Mailbox */
   Can_MailboxTxBasicStartIdxOfControllerConfigType MailboxTxBasicStartIdxOfControllerConfig;  /**< the start index of the 0:n relation pointing to Can_Mailbox */
@@ -1933,11 +1973,11 @@ typedef struct sCan_ControllerDataType
 /**   \brief  type used in Can_Mailbox */
 typedef struct sCan_MailboxType
 {
+  Can_IDValueOfMailboxType IDValueOfMailbox;
   Can_ActiveSendObjectOfMailboxType ActiveSendObjectOfMailbox;
   Can_ControllerConfigIdxOfMailboxType ControllerConfigIdxOfMailbox;  /**< the index of the 1:1 relation pointing to Can_ControllerConfig */
   Can_HwHandleOfMailboxType HwHandleOfMailbox;
   Can_HwHandleStopOfMailboxType HwHandleStopOfMailbox;
-  Can_IDValueOfMailboxType IDValueOfMailbox;
   Can_MailboxSizeOfMailboxType MailboxSizeOfMailbox;
   Can_MailboxTypeOfMailboxType MailboxTypeOfMailbox;
   Can_MaxDataLenOfMailboxType MaxDataLenOfMailbox;
@@ -2121,6 +2161,9 @@ extern CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[1];
   MailboxRxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxRxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxRxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
+  MailboxRxFullEndIdx                the end index of the 0:n relation pointing to Can_Mailbox
+  MailboxRxFullLength                the number of relations pointing to Can_Mailbox
+  MailboxRxFullStartIdx              the start index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxTxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
@@ -2189,12 +2232,12 @@ extern CONST(Can_InitBTType, CAN_CONST) Can_InitBT[1];
   \var    Can_InitCodeH
   \brief  BasicCAN acceptance filter.
 */ 
-#define CAN_START_SEC_CONST_8BIT
+#define CAN_START_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern CONST(Can_InitCodeHType, CAN_CONST) Can_InitCodeH[1];
-#define CAN_STOP_SEC_CONST_8BIT
+#define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -2326,11 +2369,11 @@ extern CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[1];
   \brief  mailbox configuration (over all controllers)
   \details
   Element                Description
+  IDValue            
   ActiveSendObject   
   ControllerConfigIdx    the index of the 1:1 relation pointing to Can_ControllerConfig
   HwHandle           
   HwHandleStop       
-  IDValue            
   MailboxSize        
   MailboxType        
   MaxDataLen         
@@ -2340,7 +2383,7 @@ extern CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[3];
+extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[9];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

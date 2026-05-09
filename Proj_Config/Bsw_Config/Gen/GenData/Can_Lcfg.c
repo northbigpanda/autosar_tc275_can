@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Lcfg.c
- *   Generation Time: 2024-01-27 15:22:28
+ *   Generation Time: 2026-05-09 23:13:12
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -116,6 +116,9 @@ CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[1] = {  /* PRQA S 15
   MailboxRxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxRxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxRxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
+  MailboxRxFullEndIdx                the end index of the 0:n relation pointing to Can_Mailbox
+  MailboxRxFullLength                the number of relations pointing to Can_Mailbox
+  MailboxRxFullStartIdx              the start index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxTxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
@@ -138,8 +141,8 @@ CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[1] = {  /* PRQA S 15
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    CanControllerDefaultBaudrate  CanControllerDefaultBaudrateIdx  MailboxRxBasicEndIdx                                                                                                                                                    MailboxRxBasicLength                                                                                                                                                    MailboxRxBasicStartIdx                                                                                                                                                    MailboxTxBasicEndIdx                                                                                                                                                    MailboxTxBasicLength                                                                                                                                                    MailboxTxBasicStartIdx                                                                                                                                                    MailboxUnusedEndIdx                                                                                                                                                   MailboxUnusedLength                                                                                                                                                   MailboxUnusedStartIdx                                                                                                                                                   RxBasicHwStart  RxBasicHwStop  RxFullHwStart  RxFullHwStop  TxBasicHwStart  TxBasicHwStop  TxFullHwStart  TxFullHwStop  UnusedHwStart  UnusedHwStop        Comment                              Referable Keys */
-  { /*     0 */                         500u,                              0u,                   2u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                     1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                     0u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                  3u  /* UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                  1u  /* UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                    2u  /* UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,             1u,           11u,            1u,           1u,             0u,            1u,            0u,           0u,           11u,          20u }   /* [CT_DBCNetWork_78f82e94] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94] */
+    /* Index    CanControllerDefaultBaudrate  CanControllerDefaultBaudrateIdx  MailboxRxBasicEndIdx                                                                                                                                                    MailboxRxBasicLength                                                                                                                                                    MailboxRxBasicStartIdx                                                                                                                                                    MailboxRxFullEndIdx                                                                                                                                                   MailboxRxFullLength                                                                                                                                                   MailboxRxFullStartIdx                                                                                                                                                   MailboxTxBasicEndIdx                                                                                                                                                    MailboxTxBasicLength                                                                                                                                                    MailboxTxBasicStartIdx                                                                                                                                                    MailboxUnusedEndIdx                                                                                                                                                   MailboxUnusedLength                                                                                                                                                   MailboxUnusedStartIdx                                                                                                                                                   RxBasicHwStart  RxBasicHwStop  RxFullHwStart  RxFullHwStop  TxBasicHwStart  TxBasicHwStop  TxFullHwStart  TxFullHwStop  UnusedHwStart  UnusedHwStop        Comment                              Referable Keys */
+  { /*     0 */                         500u,                              0u,                   8u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                     7u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                  7u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                  6u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                    1u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                     0u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                  9u  /* UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                  1u  /* UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,                    8u  /* UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController) */,             7u,            9u,            1u,           7u,             0u,            1u,            0u,           0u,            9u,          20u }   /* [CT_DBCNetWork_78f82e94] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -159,7 +162,7 @@ CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1] = {  /* PRQA 
 /*lint -restore */
 CONST(Can_GlobalInterruptPendingMaskType, CAN_CONST) Can_GlobalInterruptPendingMask[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     GlobalInterruptPendingMask      Comment */
-  /*     0 */                     0x07FFu,  /* [CT_DBCNetWork_78f82e94, Mailbox 0-31] */
+  /*     0 */                     0x01FFu,  /* [CT_DBCNetWork_78f82e94, Mailbox 0-31] */
   /*     1 */                     0x0000u,  /* [CT_DBCNetWork_78f82e94, Mailbox 32-63] */
   /*     2 */                     0x0000u,  /* [CT_DBCNetWork_78f82e94, Mailbox 64-95] */
   /*     3 */                     0x0000u,  /* [CT_DBCNetWork_78f82e94, Mailbox 96-127] */
@@ -200,15 +203,15 @@ CONST(Can_InitBTType, CAN_CONST) Can_InitBT[1] = {  /* PRQA S 1514, 1533 */  /* 
   \var    Can_InitCodeH
   \brief  BasicCAN acceptance filter.
 */ 
-#define CAN_START_SEC_CONST_8BIT
+#define CAN_START_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Can_InitCodeHType, CAN_CONST) Can_InitCodeH[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     InitCodeH      Comment */
-  /*     0 */      0x00u   /* [CT_DBCNetWork_78f82e94 - CanControllerBaudrateConfig, CanFilterMask] */
+  /*     0 */    0x1800u   /* [CT_DBCNetWork_78f82e94 - CanControllerBaudrateConfig, CanFilterMask] */
 };
-#define CAN_STOP_SEC_CONST_8BIT
+#define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -246,7 +249,7 @@ CONST(Can_InitCodeLType, CAN_CONST) Can_InitCodeL[1] = {  /* PRQA S 1514, 1533 *
 /*lint -restore */
 CONST(Can_InitMaskHType, CAN_CONST) Can_InitMaskH[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     InitMaskH      Comment */
-  /*     0 */    0x2000u   /* [CT_DBCNetWork_78f82e94 - CanControllerBaudrateConfig, CanFilterMask] */
+  /*     0 */    0x3C00u   /* [CT_DBCNetWork_78f82e94 - CanControllerBaudrateConfig, CanFilterMask] */
 };
 #define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -362,11 +365,11 @@ CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[1] = {  /* PRQA S 1514, 1533 */  /
   \brief  mailbox configuration (over all controllers)
   \details
   Element                Description
+  IDValue            
   ActiveSendObject   
   ControllerConfigIdx    the index of the 1:1 relation pointing to Can_ControllerConfig
   HwHandle           
   HwHandleStop       
-  IDValue            
   MailboxSize        
   MailboxType        
   MaxDataLen         
@@ -376,11 +379,17 @@ CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[1] = {  /* PRQA S 1514, 1533 */  /
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ActiveSendObject  ControllerConfigIdx                                                             HwHandle  HwHandleStop  IDValue  MailboxSize  MailboxType                                MaxDataLen  MemorySectionsIndex        Comment                                 Referable Keys */
-  { /*     0 */               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       0u,           1u,   0x00u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  0u },  /* [CN_DBCNetWork_9ed72b09_Tx] */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
-  { /*     1 */               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       1u,          11u,   0x00u,         10u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  1u },  /* [CN_DBCNetWork_b9b38c08_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
-  { /*     2 */               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,      11u,          20u,   0x00u,          9u,  CAN_UNUSED_CAN_TYPE_MAILBOXTYPEOFMAILBOX,         0u,                 11u }   /* []                          */  /* [undefined, /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    IDValue  ActiveSendObject  ControllerConfigIdx                                                             HwHandle  HwHandleStop  MailboxSize  MailboxType                                MaxDataLen  MemorySectionsIndex        Comment                                                     Referable Keys */
+  { /*     0 */ 0x0000u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       0u,           1u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  0u },  /* [CN_DBCNetWork_9ed72b09_Tx]                     */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_9ed72b09_Tx (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     1 */ 0x07DFu,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       1u,           2u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  1u },  /* [CN_DBCNetWork_b9b38c08_Rx_Meg_FunDiag_Tp]      */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx_Meg_FunDiag_Tp (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     2 */ 0x0701u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       2u,           3u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  2u },  /* [CN_DBCNetWork_b9b38c08_Rx_Meg_PhyDiag_Tp]      */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx_Meg_PhyDiag_Tp (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     3 */ 0x0403u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       3u,           4u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  3u },  /* [CN_DBCNetWork_b9b38c08_Rx_SupC_Function_2]     */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx_SupC_Function_2 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     4 */ 0x0402u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       4u,           5u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  4u },  /* [CN_DBCNetWork_b9b38c08_Rx_SupC_Function_1]     */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx_SupC_Function_1 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     5 */ 0x0401u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       5u,           6u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  5u },  /* [CN_DBCNetWork_b9b38c08_Rx_SupB_Button_Control] */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx_SupB_Button_Control (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     6 */ 0x0400u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       6u,           7u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  6u },  /* [CN_DBCNetWork_b9b38c08_Rx_SupB_Led_Control]    */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx_SupB_Led_Control (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     7 */ 0x0000u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       7u,           9u,          2u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  7u },  /* [CN_DBCNetWork_b9b38c08_Rx_NM]                  */  /* [/ActiveEcuC/Can/CanConfigSet/CN_DBCNetWork_b9b38c08_Rx_NM (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
+  { /*     8 */ 0x0000u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 */,       9u,          20u,         11u,  CAN_UNUSED_CAN_TYPE_MAILBOXTYPEOFMAILBOX,         0u,                  9u }   /* []                                              */  /* [undefined, /ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94, UNUSED_CAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_DBCNetWork_78f82e94 (DefRef: /MICROSAR/Can_TricoreMultican/Can/CanConfigSet/CanController)] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -431,16 +440,16 @@ CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[2] = {  /* PRQ
 CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[20] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    HwHandle  MailboxElement  MailboxHandle        Comment */
   { /*     0 */       0u,             0u,            0u },  /* [Memory_CanCell - CN_DBCNetWork_9ed72b09_Tx] */
-  { /*     1 */       1u,             0u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     2 */       2u,             1u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     3 */       3u,             2u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     4 */       4u,             3u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     5 */       5u,             4u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     6 */       6u,             5u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     7 */       7u,             6u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     8 */       8u,             7u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*     9 */       9u,             8u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
-  { /*    10 */      10u,             9u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx] */
+  { /*     1 */       1u,             0u,            1u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_Meg_FunDiag_Tp] */
+  { /*     2 */       2u,             0u,            2u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_Meg_PhyDiag_Tp] */
+  { /*     3 */       3u,             0u,            3u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_SupC_Function_2] */
+  { /*     4 */       4u,             0u,            4u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_SupC_Function_1] */
+  { /*     5 */       5u,             0u,            5u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_SupB_Button_Control] */
+  { /*     6 */       6u,             0u,            6u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_SupB_Led_Control] */
+  { /*     7 */       7u,             0u,            7u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_NM] */
+  { /*     8 */       8u,             1u,            7u },  /* [Memory_CanCell - CN_DBCNetWork_b9b38c08_Rx_NM] */
+  { /*     9 */       9u,             0u,            0u },  /* [Memory_CanCell - Unused] */
+  { /*    10 */      10u,             0u,            0u },  /* [Memory_CanCell - Unused] */
   { /*    11 */      11u,             0u,            0u },  /* [Memory_CanCell - Unused] */
   { /*    12 */      12u,             0u,            0u },  /* [Memory_CanCell - Unused] */
   { /*    13 */      13u,             0u,            0u },  /* [Memory_CanCell - Unused] */
@@ -532,7 +541,7 @@ CONST(Can_PhysPrioType, CAN_CONST) Can_PhysPrio[4] = {  /* PRQA S 1514, 1533 */ 
 /*lint -restore */
 CONST(Can_RxBasicInterruptPendingMaskType, CAN_CONST) Can_RxBasicInterruptPendingMask[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     RxBasicInterruptPendingMask      Comment */
-  /*     0 */                      0x07FEu,  /* [CT_DBCNetWork_78f82e94, Mailbox 0-31] */
+  /*     0 */                      0x0180u,  /* [CT_DBCNetWork_78f82e94, Mailbox 0-31] */
   /*     1 */                      0x0000u,  /* [CT_DBCNetWork_78f82e94, Mailbox 32-63] */
   /*     2 */                      0x0000u,  /* [CT_DBCNetWork_78f82e94, Mailbox 64-95] */
   /*     3 */                      0x0000u,  /* [CT_DBCNetWork_78f82e94, Mailbox 96-127] */
@@ -559,7 +568,7 @@ CONST(Can_RxBasicInterruptPendingMaskType, CAN_CONST) Can_RxBasicInterruptPendin
 /*lint -restore */
 CONST(Can_RxFullInterruptPendingMaskType, CAN_CONST) Can_RxFullInterruptPendingMask[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     RxFullInterruptPendingMask      Comment */
-  /*     0 */                       0x00u,  /* [CT_DBCNetWork_78f82e94, Mailbox 0-31] */
+  /*     0 */                       0x7Eu,  /* [CT_DBCNetWork_78f82e94, Mailbox 0-31] */
   /*     1 */                       0x00u,  /* [CT_DBCNetWork_78f82e94, Mailbox 32-63] */
   /*     2 */                       0x00u,  /* [CT_DBCNetWork_78f82e94, Mailbox 64-95] */
   /*     3 */                       0x00u,  /* [CT_DBCNetWork_78f82e94, Mailbox 96-127] */
