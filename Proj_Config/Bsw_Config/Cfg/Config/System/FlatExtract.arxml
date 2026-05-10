@@ -2035,6 +2035,28 @@
                                   </INNER-PORT-IREF>
                                   <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Sig_0x114_Used_6</OUTER-PORT-REF>
                                 </DELEGATION-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="40ab6705-400f-4d47-a8e4-d2b4f5ee09b0">
+                                  <SHORT-NAME>AppCtrl_Trigger_Msg_State_AppComTx_Trigger_Msg_State</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/AppCtrl</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/AppCtrl/Trigger_Msg_State_SR_S</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/AppComTx</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/AppComTx/Trigger_Msg_State_SR_R</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="11644e08-6081-41b9-bc02-234f7dba3fd4">
@@ -2211,6 +2233,7 @@
                                     <SD GID="02A6AB29-6DCD-415A-B73E-05A625CE640B">/ComponentTypes/AppComTx/SG_Sig_Grp_0x114_SR_R</SD>
                                     <SD GID="26647254-4696-4B24-804B-0A3A5B73B73B">/ComponentTypes/AppComTx/Sig_0x114_Used_6</SD>
                                     <SD GID="AF30BD36-8912-4971-8319-C6B617998E3B">/ComponentTypes/AppComTx/Sig_0x114_Used_SR_R</SD>
+                                    <SD GID="CAAB2406-7A79-4BD0-8B5D-06B1D461B3A3">/ComponentTypes/AppComTx/Trigger_Msg_State_SR_R</SD>
                                     <SD GID="6C50F277-040F-4DCA-869C-ADEB18EF70F4">/ComponentTypes/AppComTx_Implementation</SD>
                                     <SD GID="12BFB369-9786-4E2C-87C1-F306A1230F97">/ComponentTypes/AppCtrl</SD>
                                     <SD GID="22F7223D-784B-4BFA-AB59-608AE1F038CE">/ComponentTypes/AppCtrl/AppCtrl_InternalBehavior/AppCtrl_InitEvent</SD>
@@ -2224,6 +2247,7 @@
                                     <SD GID="4C9D8750-5BFC-4972-9857-BE0B8BD2AFC2">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x402_SR_R</SD>
                                     <SD GID="EBE17548-08BC-4DC2-A1C4-DB2EA4155D7A">/ComponentTypes/AppCtrl/SG_Sig_Grp_0x403_SR_R</SD>
                                     <SD GID="1775A982-D578-419E-8C05-87EB5D78B70C">/ComponentTypes/AppCtrl/Sig_0x114_Used_SR_S</SD>
+                                    <SD GID="D4CB072D-F12E-492C-85A3-10077006FE7C">/ComponentTypes/AppCtrl/Trigger_Msg_State_SR_S</SD>
                                     <SD GID="EB2D86F5-FE56-434B-9C00-68956E9FEF1F">/ComponentTypes/AppCtrl1</SD>
                                     <SD GID="9CDC3824-6108-4EA7-8B3B-9FE293E68733">/ComponentTypes/AppCtrl1/AppCtrl1_InternalBehavior/TMT_AppCtrl1_MainFuntion</SD>
                                     <SD GID="9C642B15-5037-45AA-BB25-CB211350D523">/ComponentTypes/AppCtrl1_Implementation</SD>

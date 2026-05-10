@@ -1,301 +1,301 @@
-﻿[21:12:40] INFO   ----> Process of diagnostic specification
-[21:12:40] INFO   DDM-Version: 16.1.0 (Release)
-[21:12:40] INFO   Importing ODX file D:\AutoSAR\autosar_tc275_can\Proj_Config\Bsw_Config\Cfg\DBC\XWXZ_UdsCdd.cdd, ECU: XB_SUP_A, variant: BaseVariant
-[21:12:40] INFO   Selecting ECU 'XB_SUP_A'  Variant 'BaseVariant'  Protocol UDS.
-[21:12:40] WARN   Diagnostic OEM 'Vector' differs from OEM 'Unknown' in 'D:\AutoSAR\autosar_tc275_can\Proj_Config\Bsw_Config\Cfg\DBC\XWXZ_UdsCdd.cdd'.
-[21:12:40] INFO   Selecting Manufacturer 'Vector'.
-[21:12:40] INFO   'Vector' was selected and 'unspecified' was detected.
-[21:12:40] INFO   Importing Database information.
-[21:12:40] INFO   ----> Importing Variants
-[21:12:40] INFO   <---- Importing Variants
-[21:12:40] INFO   ----> Importing StateGroups
-[21:12:40] INFO   Importing StateMachine information.
-[21:12:40] INFO   <---- Importing StateGroups
-[21:12:40] INFO   ----> Importing Services
-[21:12:40] INFO   Importing Service '1001'.
-[21:12:40] INFO   Importing Service '1002'.
-[21:12:40] INFO   Importing Service '1003'.
-[21:12:40] INFO   Importing Service '1101'.
-[21:12:40] INFO   Importing Service '1103'.
-[21:12:40] INFO   Importing Service '14'.
-[21:12:40] INFO   Importing Service '1901'.
-[21:12:40] INFO   Importing Service '1902'.
-[21:12:40] INFO   Importing Service '220100'.
-[21:12:40] INFO   Importing Service '2701'.
-[21:12:40] INFO   Importing Service '2702'.
-[21:12:40] INFO   Importing Service '2800'.
-[21:12:40] INFO   Importing Service '2801'.
-[21:12:40] INFO   Importing Service '31010100'.
-[21:12:40] INFO   Importing Service '31030100'.
-[21:12:40] INFO   Importing Service '3E00'.
-[21:12:40] INFO   Importing Service '8501'.
-[21:12:40] INFO   Importing Service '8502'.
-[21:12:40] INFO   <---- Importing Services
-[21:12:40] INFO   ----> Importing FaultMemory
-[21:12:40] INFO   Importing FaultMemory.
-[21:12:40] WARN   Could not extract DTC format.
-[21:12:40] WARN   Could not find ExtendedDataRecords for DTC (0x402011). 
-[21:12:40] WARN   Could not find SnapshotRecords for DTC (0x402011). 
-[21:12:40] INFO   <---- Importing FaultMemory
-[21:12:40] INFO   ----> Importing FreezeFrame
-[21:12:40] INFO   <---- Importing FreezeFrame
-[21:12:40] INFO   ----> Importing DiagSettings
-[21:12:40] INFO   Importing DiagSettings
-[21:12:40] INFO   <---- Importing DiagSettings
-[21:12:40] INFO   ----> Importing DataCompProps
-[21:12:40] INFO   <---- Importing DataCompProps
-[21:12:40] INFO   ODX Import finished successfully.
-[21:12:40] INFO   Shaping imported model for diagnostic OEM 'Vector'
-[21:12:40] INFO   Adding shaper script to remove freeze frame 0x00
-[21:12:40] INFO   >>>>>>>>>>>>>>>> SHAPING preparation >>>>>>>>>>>>>>>>
-[21:12:40] INFO   <<<<<<<<<<<<<<<< SHAPING ready after 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> SHAPING started >>>>>>>>>>>>>>>>
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep ServiceSelection >>>>>>>>>>>>>>>>
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep ServiceSelection( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep DataPreparation >>>>>>>>>>>>>>>>
-[21:12:40] NOTE     - Shape Data Comp Collections
-[21:12:40] INFO   At Ecu 
-[21:12:40] INFO     - Fix Unsigned Boolean
-[21:12:40] INFO     - Convert XInt24/XInt64 to Byte-Array
-[21:12:40] INFO     - Set Compu-Scale Symbols
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep DataPreparation( completed in 0.016s (16ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep ServiceDefinition >>>>>>>>>>>>>>>>
-[21:12:40] INFO   Finding duplicated services... 
-[21:12:40] INFO   Destroying duplicated services... 
-[21:12:40] INFO   At Service 0x22 
-[21:12:40] INFO     - combination of subservices changed from unsupported  to supported.
-[21:12:40] INFO   At Service 0x22 SubService 0x100 
-[21:12:40] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[21:12:40] INFO     - Service has now new definition: 0x22 0x100 Braking_Read
-[21:12:40] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[21:12:40] INFO     - Service has now new definition: 0x22 0x100 Braking_Read
-[21:12:40] INFO   At Service 0x31 SubService 0x1 
-[21:12:40] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[21:12:40] INFO     - Service has now new definition: 0x31 0x1 0x100 ECU_Check_Start
-[21:12:40] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[21:12:40] INFO     - Service has now new definition: 0x31 0x1 0x100 ECU_Check_Start
-[21:12:40] INFO   At Service 0x31 SubService 0x3 
-[21:12:40] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[21:12:40] INFO     - Service has now new definition: 0x31 0x3 0x100 ECU_Check_Results
-[21:12:40] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[21:12:40] INFO     - Service has now new definition: 0x31 0x3 0x100 ECU_Check_Results
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep ServiceDefinition( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep DataDefinition >>>>>>>>>>>>>>>>
-[21:12:40] NOTE     - Combine Pid Parameters
-[21:12:40] NOTE     - Building Service Dids
-[21:12:40] NOTE     - Building Routines
-[21:12:40] NOTE     -  + Routine 'ECU_Check' created
-[21:12:40] NOTE     - Shape Routine Parameter Names
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep DataDefinition( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep DataIdentifier >>>>>>>>>>>>>>>>
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep DataIdentifier( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep Service >>>>>>>>>>>>>>>>
-[21:12:40] INFO   At Service 0x10 
-[21:12:40] INFO     - Qualifier changed from 'DefaultSession_Start' to 'DiagSessionControl'
-[21:12:40] INFO     - Service action qualifier set to 'SessionControl'
-[21:12:40] INFO   At Service 0x10 SubService 0x1 
-[21:12:40] INFO     - SubService action qualifier set to 'StartSession'
-[21:12:40] INFO   At Service 0x10 SubService 0x2 
-[21:12:40] INFO     - SubService action qualifier set to 'StartSession'
-[21:12:40] INFO   At Service 0x10 SubService 0x3 
-[21:12:40] INFO     - SubService action qualifier set to 'StartSession'
-[21:12:40] INFO   At Service 0x10 SubService 0x1 
-[21:12:40] INFO     - Qualifier changed from 'DefaultSession_Start' to 'Default'
-[21:12:40] INFO   At Service 0x10 SubService 0x2 
-[21:12:40] INFO     - Qualifier changed from 'ProgrammingSession_Start' to 'Programming'
-[21:12:40] INFO   At Service 0x10 SubService 0x3 
-[21:12:40] INFO     - Qualifier changed from 'ExtendedDiagnosticSession_Start' to 'Extended'
-[21:12:40] INFO   At Service 0x11 
-[21:12:40] INFO     - Qualifier changed from 'HardReset_Reset' to 'EcuReset'
-[21:12:40] INFO   At Service 0x11 SubService 0x1 
-[21:12:40] INFO     - SubService action qualifier set to 'EcuReset'
-[21:12:40] INFO   At Service 0x11 SubService 0x3 
-[21:12:40] INFO     - SubService action qualifier set to 'EcuReset'
-[21:12:40] INFO   At Service 0x11 SubService 0x1 
-[21:12:40] INFO     - Qualifier changed from 'HardReset_Reset' to 'Hard'
-[21:12:40] INFO   At Service 0x11 SubService 0x3 
-[21:12:40] INFO     - Qualifier changed from 'SoftReset_Reset' to 'Soft'
-[21:12:40] INFO   At Service 0x14 
-[21:12:40] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
-[21:12:40] INFO   At Service 0x14 SubService 
-[21:12:40] INFO     - SubService action qualifier set to 'Clear'
-[21:12:40] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
-[21:12:40] INFO   At Service 0x19 
-[21:12:40] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'ReadDtcInfo'
-[21:12:40] INFO   At Service 0x19 SubService 0x2 
-[21:12:40] INFO     - SubService action qualifier set to 'ReadDtc'
-[21:12:40] INFO   At Service 0x19 SubService 0x1 
-[21:12:40] INFO     - SubService action qualifier set to 'ReadDtc'
-[21:12:40] INFO   At Service 0x19 SubService 0x1 
-[21:12:40] INFO     - Qualifier changed from 'FaultMemory_ReadNumber' to 'RNODTCBSM'
-[21:12:40] INFO   At Service 0x19 SubService 0x2 
-[21:12:40] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'RDTCBSM'
-[21:12:40] INFO   At Service 0x22 
-[21:12:40] INFO     - Qualifier changed from 'Braking_Read' to 'ReadDataById'
-[21:12:40] INFO     - Service action qualifier set to 'Read'
-[21:12:40] INFO   At Service 0x22 SubService 0x100 
-[21:12:40] INFO     - SubService action qualifier set to 'ReadDid'
-[21:12:40] INFO   At Service 0x27 
-[21:12:40] INFO     - Qualifier changed from 'SeedLevel1_Request' to 'SecurityAccess'
-[21:12:40] INFO     - Service action qualifier set to 'SecurityAccess'
-[21:12:40] INFO   At Service 0x27 SubService 0x2 
-[21:12:40] INFO     - SubService action qualifier set to 'SendKey'
-[21:12:40] INFO   At Service 0x27 SubService 0x1 
-[21:12:40] INFO     - SubService action qualifier set to 'GetSeed'
-[21:12:40] INFO   At Service 0x28 
-[21:12:40] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'CommunicationControl'
-[21:12:40] INFO   At Service 0x28 SubService 0x0 
-[21:12:40] INFO     - SubService action qualifier set to 'CommCtrl'
-[21:12:40] INFO   At Service 0x28 SubService 0x1 
-[21:12:40] INFO     - SubService action qualifier set to 'CommCtrl'
-[21:12:40] INFO   At Service 0x28 SubService 0x0 
-[21:12:40] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'EnableRxAndTx'
-[21:12:40] INFO   At Service 0x28 SubService 0x1 
-[21:12:40] INFO     - Qualifier changed from 'EnableRxAndDisableTx_Control' to 'EnableRxAndDisableTx'
-[21:12:40] INFO   At Service 0x31 
-[21:12:40] INFO     - Qualifier changed from 'ECU_Check_Start' to 'RoutineControl'
-[21:12:40] INFO   At Service 0x31 SubService 0x1 
-[21:12:40] INFO     - SubService action qualifier set to 'RtnCtrlStart'
-[21:12:40] INFO   At Service 0x31 SubService 0x3 
-[21:12:40] INFO     - SubService action qualifier set to 'RtnCtrlReqRes'
-[21:12:40] INFO   At Service 0x3e 
-[21:12:40] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
-[21:12:40] INFO   At Service 0x3e SubService 0x0 
-[21:12:40] INFO     - SubService action qualifier set to 'Send'
-[21:12:40] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
-[21:12:40] INFO   At Service 0x85 
-[21:12:40] INFO     - Spec changed from '8' to 'FaultMemory'(2)
-[21:12:40] INFO     - Qualifier changed from 'DTC_Setting_Mode_On_Send' to 'ControlDtcSetting'
-[21:12:40] INFO   At Service 0x85 SubService 0x1 
-[21:12:40] INFO     - SubService action qualifier set to 'ControlDtcSetting'
-[21:12:40] INFO   At Service 0x85 SubService 0x2 
-[21:12:40] INFO     - SubService action qualifier set to 'ControlDtcSetting'
-[21:12:40] INFO   At Service 0x85 SubService 0x1 
-[21:12:40] INFO     - Qualifier changed from 'DTC_Setting_Mode_On_Send' to 'Enable'
-[21:12:40] INFO   At Service 0x85 SubService 0x2 
-[21:12:40] INFO     - Qualifier changed from 'DTC_Setting_Mode_Off_Send' to 'Disable'
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep Service( completed in 0.016s (16ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep StateMachine >>>>>>>>>>>>>>>>
-[21:12:40] ERROR  Session state group could not be found for session management shaping!
-[21:12:40] INFO   Session state group is created!
-[21:12:40] ERROR  Session state group has no default state!
-[21:12:40] INFO   At Ecu 
-[21:12:40] INFO     - Default state 'DefaultSession' is created.
-[21:12:40] ERROR  Service 0x10 0x01 has no transition to any session state!
+﻿[11:48:55] INFO   ----> Process of diagnostic specification
+[11:48:55] INFO   DDM-Version: 16.1.0 (Release)
+[11:48:55] INFO   Importing ODX file D:\AutoSAR\autosar_tc275_can\Proj_Config\Bsw_Config\Cfg\DBC\XWXZ_UdsCdd.cdd, ECU: XB_SUP_A, variant: BaseVariant
+[11:48:55] INFO   Selecting ECU 'XB_SUP_A'  Variant 'BaseVariant'  Protocol UDS.
+[11:48:55] WARN   Diagnostic OEM 'Vector' differs from OEM 'Unknown' in 'D:\AutoSAR\autosar_tc275_can\Proj_Config\Bsw_Config\Cfg\DBC\XWXZ_UdsCdd.cdd'.
+[11:48:55] INFO   Selecting Manufacturer 'Vector'.
+[11:48:55] INFO   'Vector' was selected and 'unspecified' was detected.
+[11:48:55] INFO   Importing Database information.
+[11:48:55] INFO   ----> Importing Variants
+[11:48:55] INFO   <---- Importing Variants
+[11:48:55] INFO   ----> Importing StateGroups
+[11:48:55] INFO   Importing StateMachine information.
+[11:48:55] INFO   <---- Importing StateGroups
+[11:48:55] INFO   ----> Importing Services
+[11:48:55] INFO   Importing Service '1001'.
+[11:48:55] INFO   Importing Service '1002'.
+[11:48:55] INFO   Importing Service '1003'.
+[11:48:55] INFO   Importing Service '1101'.
+[11:48:55] INFO   Importing Service '1103'.
+[11:48:55] INFO   Importing Service '14'.
+[11:48:55] INFO   Importing Service '1901'.
+[11:48:55] INFO   Importing Service '1902'.
+[11:48:55] INFO   Importing Service '220100'.
+[11:48:55] INFO   Importing Service '2701'.
+[11:48:55] INFO   Importing Service '2702'.
+[11:48:55] INFO   Importing Service '2800'.
+[11:48:55] INFO   Importing Service '2801'.
+[11:48:55] INFO   Importing Service '31010100'.
+[11:48:55] INFO   Importing Service '31030100'.
+[11:48:55] INFO   Importing Service '3E00'.
+[11:48:55] INFO   Importing Service '8501'.
+[11:48:55] INFO   Importing Service '8502'.
+[11:48:55] INFO   <---- Importing Services
+[11:48:55] INFO   ----> Importing FaultMemory
+[11:48:55] INFO   Importing FaultMemory.
+[11:48:55] WARN   Could not extract DTC format.
+[11:48:55] WARN   Could not find ExtendedDataRecords for DTC (0x402011). 
+[11:48:55] WARN   Could not find SnapshotRecords for DTC (0x402011). 
+[11:48:55] INFO   <---- Importing FaultMemory
+[11:48:55] INFO   ----> Importing FreezeFrame
+[11:48:55] INFO   <---- Importing FreezeFrame
+[11:48:55] INFO   ----> Importing DiagSettings
+[11:48:55] INFO   Importing DiagSettings
+[11:48:55] INFO   <---- Importing DiagSettings
+[11:48:55] INFO   ----> Importing DataCompProps
+[11:48:55] INFO   <---- Importing DataCompProps
+[11:48:55] INFO   ODX Import finished successfully.
+[11:48:55] INFO   Shaping imported model for diagnostic OEM 'Vector'
+[11:48:55] INFO   Adding shaper script to remove freeze frame 0x00
+[11:48:55] INFO   >>>>>>>>>>>>>>>> SHAPING preparation >>>>>>>>>>>>>>>>
+[11:48:55] INFO   <<<<<<<<<<<<<<<< SHAPING ready after 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> SHAPING started >>>>>>>>>>>>>>>>
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep ServiceSelection >>>>>>>>>>>>>>>>
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep ServiceSelection( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep DataPreparation >>>>>>>>>>>>>>>>
+[11:48:55] NOTE     - Shape Data Comp Collections
+[11:48:55] INFO   At Ecu 
+[11:48:55] INFO     - Fix Unsigned Boolean
+[11:48:55] INFO     - Convert XInt24/XInt64 to Byte-Array
+[11:48:55] INFO     - Set Compu-Scale Symbols
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep DataPreparation( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep ServiceDefinition >>>>>>>>>>>>>>>>
+[11:48:55] INFO   Finding duplicated services... 
+[11:48:55] INFO   Destroying duplicated services... 
+[11:48:55] INFO   At Service 0x22 
+[11:48:55] INFO     - combination of subservices changed from unsupported  to supported.
+[11:48:55] INFO   At Service 0x22 SubService 0x100 
+[11:48:55] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[11:48:55] INFO     - Service has now new definition: 0x22 0x100 Braking_Read
+[11:48:55] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[11:48:55] INFO     - Service has now new definition: 0x22 0x100 Braking_Read
+[11:48:55] INFO   At Service 0x31 SubService 0x1 
+[11:48:55] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[11:48:55] INFO     - Service has now new definition: 0x31 0x1 0x100 ECU_Check_Start
+[11:48:55] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[11:48:55] INFO     - Service has now new definition: 0x31 0x1 0x100 ECU_Check_Start
+[11:48:55] INFO   At Service 0x31 SubService 0x3 
+[11:48:55] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[11:48:55] INFO     - Service has now new definition: 0x31 0x3 0x100 ECU_Check_Results
+[11:48:55] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[11:48:55] INFO     - Service has now new definition: 0x31 0x3 0x100 ECU_Check_Results
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep ServiceDefinition( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep DataDefinition >>>>>>>>>>>>>>>>
+[11:48:55] NOTE     - Combine Pid Parameters
+[11:48:55] NOTE     - Building Service Dids
+[11:48:55] NOTE     - Building Routines
+[11:48:55] NOTE     -  + Routine 'ECU_Check' created
+[11:48:55] NOTE     - Shape Routine Parameter Names
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep DataDefinition( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep DataIdentifier >>>>>>>>>>>>>>>>
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep DataIdentifier( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep Service >>>>>>>>>>>>>>>>
+[11:48:55] INFO   At Service 0x10 
+[11:48:55] INFO     - Qualifier changed from 'DefaultSession_Start' to 'DiagSessionControl'
+[11:48:55] INFO     - Service action qualifier set to 'SessionControl'
+[11:48:55] INFO   At Service 0x10 SubService 0x1 
+[11:48:55] INFO     - SubService action qualifier set to 'StartSession'
+[11:48:55] INFO   At Service 0x10 SubService 0x2 
+[11:48:55] INFO     - SubService action qualifier set to 'StartSession'
+[11:48:55] INFO   At Service 0x10 SubService 0x3 
+[11:48:55] INFO     - SubService action qualifier set to 'StartSession'
+[11:48:55] INFO   At Service 0x10 SubService 0x1 
+[11:48:55] INFO     - Qualifier changed from 'DefaultSession_Start' to 'Default'
+[11:48:55] INFO   At Service 0x10 SubService 0x2 
+[11:48:55] INFO     - Qualifier changed from 'ProgrammingSession_Start' to 'Programming'
+[11:48:55] INFO   At Service 0x10 SubService 0x3 
+[11:48:55] INFO     - Qualifier changed from 'ExtendedDiagnosticSession_Start' to 'Extended'
+[11:48:55] INFO   At Service 0x11 
+[11:48:55] INFO     - Qualifier changed from 'HardReset_Reset' to 'EcuReset'
+[11:48:55] INFO   At Service 0x11 SubService 0x1 
+[11:48:55] INFO     - SubService action qualifier set to 'EcuReset'
+[11:48:55] INFO   At Service 0x11 SubService 0x3 
+[11:48:55] INFO     - SubService action qualifier set to 'EcuReset'
+[11:48:55] INFO   At Service 0x11 SubService 0x1 
+[11:48:55] INFO     - Qualifier changed from 'HardReset_Reset' to 'Hard'
+[11:48:55] INFO   At Service 0x11 SubService 0x3 
+[11:48:55] INFO     - Qualifier changed from 'SoftReset_Reset' to 'Soft'
+[11:48:55] INFO   At Service 0x14 
+[11:48:55] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
+[11:48:55] INFO   At Service 0x14 SubService 
+[11:48:55] INFO     - SubService action qualifier set to 'Clear'
+[11:48:55] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
+[11:48:55] INFO   At Service 0x19 
+[11:48:55] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'ReadDtcInfo'
+[11:48:55] INFO   At Service 0x19 SubService 0x2 
+[11:48:55] INFO     - SubService action qualifier set to 'ReadDtc'
+[11:48:55] INFO   At Service 0x19 SubService 0x1 
+[11:48:55] INFO     - SubService action qualifier set to 'ReadDtc'
+[11:48:55] INFO   At Service 0x19 SubService 0x1 
+[11:48:55] INFO     - Qualifier changed from 'FaultMemory_ReadNumber' to 'RNODTCBSM'
+[11:48:55] INFO   At Service 0x19 SubService 0x2 
+[11:48:55] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'RDTCBSM'
+[11:48:55] INFO   At Service 0x22 
+[11:48:55] INFO     - Qualifier changed from 'Braking_Read' to 'ReadDataById'
+[11:48:55] INFO     - Service action qualifier set to 'Read'
+[11:48:55] INFO   At Service 0x22 SubService 0x100 
+[11:48:55] INFO     - SubService action qualifier set to 'ReadDid'
+[11:48:55] INFO   At Service 0x27 
+[11:48:55] INFO     - Qualifier changed from 'SeedLevel1_Request' to 'SecurityAccess'
+[11:48:55] INFO     - Service action qualifier set to 'SecurityAccess'
+[11:48:55] INFO   At Service 0x27 SubService 0x2 
+[11:48:55] INFO     - SubService action qualifier set to 'SendKey'
+[11:48:55] INFO   At Service 0x27 SubService 0x1 
+[11:48:55] INFO     - SubService action qualifier set to 'GetSeed'
+[11:48:55] INFO   At Service 0x28 
+[11:48:55] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'CommunicationControl'
+[11:48:55] INFO   At Service 0x28 SubService 0x0 
+[11:48:55] INFO     - SubService action qualifier set to 'CommCtrl'
+[11:48:55] INFO   At Service 0x28 SubService 0x1 
+[11:48:55] INFO     - SubService action qualifier set to 'CommCtrl'
+[11:48:55] INFO   At Service 0x28 SubService 0x0 
+[11:48:55] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'EnableRxAndTx'
+[11:48:55] INFO   At Service 0x28 SubService 0x1 
+[11:48:55] INFO     - Qualifier changed from 'EnableRxAndDisableTx_Control' to 'EnableRxAndDisableTx'
+[11:48:55] INFO   At Service 0x31 
+[11:48:55] INFO     - Qualifier changed from 'ECU_Check_Start' to 'RoutineControl'
+[11:48:55] INFO   At Service 0x31 SubService 0x1 
+[11:48:55] INFO     - SubService action qualifier set to 'RtnCtrlStart'
+[11:48:55] INFO   At Service 0x31 SubService 0x3 
+[11:48:55] INFO     - SubService action qualifier set to 'RtnCtrlReqRes'
+[11:48:55] INFO   At Service 0x3e 
+[11:48:55] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
+[11:48:55] INFO   At Service 0x3e SubService 0x0 
+[11:48:55] INFO     - SubService action qualifier set to 'Send'
+[11:48:55] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
+[11:48:55] INFO   At Service 0x85 
+[11:48:55] INFO     - Spec changed from '8' to 'FaultMemory'(2)
+[11:48:55] INFO     - Qualifier changed from 'DTC_Setting_Mode_On_Send' to 'ControlDtcSetting'
+[11:48:55] INFO   At Service 0x85 SubService 0x1 
+[11:48:55] INFO     - SubService action qualifier set to 'ControlDtcSetting'
+[11:48:55] INFO   At Service 0x85 SubService 0x2 
+[11:48:55] INFO     - SubService action qualifier set to 'ControlDtcSetting'
+[11:48:55] INFO   At Service 0x85 SubService 0x1 
+[11:48:55] INFO     - Qualifier changed from 'DTC_Setting_Mode_On_Send' to 'Enable'
+[11:48:55] INFO   At Service 0x85 SubService 0x2 
+[11:48:55] INFO     - Qualifier changed from 'DTC_Setting_Mode_Off_Send' to 'Disable'
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep Service( completed in 0.016s (16ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep StateMachine >>>>>>>>>>>>>>>>
+[11:48:55] ERROR  Session state group could not be found for session management shaping!
+[11:48:55] INFO   Session state group is created!
+[11:48:55] ERROR  Session state group has no default state!
+[11:48:55] INFO   At Ecu 
+[11:48:55] INFO     - Default state 'DefaultSession' is created.
+[11:48:55] ERROR  Service 0x10 0x01 has no transition to any session state!
 Please, define a transition to a concrete session state!
-[21:12:40] INFO   Service 0x10 0x01 is deactivated
-[21:12:40] ERROR  Service 0x10 0x02 has no transition to any session state!
+[11:48:55] INFO   Service 0x10 0x01 is deactivated
+[11:48:55] ERROR  Service 0x10 0x02 has no transition to any session state!
 Please, define a transition to a concrete session state!
-[21:12:40] INFO   Service 0x10 0x02 is deactivated
-[21:12:40] ERROR  Service 0x10 0x03 has no transition to any session state!
+[11:48:55] INFO   Service 0x10 0x02 is deactivated
+[11:48:55] ERROR  Service 0x10 0x03 has no transition to any session state!
 Please, define a transition to a concrete session state!
-[21:12:40] INFO   Service 0x10 0x03 is deactivated
-[21:12:40] ERROR    - SecurityAccess state group could not be found for SecurityAccess management shaping!
-[21:12:40] INFO     - SecurityAccess state group is created!
-[21:12:40] ERROR  Service 0x27 0x02 has no transition to any SecurityAccess state!
+[11:48:55] INFO   Service 0x10 0x03 is deactivated
+[11:48:55] ERROR    - SecurityAccess state group could not be found for SecurityAccess management shaping!
+[11:48:55] INFO     - SecurityAccess state group is created!
+[11:48:55] ERROR  Service 0x27 0x02 has no transition to any SecurityAccess state!
 Please, define a transition to a concrete SecurityAccess state!
-[21:12:40] ERROR  Service 0x27 0x01 GetSeed service is deactivated!
-[21:12:40] ERROR  Service 0x27 0x02 SendKey service is deactivated!
-[21:12:40] INFO     - Session 'DefaultSession' does not have any P2 timings! Created default P2: 50ms
-[21:12:40] INFO     - Session 'DefaultSession' does not have any P2Ex timings! Created default P2Ex: 5000ms
-[21:12:40] WARN   State group: <SecurityAccess> was not found as useful since none of the relevant services does execute a transition to it!
-[21:12:40] NOTE     - Building Diagnostic Sessions
-[21:12:40] NOTE     - Building Diagnostic Securities
-[21:12:40] NOTE     - Building Access Conditions
-[21:12:40] NOTE     -  + Access Cond '|' created
-[21:12:40] NOTE     - Building Access Conditions - finshed
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep StateMachine( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep StateMachine2 >>>>>>>>>>>>>>>>
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep StateMachine2( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep Settings >>>>>>>>>>>>>>>>
-[21:12:40] INFO   At Ecu 'XB_SUP_A' 
-[21:12:40] INFO     - Set 'periodic rate slow' to '1000'
-[21:12:40] INFO     - Set 'periodic rate medium' to '100'
-[21:12:40] INFO     - Set 'periodic rate fast' to '20'
-[21:12:40] INFO     - Set 'maximum number of dynamically defined dids' to '5'
-[21:12:40] INFO     - Set 'check access of dynamically defined dids' to 'false'
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep Settings( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory >>>>>>>>>>>>>>>>
-[21:12:40] NOTE     - Building Diagnostic Event Memories
-[21:12:40] INFO   At Ecu 
-[21:12:40] INFO     -  + Event-Memory 'PrimaryMemory' created
-[21:12:40] ERROR  At DTC 0x402011 
-[21:12:40] ERROR    - No value found for DTC property 'Qualifier' in attr(s) 'DTC_SHORTNAME'
-[21:12:40] INFO     - Set DTC-Prop 'Qualifier' to 'DTC_0x402011'
-[21:12:40] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
-[21:12:40] INFO     - Add to 'EventMemory' value(s) 'Primary'
-[21:12:40] INFO   At Faultmemory  
-[21:12:40] INFO     - Set fault memory property 'ssrUpdatable' to 'true'
-[21:12:40] INFO     - Set fault memory property 'ecgNaming' to 'singleElem'
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory2 >>>>>>>>>>>>>>>>
-[21:12:40] NOTE     - Building DidSets. WWH-OBD supported: false
-[21:12:40] NOTE     - Building Events
-[21:12:40] INFO   At Faultmemory  SSR-Numeration is Null 
-[21:12:40] INFO     - Set fault memory property 'ssrNumeration' to 'calculated'
-[21:12:40] INFO   At Event 'DTC_0x402011_Event' EventKind is Null 
-[21:12:40] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory2( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory3 >>>>>>>>>>>>>>>>
-[21:12:40] INFO   At Event 'DTC_0x402011_Event' Microsar: true OpCycle is Null 
-[21:12:40] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER' using 'Power'
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory3( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory4 >>>>>>>>>>>>>>>>
-[21:12:40] INFO   At Event 'DTC_0x402011_Event' DebounceType is Null 
-[21:12:40] INFO     - Set Event-Prop 'DebounceType' to 'Internal' using 'updatable'
-[21:12:40] INFO   At DTC 0x402011 Microsar: true AgingCycle: NULL 
-[21:12:40] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER' using 'Power'
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory4( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory5 >>>>>>>>>>>>>>>>
-[21:12:40] INFO   At Ecu 'XB_SUP_A' 
-[21:12:40] INFO     - Merging Debounce Algorithms
-[21:12:40] INFO     - Merging Operation Cycles
-[21:12:40] INFO     - Merging Warning Indicators
-[21:12:40] INFO     - Merging Enable/Storage Conditions
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory5( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep Obd >>>>>>>>>>>>>>>>
-[21:12:40] NOTE     - Building OBD Service Pids
-[21:12:40] NOTE     - Building OBD Service Monitor Identifier
-[21:12:40] NOTE     - Building OBD Service Rids
-[21:12:40] NOTE     - Building OBD Service Vehicle Infos
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep Obd( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   >>>>>>>>>>>>>>>> ShapingStep CleanUp >>>>>>>>>>>>>>>>
-[21:12:40] INFO   At Ecu 
-[21:12:40] INFO     - Inactive sub-service 'KeyLevel1_Send' deleted
-[21:12:40] INFO     - Inactive sub-service 'SeedLevel1_Request' deleted
-[21:12:40] INFO     - Inactive sub-service 'Extended' deleted
-[21:12:40] INFO     - Inactive sub-service 'Programming' deleted
-[21:12:40] INFO     - Inactive sub-service 'Default' deleted
-[21:12:40] INFO     - Service 0x27 deleted since it has no sub-services
-[21:12:40] INFO     - Service 0x10 deleted since it has no sub-services
-[21:12:40] INFO   <<<<<<<<<<<<<<<< ShapingStep CleanUp( completed in 0s (0ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   <<<<<<<<<<<<<<<< SHAPING finished after 0.032s (32ms) <<<<<<<<<<<<<<<<
-[21:12:40] INFO   Shaping AR-Export
-[21:12:40] INFO   ----> Shaping DescDataModel
-[21:12:40] INFO   ----> Shape service data
-[21:12:40] INFO   <---- Finished shaping service data
-[21:12:40] INFO   <---- Finished shaping DescDataModel 
-[21:12:40] INFO   Exporting ECUC module configurations to file: C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-7531833\DiagnosticsImportService\1777986760000-0\DiagnosticsDescriptionData4248111816618012310.xml
-[21:12:40] INFO   ----> Create ECUC from imported diagnostic data.
-[21:12:40] NOTE   Using EcucEx-Parameter 'DemDidQualifierMode' = 'R19' (default)
-[21:12:40] NOTE   Using EcucEx-Parameter 'DcmQualifierMode' = 'R19' (default)
-[21:12:40] INFO   ----> STEP 1: Create ECUC model.
-[21:12:40] INFO   Creating Dcm module configuration...
-[21:12:40] INFO   Creating Dem module configuration...
-[21:12:40] INFO   <---- STEP 1: Finished.
-[21:12:40] INFO   ----> STEP 2: Postprocess created ECUC model.
-[21:12:40] INFO   ----> Decorate imported object qualifiers/shortnames
-[21:12:40] INFO   <---- Finished decorating qualifiers/shortnames
-[21:12:40] INFO   ----> Transform imported object qualifiers/shortnames to match AUTOSAR IDENTIFIER pattern restriction (except length limit)
-[21:12:40] INFO   <---- Finished transforming shortnames
-[21:12:40] INFO   ----> Ensure uniqueness of container shortnames within their scope
-[21:12:40] INFO   <---- Finished ensuring uniqueness of container shortnames
-[21:12:40] INFO   ----> Truncate shortnames whose length exceeds the 128 character limit for AUTOSAR shortnames
-[21:12:40] INFO   <---- Finished truncating shortnames
-[21:12:40] INFO   ----> Resolve reference parameters
-[21:12:40] INFO   <---- Finished resolving reference parameters
-[21:12:40] INFO   <---- STEP 2: Finished.
-[21:12:40] INFO   ----> STEP 3: Serialize ECUC model to XML.
-[21:12:40] INFO   <---- STEP 3: Finished.
-[21:12:40] INFO   <---- Finished creation of ECUC from imported diagnostic data.
-[21:12:40] INFO   <---- Process of diagnostic specification.
+[11:48:55] ERROR  Service 0x27 0x01 GetSeed service is deactivated!
+[11:48:55] ERROR  Service 0x27 0x02 SendKey service is deactivated!
+[11:48:55] INFO     - Session 'DefaultSession' does not have any P2 timings! Created default P2: 50ms
+[11:48:55] INFO     - Session 'DefaultSession' does not have any P2Ex timings! Created default P2Ex: 5000ms
+[11:48:55] WARN   State group: <SecurityAccess> was not found as useful since none of the relevant services does execute a transition to it!
+[11:48:55] NOTE     - Building Diagnostic Sessions
+[11:48:55] NOTE     - Building Diagnostic Securities
+[11:48:55] NOTE     - Building Access Conditions
+[11:48:55] NOTE     -  + Access Cond '|' created
+[11:48:55] NOTE     - Building Access Conditions - finshed
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep StateMachine( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep StateMachine2 >>>>>>>>>>>>>>>>
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep StateMachine2( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep Settings >>>>>>>>>>>>>>>>
+[11:48:55] INFO   At Ecu 'XB_SUP_A' 
+[11:48:55] INFO     - Set 'periodic rate slow' to '1000'
+[11:48:55] INFO     - Set 'periodic rate medium' to '100'
+[11:48:55] INFO     - Set 'periodic rate fast' to '20'
+[11:48:55] INFO     - Set 'maximum number of dynamically defined dids' to '5'
+[11:48:55] INFO     - Set 'check access of dynamically defined dids' to 'false'
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep Settings( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory >>>>>>>>>>>>>>>>
+[11:48:55] NOTE     - Building Diagnostic Event Memories
+[11:48:55] INFO   At Ecu 
+[11:48:55] INFO     -  + Event-Memory 'PrimaryMemory' created
+[11:48:55] ERROR  At DTC 0x402011 
+[11:48:55] ERROR    - No value found for DTC property 'Qualifier' in attr(s) 'DTC_SHORTNAME'
+[11:48:55] INFO     - Set DTC-Prop 'Qualifier' to 'DTC_0x402011'
+[11:48:55] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
+[11:48:55] INFO     - Add to 'EventMemory' value(s) 'Primary'
+[11:48:55] INFO   At Faultmemory  
+[11:48:55] INFO     - Set fault memory property 'ssrUpdatable' to 'true'
+[11:48:55] INFO     - Set fault memory property 'ecgNaming' to 'singleElem'
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory2 >>>>>>>>>>>>>>>>
+[11:48:55] NOTE     - Building DidSets. WWH-OBD supported: false
+[11:48:55] NOTE     - Building Events
+[11:48:55] INFO   At Faultmemory  SSR-Numeration is Null 
+[11:48:55] INFO     - Set fault memory property 'ssrNumeration' to 'calculated'
+[11:48:55] INFO   At Event 'DTC_0x402011_Event' EventKind is Null 
+[11:48:55] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory2( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory3 >>>>>>>>>>>>>>>>
+[11:48:55] INFO   At Event 'DTC_0x402011_Event' Microsar: true OpCycle is Null 
+[11:48:55] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER' using 'Power'
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory3( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory4 >>>>>>>>>>>>>>>>
+[11:48:55] INFO   At Event 'DTC_0x402011_Event' DebounceType is Null 
+[11:48:55] INFO     - Set Event-Prop 'DebounceType' to 'Internal' using 'updatable'
+[11:48:55] INFO   At DTC 0x402011 Microsar: true AgingCycle: NULL 
+[11:48:55] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER' using 'Power'
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory4( completed in 0.015s (15ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep FaultMemory5 >>>>>>>>>>>>>>>>
+[11:48:55] INFO   At Ecu 'XB_SUP_A' 
+[11:48:55] INFO     - Merging Debounce Algorithms
+[11:48:55] INFO     - Merging Operation Cycles
+[11:48:55] INFO     - Merging Warning Indicators
+[11:48:55] INFO     - Merging Enable/Storage Conditions
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep FaultMemory5( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep Obd >>>>>>>>>>>>>>>>
+[11:48:55] NOTE     - Building OBD Service Pids
+[11:48:55] NOTE     - Building OBD Service Monitor Identifier
+[11:48:55] NOTE     - Building OBD Service Rids
+[11:48:55] NOTE     - Building OBD Service Vehicle Infos
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep Obd( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   >>>>>>>>>>>>>>>> ShapingStep CleanUp >>>>>>>>>>>>>>>>
+[11:48:55] INFO   At Ecu 
+[11:48:55] INFO     - Inactive sub-service 'KeyLevel1_Send' deleted
+[11:48:55] INFO     - Inactive sub-service 'SeedLevel1_Request' deleted
+[11:48:55] INFO     - Inactive sub-service 'Extended' deleted
+[11:48:55] INFO     - Inactive sub-service 'Programming' deleted
+[11:48:55] INFO     - Inactive sub-service 'Default' deleted
+[11:48:55] INFO     - Service 0x27 deleted since it has no sub-services
+[11:48:55] INFO     - Service 0x10 deleted since it has no sub-services
+[11:48:55] INFO   <<<<<<<<<<<<<<<< ShapingStep CleanUp( completed in 0s (0ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   <<<<<<<<<<<<<<<< SHAPING finished after 0.031s (31ms) <<<<<<<<<<<<<<<<
+[11:48:55] INFO   Shaping AR-Export
+[11:48:55] INFO   ----> Shaping DescDataModel
+[11:48:55] INFO   ----> Shape service data
+[11:48:55] INFO   <---- Finished shaping service data
+[11:48:55] INFO   <---- Finished shaping DescDataModel 
+[11:48:55] INFO   Exporting ECUC module configurations to file: C:\Users\99484\AppData\Local\Temp\DaVinci\Cfg-4091025\DiagnosticsImportService\1778384934901-0\DiagnosticsDescriptionData4554862029483239551.xml
+[11:48:55] INFO   ----> Create ECUC from imported diagnostic data.
+[11:48:55] NOTE   Using EcucEx-Parameter 'DemDidQualifierMode' = 'R19' (default)
+[11:48:55] NOTE   Using EcucEx-Parameter 'DcmQualifierMode' = 'R19' (default)
+[11:48:55] INFO   ----> STEP 1: Create ECUC model.
+[11:48:55] INFO   Creating Dcm module configuration...
+[11:48:55] INFO   Creating Dem module configuration...
+[11:48:55] INFO   <---- STEP 1: Finished.
+[11:48:55] INFO   ----> STEP 2: Postprocess created ECUC model.
+[11:48:55] INFO   ----> Decorate imported object qualifiers/shortnames
+[11:48:55] INFO   <---- Finished decorating qualifiers/shortnames
+[11:48:55] INFO   ----> Transform imported object qualifiers/shortnames to match AUTOSAR IDENTIFIER pattern restriction (except length limit)
+[11:48:55] INFO   <---- Finished transforming shortnames
+[11:48:55] INFO   ----> Ensure uniqueness of container shortnames within their scope
+[11:48:55] INFO   <---- Finished ensuring uniqueness of container shortnames
+[11:48:55] INFO   ----> Truncate shortnames whose length exceeds the 128 character limit for AUTOSAR shortnames
+[11:48:55] INFO   <---- Finished truncating shortnames
+[11:48:55] INFO   ----> Resolve reference parameters
+[11:48:55] INFO   <---- Finished resolving reference parameters
+[11:48:55] INFO   <---- STEP 2: Finished.
+[11:48:55] INFO   ----> STEP 3: Serialize ECUC model to XML.
+[11:48:55] INFO   <---- STEP 3: Finished.
+[11:48:55] INFO   <---- Finished creation of ECUC from imported diagnostic data.
+[11:48:55] INFO   <---- Process of diagnostic specification.

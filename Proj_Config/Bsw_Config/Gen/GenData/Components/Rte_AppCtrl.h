@@ -54,6 +54,7 @@ extern "C"
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(Sig_0x114_Used_6, RTE_VAR_INIT) Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6;
+extern VAR(Trigger_Msg_Type, RTE_VAR_INIT) Rte_AppCtrl_Trigger_Msg_State_SR_S_Trigger_Msg_State;
 
 #  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -67,6 +68,7 @@ extern VAR(Sig_0x114_Used_6, RTE_VAR_INIT) Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0
  *********************************************************************************************************************/
 
 #  define Rte_InitValue_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 (0U)
+#  define Rte_InitValue_Trigger_Msg_State_SR_S_Trigger_Msg_State (FALSE)
 # endif
 
 
@@ -107,6 +109,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Gr
 #  define Rte_Write_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 Rte_Write_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114
 #  define Rte_Write_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 Rte_Write_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6
 #  define Rte_Write_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6(data) (Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 = (data), ((Std_ReturnType)RTE_E_OK)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#  define Rte_Write_Trigger_Msg_State_SR_S_Trigger_Msg_State Rte_Write_AppCtrl_Trigger_Msg_State_SR_S_Trigger_Msg_State
+#  define Rte_Write_AppCtrl_Trigger_Msg_State_SR_S_Trigger_Msg_State(data) (Rte_AppCtrl_Trigger_Msg_State_SR_S_Trigger_Msg_State = (data), ((Std_ReturnType)RTE_E_OK)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
 
 /**********************************************************************************************************************

@@ -2041,9 +2041,15 @@
                       <VALUE>0</VALUE>
                     </TIME-OFFSET>
                     <TIME-PERIOD>
-                      <VALUE>0.01</VALUE>
+                      <VALUE>0</VALUE>
                     </TIME-PERIOD>
                   </CYCLIC-TIMING>
+                  <EVENT-CONTROLLED-TIMING>
+                    <NUMBER-OF-REPETITIONS>4</NUMBER-OF-REPETITIONS>
+                    <REPETITION-PERIOD>
+                      <VALUE>0.02</VALUE>
+                    </REPETITION-PERIOD>
+                  </EVENT-CONTROLLED-TIMING>
                 </TRANSMISSION-MODE-FALSE-TIMING>
                 <TRANSMISSION-MODE-TRUE-TIMING>
                   <CYCLIC-TIMING>
@@ -2051,9 +2057,15 @@
                       <VALUE>0</VALUE>
                     </TIME-OFFSET>
                     <TIME-PERIOD>
-                      <VALUE>0.01</VALUE>
+                      <VALUE>0</VALUE>
                     </TIME-PERIOD>
                   </CYCLIC-TIMING>
+                  <EVENT-CONTROLLED-TIMING>
+                    <NUMBER-OF-REPETITIONS>4</NUMBER-OF-REPETITIONS>
+                    <REPETITION-PERIOD>
+                      <VALUE>0.02</VALUE>
+                    </REPETITION-PERIOD>
+                  </EVENT-CONTROLLED-TIMING>
                 </TRANSMISSION-MODE-TRUE-TIMING>
               </TRANSMISSION-MODE-DECLARATION>
             </I-PDU-TIMING>
@@ -2099,7 +2111,7 @@
               <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Sig_0x114_Used_6_oSupA_Function_1_oDBCNetWork</I-SIGNAL-REF>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-FIRST</PACKING-BYTE-ORDER>
               <START-POSITION>63</START-POSITION>
-              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+              <TRANSFER-PROPERTY>TRIGGERED</TRANSFER-PROPERTY>
             </I-SIGNAL-TO-I-PDU-MAPPING>
             <I-SIGNAL-TO-I-PDU-MAPPING>
               <SHORT-NAME>SG_Sig_Grp_0x114</SHORT-NAME>

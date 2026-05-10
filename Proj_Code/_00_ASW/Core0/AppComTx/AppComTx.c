@@ -187,6 +187,7 @@ FUNC(void, AppComTx_CODE) AppComTx_MainFunction(void) /* PRQA S 0624, 3206 */ /*
   SG_Sig_Grp_0x113 SG_Sig_Grp_0x113_ComTx;
   SG_Sig_Grp_0x114 SG_Sig_Grp_0x114_ComTx;
   Sig_0x114_Used_6 Sig_0x114_Used_6_ComTx;
+  Trigger_Msg_Type Trigger_Msg_State_AppCtrl = FALSE;
 
 
   Rte_Read_SG_Sig_Grp_0x110_SR_R_SG_Sig_Grp_0x110(&SG_Sig_Grp_0x110_ComTx);
@@ -195,8 +196,9 @@ FUNC(void, AppComTx_CODE) AppComTx_MainFunction(void) /* PRQA S 0624, 3206 */ /*
   Rte_Read_SG_Sig_Grp_0x113_SR_R_SG_Sig_Grp_0x113(&SG_Sig_Grp_0x113_ComTx);
   Rte_Read_SG_Sig_Grp_0x114_SR_R_SG_Sig_Grp_0x114(&SG_Sig_Grp_0x114_ComTx);
   Rte_Read_Sig_0x114_Used_SR_R_Sig_0x114_Used_6(&Sig_0x114_Used_6_ComTx);
+  Rte_Read_AppComTx_Trigger_Msg_State_SR_R_Trigger_Msg_State(&Trigger_Msg_State_AppCtrl);
 
-
+  
 
 
 
@@ -205,8 +207,15 @@ FUNC(void, AppComTx_CODE) AppComTx_MainFunction(void) /* PRQA S 0624, 3206 */ /*
   Rte_Write_SG_Sig_Grp_0x111_SG_Sig_Grp_0x111(&SG_Sig_Grp_0x111_ComTx);
   E2EPW_Write_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112(&SG_Sig_Grp_0x112_ComTx);
   Rte_Write_SG_Sig_Grp_0x113_SG_Sig_Grp_0x113(&SG_Sig_Grp_0x113_ComTx);
-  Rte_Write_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114(&SG_Sig_Grp_0x114_ComTx);
-  Rte_Write_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6_ComTx);
+  
+
+  if (Trigger_Msg_State_AppCtrl == TRUE)
+  {
+    Rte_Write_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6_ComTx);
+  }
+
+  //Rte_Write_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114(&SG_Sig_Grp_0x114_ComTx);
+  //Rte_Write_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6_ComTx);
   
 
   

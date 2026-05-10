@@ -173,6 +173,9 @@ VAR(SG_Sig_Grp_0x114, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp
 VAR(Sig_0x114_Used_6, RTE_VAR_INIT) Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 = 0U;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(Trigger_Msg_Type, RTE_VAR_INIT) Rte_AppCtrl_Trigger_Msg_State_SR_S_Trigger_Msg_State = FALSE;
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(SG_Sig_Grp_0x110, RTE_VAR_INIT) Rte_AppLedCtrl_SG_Sig_Grp_0x110_SR_S_SG_Sig_Grp_0x110 = {
   FALSE, FALSE, FALSE, FALSE
 };
@@ -349,6 +352,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
   Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113 = Rte_C_SG_Sig_Grp_0x113_0;
   Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114 = Rte_C_SG_Sig_Grp_0x114_0;
   Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6 = 0U;
+  Rte_AppCtrl_Trigger_Msg_State_SR_S_Trigger_Msg_State = FALSE;
   Rte_AppLedCtrl_SG_Sig_Grp_0x110_SR_S_SG_Sig_Grp_0x110 = Rte_C_SG_Sig_Grp_0x110_0;
   Rte_AppWakeUpCtrl_App_ComM_Mode_Request_Request_Mode = 0U;
 

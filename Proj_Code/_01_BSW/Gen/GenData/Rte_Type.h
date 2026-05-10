@@ -277,6 +277,9 @@ typedef boolean IOHWAB_BOOL;
 # define Rte_TypeDef_TimeInMicrosecondsType
 typedef uint32 TimeInMicrosecondsType;
 
+# define Rte_TypeDef_Trigger_Msg_Type
+typedef boolean Trigger_Msg_Type;
+
 # define Rte_TypeDef_BswM_ESH_Mode
 typedef uint8 BswM_ESH_Mode;
 
@@ -561,6 +564,7 @@ extern VAR(SG_Sig_Grp_0x112, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x112_SR_S_SG_
 extern VAR(SG_Sig_Grp_0x113, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x113_SR_S_SG_Sig_Grp_0x113; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(SG_Sig_Grp_0x114, RTE_VAR_INIT) Rte_AppCtrl_SG_Sig_Grp_0x114_SR_S_SG_Sig_Grp_0x114; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(Sig_0x114_Used_6, RTE_VAR_INIT) Rte_AppCtrl_Sig_0x114_Used_SR_S_Sig_0x114_Used_6; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(Trigger_Msg_Type, RTE_VAR_INIT) Rte_AppCtrl_Trigger_Msg_State_SR_S_Trigger_Msg_State; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(SG_Sig_Grp_0x110, RTE_VAR_INIT) Rte_AppLedCtrl_SG_Sig_Grp_0x110_SR_S_SG_Sig_Grp_0x110; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(ComM_ModeType, RTE_VAR_INIT) Rte_AppWakeUpCtrl_App_ComM_Mode_Request_Request_Mode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 
