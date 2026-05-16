@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Callout_Stubs.c
- *   Generation Time: 2024-01-23 23:36:25
+ *   Generation Time: 2026-05-16 22:28:40
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -180,10 +180,12 @@ FUNC(void, BSWM_CODE) ESH_ComM_CheckPendingRequests(void)
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
   ComM_StateType CN_DBCNetWork_9ed72b09 = COMM_NO_COM_NO_PENDING_REQUEST;
+  ComM_StateType CN_DBCNetWork_Can0_7c554129 = COMM_NO_COM_NO_PENDING_REQUEST;
   
   (void)ComM_GetState(ComMConf_ComMChannel_CN_DBCNetWork_9ed72b09, &CN_DBCNetWork_9ed72b09); /* SBSW_BSWM_FCTCALL_LOCALVAR */
+  (void)ComM_GetState(ComMConf_ComMChannel_CN_DBCNetWork_Can0_7c554129, &CN_DBCNetWork_Can0_7c554129); /* SBSW_BSWM_FCTCALL_LOCALVAR */
   
-  if(CN_DBCNetWork_9ed72b09 != COMM_NO_COM_NO_PENDING_REQUEST)
+  if((CN_DBCNetWork_9ed72b09 != COMM_NO_COM_NO_PENDING_REQUEST) || (CN_DBCNetWork_Can0_7c554129 != COMM_NO_COM_NO_PENDING_REQUEST))
   {
     BswM_RequestMode(BSWM_GENERIC_ESH_ComMPendingRequests, BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST);
   }

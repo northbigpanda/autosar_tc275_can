@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link_Core0.lsl
- *   Generation Time: 2024-02-04 17:30:06
+ *   Generation Time: 2026-05-17 00:17:54
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -29,6 +29,17 @@
  *
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ * WARNING: This code has been generated with reduced-severity errors. 
+ * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
+ * Usage of the created files happens at own risk!
+ * 
+ * [Warning] Cfg95301 - Os Interrupt Service Routine parameter invalid or different to configuration in BSW module 
+ * - [Reduced Severity due to User-Defined Parameter] Either this parameter deviates from its definition in the /ActiveEcuC/Can Os Interrupt Service Routine or the definition of this parameter is invalid.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Os/CanIsr_0 (DefRef: /MICROSAR/Os/OsIsr)
+ * /ActiveEcuC/Os/CanIsr_0[0:OsIsrInterruptPriority](value=100) (DefRef: /MICROSAR/Os/OsIsr/OsIsrInterruptPriority)
+ *********************************************************************************************************************/
 /**********************************************************************************************************************
  *  CODE SECTIONS
  *********************************************************************************************************************/
@@ -72,6 +83,22 @@ else
 #endif
 
 #if defined ( OS_LINK_CALLOUT_CODE )
+if (exists(".text.OS_CanIsr_0_CODE"))
+{
+  group OS_CanIsr_0_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_CanIsr_0_CODE";
+  }
+  "_OS_CanIsr_0_CODE_START" = "_lc_gb_OS_CanIsr_0_CODE_GROUP";
+  "_OS_CanIsr_0_CODE_END" = "_lc_ge_OS_CanIsr_0_CODE_GROUP" - 1;
+  "_OS_CanIsr_0_CODE_LIMIT" = "_lc_ge_OS_CanIsr_0_CODE_GROUP";
+}
+else
+{
+  "_OS_CanIsr_0_CODE_START" = 0;
+  "_OS_CanIsr_0_CODE_END" = 0;
+  "_OS_CanIsr_0_CODE_LIMIT" = 0;
+}
 if (exists(".text.OS_CanIsr_1_CODE"))
 {
   group OS_CanIsr_1_CODE_GROUP(align=8)
@@ -695,6 +722,78 @@ else
 
 #ifdef OS_LINK_CONST_TASK_OSTASK_BSW5MS_CORE0_INIT
 # undef OS_LINK_CONST_TASK_OSTASK_BSW5MS_CORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_CANISR_0 ) || defined ( OS_LINK_CONST_ISR_CANISR_0_FAR )
+if (exists(".rodata.OS_CanIsr_0_CONST"))
+{
+  group OS_CanIsr_0_CONST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]rodata.OS_CanIsr_0_CONST";
+  }
+  "_OS_CanIsr_0_CONST_START" = "_lc_gb_OS_CanIsr_0_CONST_GROUP";
+  "_OS_CanIsr_0_CONST_END" = "_lc_ge_OS_CanIsr_0_CONST_GROUP" - 1;
+  "_OS_CanIsr_0_CONST_LIMIT" = "_lc_ge_OS_CanIsr_0_CONST_GROUP";
+}
+else
+{
+  "_OS_CanIsr_0_CONST_START" = 0;
+  "_OS_CanIsr_0_CONST_END" = 0;
+  "_OS_CanIsr_0_CONST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_CANISR_0 ) || defined ( OS_LINK_CONST_ISR_CANISR_0_NEAR )
+if (exists(".zrodata.OS_CanIsr_0_CONST_FAST"))
+{
+  group OS_CanIsr_0_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]zrodata.OS_CanIsr_0_CONST_FAST";
+  }
+  "_OS_CanIsr_0_CONST_FAST_START" = "_lc_gb_OS_CanIsr_0_CONST_FAST_GROUP";
+  "_OS_CanIsr_0_CONST_FAST_END" = "_lc_ge_OS_CanIsr_0_CONST_FAST_GROUP" - 1;
+  "_OS_CanIsr_0_CONST_FAST_LIMIT" = "_lc_ge_OS_CanIsr_0_CONST_FAST_GROUP";
+}
+else
+{
+  "_OS_CanIsr_0_CONST_FAST_START" = 0;
+  "_OS_CanIsr_0_CONST_FAST_END" = 0;
+  "_OS_CanIsr_0_CONST_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_CANISR_0 ) || defined ( OS_LINK_CONST_ISR_CANISR_0_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_ISR_CANISR_0
+# undef OS_LINK_CONST_ISR_CANISR_0
+#endif
+
+#ifdef OS_LINK_CONST_ISR_CANISR_0_FAR
+# undef OS_LINK_CONST_ISR_CANISR_0_FAR
+#endif
+
+#ifdef OS_LINK_CONST_ISR_CANISR_0_NEAR
+# undef OS_LINK_CONST_ISR_CANISR_0_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_ISR_CANISR_0_INIT
+# undef OS_LINK_CONST_ISR_CANISR_0_INIT
 #endif
 
 
@@ -3555,6 +3654,374 @@ else
 
 #ifdef OS_LINK_VAR_TASK_OSTASK_BSW5MS_CORE0_NEAR_NOCACHE_ZERO_INIT
 # undef OS_LINK_VAR_TASK_OSTASK_BSW5MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0
+group OS_CanIsr_0_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+{
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_INIT )
+if (exists(".data.OS_CanIsr_0_VAR"))
+{
+  group OS_CanIsr_0_VAR_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_CanIsr_0_VAR";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_START" = "_lc_gb_OS_CanIsr_0_VAR_GROUP";
+  "_OS_CanIsr_0_VAR_END" = "_lc_ub__pad_OS_CanIsr_0_VAR" - 1;
+  "_OS_CanIsr_0_VAR_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_START" = 0;
+  "_OS_CanIsr_0_VAR_END" = 0;
+  "_OS_CanIsr_0_VAR_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_CanIsr_0_VAR_NOINIT"))
+{
+  group OS_CanIsr_0_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_CanIsr_0_VAR_NOINIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_NOINIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_NOINIT_START" = "_lc_gb_OS_CanIsr_0_VAR_NOINIT_GROUP";
+  "_OS_CanIsr_0_VAR_NOINIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOINIT" - 1;
+  "_OS_CanIsr_0_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOINIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_NOINIT_START" = 0;
+  "_OS_CanIsr_0_VAR_NOINIT_END" = 0;
+  "_OS_CanIsr_0_VAR_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_CanIsr_0_VAR_ZERO_INIT_bss") || exists(".data.OS_CanIsr_0_VAR_ZERO_INIT"))
+{
+  group OS_CanIsr_0_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_CanIsr_0_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_CanIsr_0_VAR_ZERO_INIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_ZERO_INIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_ZERO_INIT_START" = "_lc_gb_OS_CanIsr_0_VAR_ZERO_INIT_GROUP";
+  "_OS_CanIsr_0_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_ZERO_INIT" - 1;
+  "_OS_CanIsr_0_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_ZERO_INIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_ZERO_INIT_START" = 0;
+  "_OS_CanIsr_0_VAR_ZERO_INIT_END" = 0;
+  "_OS_CanIsr_0_VAR_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_CanIsr_0_VAR_FAST"))
+{
+  group OS_CanIsr_0_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_CanIsr_0_VAR_FAST";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_FAST" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_FAST_START" = "_lc_gb_OS_CanIsr_0_VAR_FAST_GROUP";
+  "_OS_CanIsr_0_VAR_FAST_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST" - 1;
+  "_OS_CanIsr_0_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_FAST_START" = 0;
+  "_OS_CanIsr_0_VAR_FAST_END" = 0;
+  "_OS_CanIsr_0_VAR_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_CanIsr_0_VAR_FAST_NOINIT"))
+{
+  group OS_CanIsr_0_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_CanIsr_0_VAR_FAST_NOINIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_FAST_NOINIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_FAST_NOINIT_START" = "_lc_gb_OS_CanIsr_0_VAR_FAST_NOINIT_GROUP";
+  "_OS_CanIsr_0_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOINIT" - 1;
+  "_OS_CanIsr_0_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOINIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_FAST_NOINIT_START" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOINIT_END" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_CanIsr_0_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_CanIsr_0_VAR_FAST_ZERO_INIT"))
+{
+  group OS_CanIsr_0_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_CanIsr_0_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_CanIsr_0_VAR_FAST_ZERO_INIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_FAST_ZERO_INIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_CanIsr_0_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_CanIsr_0_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_CanIsr_0_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_ZERO_INIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_CanIsr_0_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_CanIsr_0_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_INIT )
+if (exists(".data.OS_CanIsr_0_VAR_NOCACHE"))
+{
+  group OS_CanIsr_0_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_CanIsr_0_VAR_NOCACHE";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_NOCACHE" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_NOCACHE_START" = "_lc_gb_OS_CanIsr_0_VAR_NOCACHE_GROUP";
+  "_OS_CanIsr_0_VAR_NOCACHE_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOCACHE" - 1;
+  "_OS_CanIsr_0_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOCACHE";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_NOCACHE_START" = 0;
+  "_OS_CanIsr_0_VAR_NOCACHE_END" = 0;
+  "_OS_CanIsr_0_VAR_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_CanIsr_0_VAR_NOCACHE_NOINIT"))
+{
+  group OS_CanIsr_0_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_CanIsr_0_VAR_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_CanIsr_0_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_CanIsr_0_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_CanIsr_0_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_CanIsr_0_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_CanIsr_0_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT"))
+{
+  group OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_CanIsr_0_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_CanIsr_0_VAR_FAST_NOCACHE"))
+{
+  group OS_CanIsr_0_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_CanIsr_0_VAR_FAST_NOCACHE";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_FAST_NOCACHE" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_CanIsr_0_VAR_FAST_NOCACHE_GROUP";
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOCACHE" - 1;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOCACHE";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT"))
+{
+  group OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_CANISR_0 ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT"))
+{
+  group OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_CanIsr_0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0
+} /* OS_CanIsr_0_VAR_ALL_GROUP */
+"_OS_CanIsr_0_VAR_ALL_START" = "_lc_gb_OS_CanIsr_0_VAR_ALL_GROUP";
+"_OS_CanIsr_0_VAR_ALL_END" = "_lc_ge_OS_CanIsr_0_VAR_ALL_GROUP" - 1;
+"_OS_CanIsr_0_VAR_ALL_LIMIT" = "_lc_ge_OS_CanIsr_0_VAR_ALL_GROUP";
+
+# undef OS_LINK_VAR_ISR_CANISR_0
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_CANISR_0_NEAR_NOCACHE_ZERO_INIT
 #endif
 
 

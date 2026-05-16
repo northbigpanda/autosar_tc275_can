@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_PrivateCfg.h
- *   Generation Time: 2026-05-10 15:19:05
+ *   Generation Time: 2026-05-16 22:28:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -81,17 +81,17 @@
 #define EcuM_GetDefaultShutdownModeOfPCConfig()                       0u  /**< Default Shutdown Mode - Depending on target it its either a Sleep Mode or Reset Mode. */
 #define EcuM_GetDefaultShutdownTargetOfPCConfig()                     ECUM_STATE_OFF  /**< Default Shutdown Target */
 #define EcuM_GetDriverInitOneOfPCConfig()                             EcuM_DriverInitOne  /**< the pointer to EcuM_DriverInitOne */
-#define EcuM_GetEcuM_CRCHash_LowerOfPCConfig()                        0xD135980Cu
-#define EcuM_GetEcuM_CRCHash_UpperOfPCConfig()                        0xE27C873Bu
+#define EcuM_GetEcuM_CRCHash_LowerOfPCConfig()                        0x214CA8A0u
+#define EcuM_GetEcuM_CRCHash_UpperOfPCConfig()                        0xF3E9D7C8u
 #define EcuM_GetGeneratorCompatibilityVersionOfPCConfig()             2560u
-#define EcuM_GetMaxWakeupSourceCountOfPCConfig()                      7u  /**< Max Wakeup source count. */
+#define EcuM_GetMaxWakeupSourceCountOfPCConfig()                      8u  /**< Max Wakeup source count. */
 #define EcuM_GetModuleStateOfPCConfig()                               (&(EcuM_ModuleState))  /**< the pointer to EcuM_ModuleState */
 #define EcuM_GetNormalMcuModeOfPCConfig()                             McuConf_McuModeSettingConf_McuModeSettingConf_0  /**< EcuMNormalMcuModeRef id of the Mcu module */
 #define EcuM_GetPartitionDataOfPCConfig()                             EcuM_PartitionData  /**< the pointer to EcuM_PartitionData */
 #define EcuM_GetSizeOfCoreStatusOfPCConfig()                          3u  /**< the number of accomplishable value elements in EcuM_CoreStatus */
 #define EcuM_GetSizeOfDriverInitOneOfPCConfig()                       1u  /**< the number of accomplishable value elements in EcuM_DriverInitOne */
 #define EcuM_GetSizeOfPartitionDataOfPCConfig()                       3u  /**< the number of accomplishable value elements in EcuM_PartitionData */
-#define EcuM_GetSizeOfWakeupSourceListOfPCConfig()                    7u  /**< the number of accomplishable value elements in EcuM_WakeupSourceList */
+#define EcuM_GetSizeOfWakeupSourceListOfPCConfig()                    8u  /**< the number of accomplishable value elements in EcuM_WakeupSourceList */
 #define EcuM_GetValidationTimeoutTableOfPCConfig()                    EcuM_ValidationTimeoutTable  /**< the pointer to EcuM_ValidationTimeoutTable */
 #define EcuM_GetWakeupSourceListOfPCConfig()                          EcuM_WakeupSourceList  /**< the pointer to EcuM_WakeupSourceList */
 /** 
@@ -356,7 +356,7 @@ extern CONST(EcuM_PartitionDataType, ECUM_CONST) EcuM_PartitionData[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(EcuM_WakeupSourceListType, ECUM_CONST) EcuM_WakeupSourceList[7];
+extern CONST(EcuM_WakeupSourceListType, ECUM_CONST) EcuM_WakeupSourceList[8];
 #define ECUM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -386,7 +386,7 @@ extern VAR(EcuM_StateType, ECUM_VAR_NOINIT) EcuM_ModuleState;
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(EcuM_ValidationTimeoutTableType, ECUM_VAR_NOINIT) EcuM_ValidationTimeoutTable[7];
+extern VAR(EcuM_ValidationTimeoutTableType, ECUM_VAR_NOINIT) EcuM_ValidationTimeoutTable[8];
 #define ECUM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

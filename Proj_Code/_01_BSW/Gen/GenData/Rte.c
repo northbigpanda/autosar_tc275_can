@@ -287,6 +287,7 @@ FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint
 #define RTE_CONST_MSEC_SystemTimer_Core0_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core2_10 (10UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_5 (5UL)
 #define RTE_CONST_MSEC_SystemTimer_Core2_5 (5UL)
@@ -325,6 +326,7 @@ FUNC(void, RTE_CODE) SchM_Init(void)
     (void)ActivateTask(OsTask_Bsw5ms_Core0); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     /* activate the alarms used for TimingEvents */
+    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw5ms_Core0_0_20ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(20)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw5ms_Core0_0_5ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_SCHM_INIT;
@@ -417,6 +419,7 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
     /* deactivate alarms */
+    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw5ms_Core0_0_20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw5ms_Core0_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_UNINIT;

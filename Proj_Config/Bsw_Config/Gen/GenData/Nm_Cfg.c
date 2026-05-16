@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.c
- *   Generation Time: 2024-01-23 23:36:26
+ *   Generation Time: 2026-05-16 22:28:40
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -29,6 +29,17 @@
  *
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ * WARNING: This code has been generated with reduced-severity errors. 
+ * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
+ * Usage of the created files happens at own risk!
+ * 
+ * [Warning] NM01500 - Conflicting 'Passive Mode Enabled' parameters. 
+ * - [Reduced Severity due to User-Defined Parameter] 'Passive Mode Enabled' parameter must not exist at the same time in NmGlobalFeatures and in NmChannelConfig containers. Please delete one of the instances.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Nm/CN_DBCNetWork_9ed72b09[0:NmPassiveModeEnabled](value=false) (DefRef: /MICROSAR/Nm/NmChannelConfig/NmPassiveModeEnabled)
+ * /ActiveEcuC/Nm/NmGlobalConfig/NmGlobalFeatures[0:NmPassiveModeEnabled](value=false) (DefRef: /MICROSAR/Nm/NmGlobalConfig/NmGlobalFeatures/NmPassiveModeEnabled)
+ *********************************************************************************************************************/
 
 #define NM_CFG_SOURCE
 
@@ -145,6 +156,27 @@ CONST(Nm_NmFunctionTableType, NM_CONST) Nm_NmFunctionTable[1] = {  /* PRQA S 151
   { /*     0 */ CanNm_GetLocalNodeIdentifier, CanNm_GetNodeIdentifier, CanNm_GetPduData, CanNm_GetUserData, CanNm_GetState, CanNm_SetUserData, CanNm_NetworkRelease, CanNm_NetworkRequest, CanNm_PassiveStartUp }   /* [CanNm] */
 };
 #define NM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Nm_SysToNmChInd
+**********************************************************************************************************************/
+/** 
+  \var    Nm_SysToNmChInd
+  \brief  Channel indirection: System Channel handle to NM channel handle
+*/ 
+#define NM_START_SEC_CONST_8
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SysToNmChInd        */
+  /*     0 */                  0u,
+  /*     1 */  NM_NO_SYSTONMCHIND
+};
+#define NM_STOP_SEC_CONST_8
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

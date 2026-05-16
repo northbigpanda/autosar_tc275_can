@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.h
- *   Generation Time: 2024-01-10 07:48:04
+ *   Generation Time: 2026-05-16 22:28:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -76,6 +76,18 @@ FUNCTION: ComM_MainFunction_0
  *  \synchronous TRUE
 *********************************************************************************************************************/
 extern FUNC(void, COMM_CODE) ComM_MainFunction_0(void);
+
+/*********************************************************************************************************************
+FUNCTION: ComM_MainFunction_1
+*********************************************************************************************************************/
+/*! \brief       Calls ComM_MainFunction() for the corresponding channel. This function is called by RTE with the 
+ *               configured channel-specific Main Function Period
+ *  \pre         ComM must be initialized
+ *  \context     TASK
+ *  \reentrant   FALSE
+ *  \synchronous TRUE
+*********************************************************************************************************************/
+extern FUNC(void, COMM_CODE) ComM_MainFunction_1(void);
 
 /* -----------------------------------------------------------------------------
     &&&~ INTERNAL GENERATED FUNCTION PROTOTYPES

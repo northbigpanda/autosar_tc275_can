@@ -38,6 +38,7 @@
 
 #include "Rte_AppComTx.h"
 #include "E2EPW_AppComTx_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112_tx.h"
+#include "CanIf.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -104,7 +105,8 @@
 
 #define AppComTx_START_SEC_CODE
 #include "AppComTx_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
+PduInfoType Can0_Send_Data;
+uint8 Msg_Data[8] = {1,2,3,4,5,6,7,8};
 
 /**********************************************************************************************************************
  *
@@ -132,11 +134,19 @@ FUNC(void, AppComTx_CODE) AppComTx_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  *********************************************************************************************************************/
 
 	E2EPW_WriteInit_SG_Sig_Grp_0x112_SG_Sig_Grp_0x112();
+  Can0_Send_Data.SduDataPtr = Msg_Data;
+  Can0_Send_Data.SduLength = 8;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 }
 
+void Can0_Transmit(void)
+{
+  CanIf_Transmit(CanIfTxPduHnd_Ecu_Send_Msg_oDBCNetWork_Can0_0cc6104d_Tx, &Can0_Send_Data);
+  /* The implementation of this function is not part of the RTE and can be adapted as needed. */
+  /* For example, it can be used to trigger the transmission of the next CAN message or to perform other actions after a CAN message has been transmitted. */
+}
 /**********************************************************************************************************************
  *
  * Runnable Entity Name: AppComTx_MainFunction
@@ -213,6 +223,8 @@ FUNC(void, AppComTx_CODE) AppComTx_MainFunction(void) /* PRQA S 0624, 3206 */ /*
   {
     Rte_Write_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6_ComTx);
   }
+
+  Can0_Transmit();
 
   //Rte_Write_SG_Sig_Grp_0x114_SG_Sig_Grp_0x114(&SG_Sig_Grp_0x114_ComTx);
   //Rte_Write_Sig_0x114_Used_6_Sig_0x114_Used_6(Sig_0x114_Used_6_ComTx);

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Generated_Types.h
- *   Generation Time: 2024-01-28 22:55:55
+ *   Generation Time: 2026-05-16 22:28:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -55,18 +55,20 @@
 #define EcuMConf_EcuMWakeupSource_ECUM_WKSOURCE_EXTERNAL_WDG   (4uL) 
 #define EcuMConf_EcuMWakeupSource_CN_DBCNetWork_9ed72b09       (5uL) 
 #define EcuMConf_EcuMWakeupSource_ECUM_WKSOURCE_KL15           (6uL) 
+#define EcuMConf_EcuMWakeupSource_CN_DBCNetWork_Can0_7c554129  (7uL) 
 
  
 /* ------------------------------------- Range of EcuM_WakeupSourceType -------------------------------------------- */
-#define ECUM_WKSOURCE_NONE                   (EcuM_WakeupSourceType)(0x00000000uL) 
-#define ECUM_WKSOURCE_ALL_SOURCES            (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
-#define ECUM_WKSOURCE_POWER                  (EcuM_WakeupSourceType)(1uL) 
-#define ECUM_WKSOURCE_RESET                  (EcuM_WakeupSourceType)(2uL) 
-#define ECUM_WKSOURCE_INTERNAL_RESET         (EcuM_WakeupSourceType)(4uL) 
-#define ECUM_WKSOURCE_INTERNAL_WDG           (EcuM_WakeupSourceType)(8uL) 
-#define ECUM_WKSOURCE_EXTERNAL_WDG           (EcuM_WakeupSourceType)(16uL) 
-#define ECUM_WKSOURCE_CN_DBCNetWork_9ed72b09 (EcuM_WakeupSourceType)(32uL) 
-#define ECUM_WKSOURCE_KL15                   (EcuM_WakeupSourceType)(64uL) 
+#define ECUM_WKSOURCE_NONE                        (EcuM_WakeupSourceType)(0x00000000uL) 
+#define ECUM_WKSOURCE_ALL_SOURCES                 (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
+#define ECUM_WKSOURCE_POWER                       (EcuM_WakeupSourceType)(1uL) 
+#define ECUM_WKSOURCE_RESET                       (EcuM_WakeupSourceType)(2uL) 
+#define ECUM_WKSOURCE_INTERNAL_RESET              (EcuM_WakeupSourceType)(4uL) 
+#define ECUM_WKSOURCE_INTERNAL_WDG                (EcuM_WakeupSourceType)(8uL) 
+#define ECUM_WKSOURCE_EXTERNAL_WDG                (EcuM_WakeupSourceType)(16uL) 
+#define ECUM_WKSOURCE_CN_DBCNetWork_9ed72b09      (EcuM_WakeupSourceType)(32uL) 
+#define ECUM_WKSOURCE_KL15                        (EcuM_WakeupSourceType)(64uL) 
+#define ECUM_WKSOURCE_CN_DBCNetWork_Can0_7c554129 (EcuM_WakeupSourceType)(128uL) 
 
 
 

@@ -5002,7 +5002,7 @@
                             </a:a>
                           </d:var>
                           <d:var name="PortPinDirection" type="ENUMERATION" 
-                                 value="PORT_PIN_IN"/>
+                                 value="PORT_PIN_OUT"/>
                           <d:var name="PortPinDirectionChangeable" 
                                  type="BOOLEAN" value="false">
                             <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5079,7 +5079,7 @@
                             <a:a name="IMPORTER_INFO" value="@DEF"/>
                           </d:var>
                           <d:var name="PortPinInputCharacteristic" 
-                                 type="ENUMERATION" value="PORT_PIN_IN_PULL_UP"/>
+                                 type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                           <d:var name="PortPinInputHysteresis" type="BOOLEAN" 
                                  value="false"/>
                           <d:var name="PortPinOutputCharacteristic" 
@@ -5131,7 +5131,7 @@
                             </a:a>
                           </d:var>
                           <d:var name="PortPinDirection" type="ENUMERATION" 
-                                 value="PORT_PIN_IN"/>
+                                 value="PORT_PIN_OUT"/>
                           <d:var name="PortPinDirectionChangeable" 
                                  type="BOOLEAN" value="false">
                             <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5157,7 +5157,7 @@
                             <a:a name="IMPORTER_INFO" value="@DEF"/>
                           </d:var>
                           <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                                 value="PORT_PIN_MODE_GPIO"/>
+                                 value="PORT_PIN_MODE_ALT5"/>
                           <d:var name="PortPinModeChangeable" type="BOOLEAN" 
                                  value="false">
                             <a:a name="IMPORTER_INFO" value="@DEF"/>

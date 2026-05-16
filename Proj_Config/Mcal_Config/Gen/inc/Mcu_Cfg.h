@@ -14,7 +14,7 @@
 **                                                                            **
 **  $CC VERSION : \main\77 $                                                 **
 **                                                                            **
-**  DATE, TIME: 2024-02-02, 00:40:57                                          **
+**  DATE, TIME: 2026-05-16, 22:40:48                                          **
 **                                                                            **
 **  GENERATOR : Build b141014-0350                                            **
 **                                                                            **
@@ -473,7 +473,7 @@ Configuration: MCU_USER_MODE_INIT_API_ENABLE
    MCU105:The code file structure shall not be defined within this specification
    completely.At this point it shall be pointed out that the code-file structure
    shall include the following file named:
-   Mcu_PBcfg.c ?for post build time configurable parameters.
+   Mcu_PBcfg.c – for post build time configurable parameters.
    This file shall contain all  post-build time configurable parameters.
 
   */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2024-01-23 23:36:25
+ *   Generation Time: 2026-05-16 22:28:40
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -116,13 +116,13 @@
 #define COMM_BUS_TYPE_FR_PRESENT                        STD_OFF
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                        1u
+#define COMM_MAX_NUMBER_OF_USERS                        2u
 #define COMM_DCM_INDICATION                             STD_ON
 
 #define COMM_SYNCHRONOUS_WAKE_UP                        STD_ON
 #define COMM_EXTENDED_RAM_CHECK                         STD_OFF
 
-#define COMM_ACTIVE_CHANNEL                             1u
+#define COMM_ACTIVE_CHANNEL                             2u
 #define COMM_NVM_SUPPORT                                STD_OFF
 
 
@@ -131,14 +131,16 @@
     &&&~ USER HANDLES
  ----------------------------------------------------------------------------- */
 
-#define ComMConf_ComMUser_CN_DBCNetWork_c855c7bf 0u 
+#define ComMConf_ComMUser_CN_DBCNetWork_Can0_4f8ab83d 1u 
+#define ComMConf_ComMUser_CN_DBCNetWork_c855c7bf      0u 
 
 
 /* -----------------------------------------------------------------------------
     &&&~ CHANNEL HANDLES
  ----------------------------------------------------------------------------- */
  
-#define ComMConf_ComMChannel_CN_DBCNetWork_9ed72b09 0u 
+#define ComMConf_ComMChannel_CN_DBCNetWork_9ed72b09      0u 
+#define ComMConf_ComMChannel_CN_DBCNetWork_Can0_7c554129 1u 
 
 
 /* -----------------------------------------------------------------------------
@@ -305,7 +307,7 @@
 #define COMM_EXISTS_FULL_NMTYPEOFCHANNEL                              STD_ON
 #define COMM_EXISTS_PASSIVE_NMTYPEOFCHANNEL                           STD_OFF
 #define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                             STD_OFF
-#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                              STD_OFF
+#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                              STD_ON
 #define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                           STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                           STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COMM_EXISTS_ERA_RX_TYPEOFPNCSIGNAL                            STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
@@ -320,6 +322,7 @@
   \{
 */ 
 #define COMM_FULL_NMTYPEOFCHANNEL                                     0x01u
+#define COMM_NONE_NMTYPEOFCHANNEL                                     0x04u
 /** 
   \}
 */ 
@@ -332,21 +335,21 @@
 #define COMM_ISDEF_BUSTYPEOFCHANNEL                                   STD_ON
 #define COMM_ISDEF_GWTYPEOFCHANNEL                                    STD_ON
 #define COMM_ISDEF_INHIBITIONINITVALUEOFCHANNEL                       STD_ON
-#define COMM_ISDEF_NMSUPPORTOFCHANNEL                                 STD_ON
-#define COMM_ISDEF_NMTYPEOFCHANNEL                                    STD_ON
-#define COMM_ISDEF_SILENTSUPPORTOFCHANNEL                             STD_ON
-#define COMM_ISDEF_WAKEUPSTATEOFCHANNEL                               STD_ON
-#define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                    STD_ON
-#define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                  STD_ON
+#define COMM_ISDEF_NMSUPPORTOFCHANNEL                                 STD_OFF
+#define COMM_ISDEF_NMTYPEOFCHANNEL                                    STD_OFF
+#define COMM_ISDEF_SILENTSUPPORTOFCHANNEL                             STD_OFF
+#define COMM_ISDEF_WAKEUPSTATEOFCHANNEL                               STD_OFF
+#define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                    STD_OFF
+#define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                  STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMUSEDOFCHANNELPB                      STD_ON
 #define COMM_ISDEF_PNCUSEROFUSER                                      STD_OFF
-#define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                           STD_ON
-#define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                         STD_ON
+#define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                           STD_OFF
+#define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                         STD_OFF
 #define COMM_ISDEF_USERBYTEMASKUSEDOFUSER                             STD_ON
-#define COMM_ISDEF_CHANNELOFUSERBYTEMASK                              STD_ON
+#define COMM_ISDEF_CHANNELOFUSERBYTEMASK                              STD_OFF
 #define COMM_ISDEF_CLEARMASKOFUSERBYTEMASK                            STD_ON
 #define COMM_ISDEF_SETMASKOFUSERBYTEMASK                              STD_ON
-#define COMM_ISDEF_USERREQFULLCOMIDXOFUSERBYTEMASK                    STD_ON
+#define COMM_ISDEF_USERREQFULLCOMIDXOFUSERBYTEMASK                    STD_OFF
 #define COMM_ISDEF_CHANNELOFPCCONFIG                                  STD_ON
 #define COMM_ISDEF_CHANNELPBOFPCCONFIG                                STD_ON
 #define COMM_ISDEF_DCMREQUESTACTIVEOFPCCONFIG                         STD_ON
@@ -365,21 +368,21 @@
 #define COMM_EQ2_BUSTYPEOFCHANNEL                                     COMM_BUS_TYPE_CAN
 #define COMM_EQ2_GWTYPEOFCHANNEL                                      COMM_GATEWAY_TYPE_NONE
 #define COMM_EQ2_INHIBITIONINITVALUEOFCHANNEL                         0x00u
-#define COMM_EQ2_NMSUPPORTOFCHANNEL                                   TRUE
-#define COMM_EQ2_NMTYPEOFCHANNEL                                      COMM_FULL_NMTYPEOFCHANNEL
-#define COMM_EQ2_SILENTSUPPORTOFCHANNEL                               TRUE
-#define COMM_EQ2_WAKEUPSTATEOFCHANNEL                                 COMM_FULL_COM_READY_SLEEP
-#define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                      1u
-#define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                    0u
+#define COMM_EQ2_NMSUPPORTOFCHANNEL                                   
+#define COMM_EQ2_NMTYPEOFCHANNEL                                      
+#define COMM_EQ2_SILENTSUPPORTOFCHANNEL                               
+#define COMM_EQ2_WAKEUPSTATEOFCHANNEL                                 
+#define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                      
+#define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                    
 #define COMM_EQ2_USERREQFULLCOMUSEDOFCHANNELPB                        TRUE
 #define COMM_EQ2_PNCUSEROFUSER                                        
-#define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                             1u
-#define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                           0u
+#define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                             
+#define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                           
 #define COMM_EQ2_USERBYTEMASKUSEDOFUSER                               TRUE
-#define COMM_EQ2_CHANNELOFUSERBYTEMASK                                0u
+#define COMM_EQ2_CHANNELOFUSERBYTEMASK                                
 #define COMM_EQ2_CLEARMASKOFUSERBYTEMASK                              0xFEu
 #define COMM_EQ2_SETMASKOFUSERBYTEMASK                                0x01u
-#define COMM_EQ2_USERREQFULLCOMIDXOFUSERBYTEMASK                      0u
+#define COMM_EQ2_USERREQFULLCOMIDXOFUSERBYTEMASK                      
 #define COMM_EQ2_CHANNELOFPCCONFIG                                    ComM_Channel
 #define COMM_EQ2_CHANNELPBOFPCCONFIG                                  ComM_ChannelPb
 #define COMM_EQ2_DCMREQUESTACTIVEOFPCCONFIG                           ComM_DcmRequestActive.raw
@@ -568,25 +571,32 @@ typedef uint8 ComM_UserReqFullComType;
 /**   \brief  type used in ComM_Channel */
 typedef struct sComM_ChannelType
 {
-  uint8 ComM_ChannelNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  ComM_NmSupportOfChannelType NmSupportOfChannel;  /**< Decides if the channel has NmType FULL or PASSIVE */
+  ComM_SilentSupportOfChannelType SilentSupportOfChannel;  /**< Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration) */
+  ComM_NmTypeOfChannelType NmTypeOfChannel;  /**< The Network Management type fo the channel */
+  ComM_WakeupStateOfChannelType WakeupStateOfChannel;  /**< Target channel state after a Passive Wake-up */
 } ComM_ChannelType;
 
 /**   \brief  type used in ComM_ChannelPb */
 typedef struct sComM_ChannelPbType
 {
-  uint8 ComM_ChannelPbNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  ComM_UserReqFullComEndIdxOfChannelPbType UserReqFullComEndIdxOfChannelPb;  /**< the end index of the 0:n relation pointing to ComM_UserReqFullCom */
+  ComM_UserReqFullComStartIdxOfChannelPbType UserReqFullComStartIdxOfChannelPb;  /**< the start index of the 0:n relation pointing to ComM_UserReqFullCom */
 } ComM_ChannelPbType;
 
 /**   \brief  type used in ComM_User */
 typedef struct sComM_UserType
 {
   ComM_PncUserOfUserType PncUserOfUser;  /**< decides if a user is a partial network user or a direct channel user */
+  ComM_UserByteMaskEndIdxOfUserType UserByteMaskEndIdxOfUser;  /**< the end index of the 0:n relation pointing to ComM_UserByteMask */
+  ComM_UserByteMaskStartIdxOfUserType UserByteMaskStartIdxOfUser;  /**< the start index of the 0:n relation pointing to ComM_UserByteMask */
 } ComM_UserType;
 
 /**   \brief  type used in ComM_UserByteMask */
 typedef struct sComM_UserByteMaskType
 {
-  uint8 ComM_UserByteMaskNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  ComM_ChannelOfUserByteMaskType ChannelOfUserByteMask;  /**< ID of the channel which is requested by this entry. */
+  ComM_UserReqFullComIdxOfUserByteMaskType UserReqFullComIdxOfUserByteMask;  /**< the index of the 1:1 relation pointing to ComM_UserReqFullCom */
 } ComM_UserByteMaskType;
 
 /** 
@@ -602,6 +612,7 @@ typedef struct sComM_UserByteMaskType
 typedef struct ComM_DcmRequestActiveStructSTag
 {
   ComM_DcmRequestActiveType ComMChannel_0;
+  ComM_DcmRequestActiveType ComMChannel_1;
 } ComM_DcmRequestActiveStructSType;
 
 /** 
@@ -616,7 +627,7 @@ typedef struct ComM_DcmRequestActiveStructSTag
 /**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
 typedef union ComM_DcmRequestActiveUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_DcmRequestActiveType raw[1];
+  ComM_DcmRequestActiveType raw[2];
   ComM_DcmRequestActiveStructSType str;
 } ComM_DcmRequestActiveUType;
 

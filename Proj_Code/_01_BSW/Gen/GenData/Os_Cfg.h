@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2024-02-05 14:39:15
+ *   Generation Time: 2026-05-17 00:17:54
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -29,6 +29,17 @@
  *
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ * WARNING: This code has been generated with reduced-severity errors. 
+ * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
+ * Usage of the created files happens at own risk!
+ * 
+ * [Warning] Cfg95301 - Os Interrupt Service Routine parameter invalid or different to configuration in BSW module 
+ * - [Reduced Severity due to User-Defined Parameter] Either this parameter deviates from its definition in the /ActiveEcuC/Can Os Interrupt Service Routine or the definition of this parameter is invalid.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Os/CanIsr_0 (DefRef: /MICROSAR/Os/OsIsr)
+ * /ActiveEcuC/Os/CanIsr_0[0:OsIsrInterruptPriority](value=100) (DefRef: /MICROSAR/Os/OsIsr/OsIsrInterruptPriority)
+ *********************************************************************************************************************/
 #ifndef OS_CFG_H
 # define OS_CFG_H
 
@@ -109,12 +120,13 @@
 
 /* Event masks */
 # define Rte_Ev_Cyclic2_OsTask_App10ms_Core2_0_5ms     ((EventMaskType)1uLL)
-# define Rte_Ev_Cyclic2_OsTask_Bsw5ms_Core0_0_5ms     ((EventMaskType)1uLL)
+# define Rte_Ev_Cyclic2_OsTask_Bsw5ms_Core0_0_20ms     ((EventMaskType)1uLL)
+# define Rte_Ev_Cyclic2_OsTask_Bsw5ms_Core0_0_5ms     ((EventMaskType)2uLL)
 # define Rte_Ev_Cyclic_OsTask_App10ms_Core0_0_10ms     ((EventMaskType)1uLL)
 # define Rte_Ev_RunS2_EcuM_EcuM_MainFunction     ((EventMaskType)1uLL)
 # define Rte_Ev_Run_AppCtrl1_AppCtrl1_MainFuntion     ((EventMaskType)2uLL)
 # define Rte_Ev_Run_AppCtrl2_AppCtrl2_MainFunction     ((EventMaskType)2uLL)
-# define Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable     ((EventMaskType)2uLL)
+# define Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable     ((EventMaskType)4uLL)
 
 /* Software counter timing macros */
 

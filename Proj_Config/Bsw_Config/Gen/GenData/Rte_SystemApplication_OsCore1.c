@@ -199,6 +199,7 @@ FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint
 #define RTE_CONST_MSEC_SystemTimer_Core0_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core2_10 (10UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_5 (5UL)
 #define RTE_CONST_MSEC_SystemTimer_Core2_5 (5UL)

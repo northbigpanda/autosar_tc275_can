@@ -17,13 +17,25 @@
               <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/DBCNetWork</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/DBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="ECU-INSTANCE">/ECU/XB_SUP_A</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="GATEWAY">/Gateway/XB_SUP_A</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/XB_SUP_A_oDBCNetWork_Rx</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/XB_SUP_A_oDBCNetWork_Tx</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Ecu_Receive_Msg_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Ecu_Send_Msg_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Meg_FunDiag_oDBCNetWork</FIBEX-ELEMENT-REF>
@@ -93,6 +105,12 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/SupC_Function_2_oDBCNetWork</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Receive_Msg_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Send_Msg_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Meg_FunDiag_oDBCNetWork</FIBEX-ELEMENT-REF>
@@ -329,15 +347,56 @@
               <NM-USER-DATA-LENGTH>6</NM-USER-DATA-LENGTH>
               <NM-WAIT-BUS-SLEEP-TIME>2</NM-WAIT-BUS-SLEEP-TIME>
             </CAN-NM-CLUSTER>
+            <CAN-NM-CLUSTER>
+              <SHORT-NAME>DBCNetWork_Can0_CAN</SHORT-NAME>
+              <COMMUNICATION-CLUSTER-REF DEST="CAN-CLUSTER">/Cluster/DBCNetWork_Can0</COMMUNICATION-CLUSTER-REF>
+              <NM-CHANNEL-ID>1</NM-CHANNEL-ID>
+              <NM-NODES>
+                <CAN-NM-NODE>
+                  <SHORT-NAME>Host</SHORT-NAME>
+                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/Host_CAN</NM-IF-ECU-REF>
+                  <NM-NODE-ID>0</NM-NODE-ID>
+                  <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
+                  <NM-RANGE-CONFIG>
+                    <LOWER-CAN-ID>1536</LOWER-CAN-ID>
+                    <UPPER-CAN-ID>1791</UPPER-CAN-ID>
+                  </NM-RANGE-CONFIG>
+                </CAN-NM-NODE>
+                <CAN-NM-NODE>
+                  <SHORT-NAME>XB_SUP_A</SHORT-NAME>
+                  <CONTROLLER-REF DEST="CAN-COMMUNICATION-CONTROLLER">/ECU/XB_SUP_A/CT_DBCNetWork_Can0</CONTROLLER-REF>
+                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/XB_SUP_A_CAN</NM-IF-ECU-REF>
+                  <NM-NODE-ID>1</NM-NODE-ID>
+                  <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
+                  <NM-RANGE-CONFIG>
+                    <LOWER-CAN-ID>1536</LOWER-CAN-ID>
+                    <UPPER-CAN-ID>1791</UPPER-CAN-ID>
+                  </NM-RANGE-CONFIG>
+                </CAN-NM-NODE>
+              </NM-NODES>
+              <NM-NETWORK-TIMEOUT>2</NM-NETWORK-TIMEOUT>
+              <NM-USER-DATA-LENGTH>6</NM-USER-DATA-LENGTH>
+              <NM-WAIT-BUS-SLEEP-TIME>2</NM-WAIT-BUS-SLEEP-TIME>
+            </CAN-NM-CLUSTER>
           </NM-CLUSTERS>
           <NM-CLUSTER-COUPLINGS>
             <CAN-NM-CLUSTER-COUPLING>
               <COUPLED-CLUSTER-REFS>
                 <COUPLED-CLUSTER-REF DEST="CAN-NM-CLUSTER">/NM/NmConfig/DBCNetWork_CAN</COUPLED-CLUSTER-REF>
+                <COUPLED-CLUSTER-REF DEST="CAN-NM-CLUSTER">/NM/NmConfig/DBCNetWork_Can0_CAN</COUPLED-CLUSTER-REF>
               </COUPLED-CLUSTER-REFS>
             </CAN-NM-CLUSTER-COUPLING>
           </NM-CLUSTER-COUPLINGS>
           <NM-IF-ECUS>
+            <NM-ECU>
+              <SHORT-NAME>Host_CAN</SHORT-NAME>
+              <BUS-SPECIFIC-NM-ECU>
+                <CAN-NM-ECU/>
+              </BUS-SPECIFIC-NM-ECU>
+              <NM-NODE-ID-ENABLED>true</NM-NODE-ID-ENABLED>
+              <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
+              <NM-USER-DATA-ENABLED>true</NM-USER-DATA-ENABLED>
+            </NM-ECU>
             <NM-ECU>
               <SHORT-NAME>XB_SUP_A_CAN</SHORT-NAME>
               <BUS-SPECIFIC-NM-ECU>
@@ -345,6 +404,7 @@
               </BUS-SPECIFIC-NM-ECU>
               <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/ECU/XB_SUP_A</ECU-INSTANCE-REF>
               <NM-NODE-ID-ENABLED>true</NM-NODE-ID-ENABLED>
+              <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
               <NM-USER-DATA-ENABLED>true</NM-USER-DATA-ENABLED>
             </NM-ECU>
             <NM-ECU>
@@ -1293,6 +1353,82 @@
             </CAN-CLUSTER-CONDITIONAL>
           </CAN-CLUSTER-VARIANTS>
         </CAN-CLUSTER>
+        <CAN-CLUSTER>
+          <SHORT-NAME>DBCNetWork_Can0</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="FOR-ALL">Vector_XWXZ_CAN0</L-4>
+          </LONG-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:ToolData">
+                <SD GID="DV:ToolName">Vector Legacy Database Converter</SD>
+                <SD GID="DV:ToolVersion">1.8.38.0</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <CAN-CLUSTER-VARIANTS>
+            <CAN-CLUSTER-CONDITIONAL>
+              <BAUDRATE>500000</BAUDRATE>
+              <PHYSICAL-CHANNELS>
+                <CAN-PHYSICAL-CHANNEL>
+                  <SHORT-NAME>CHNL</SHORT-NAME>
+                  <COMM-CONNECTORS>
+                    <COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                      <COMMUNICATION-CONNECTOR-REF DEST="CAN-COMMUNICATION-CONNECTOR">/ECU/XB_SUP_A/CN_DBCNetWork_Can0</COMMUNICATION-CONNECTOR-REF>
+                    </COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                  </COMM-CONNECTORS>
+                  <FRAME-TRIGGERINGS>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Ecu_Receive_Msg</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/FP_Ecu_Receive_Msg_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Ecu_Receive_Msg_oDBCNetWork_Can0</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/DBCNetWork_Can0/CHNL/PT_Ecu_Receive_Msg</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>512</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Ecu_Send_Msg</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/FP_Ecu_Send_Msg_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Ecu_Send_Msg_oDBCNetWork_Can0</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/DBCNetWork_Can0/CHNL/PT_Ecu_Send_Msg</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>256</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                  </FRAME-TRIGGERINGS>
+                  <PDU-TRIGGERINGS>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Ecu_Receive_Msg</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/PP_Ecu_Receive_Msg_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Receive_Msg_oDBCNetWork_Can0</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Ecu_Send_Msg</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/PP_Ecu_Send_Msg_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Send_Msg_oDBCNetWork_Can0</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                  </PDU-TRIGGERINGS>
+                </CAN-PHYSICAL-CHANNEL>
+              </PHYSICAL-CHANNELS>
+              <PROTOCOL-NAME>CAN</PROTOCOL-NAME>
+            </CAN-CLUSTER-CONDITIONAL>
+          </CAN-CLUSTER-VARIANTS>
+        </CAN-CLUSTER>
       </ELEMENTS>
     </AR-PACKAGE>
     <AR-PACKAGE>
@@ -1307,6 +1443,23 @@
           <COMM-CONTROLLERS>
             <CAN-COMMUNICATION-CONTROLLER>
               <SHORT-NAME>CT_DBCNetWork</SHORT-NAME>
+              <CAN-COMMUNICATION-CONTROLLER-VARIANTS>
+                <CAN-COMMUNICATION-CONTROLLER-CONDITIONAL>
+                  <CAN-CONTROLLER-ATTRIBUTES>
+                    <CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS>
+                      <MAX-NUMBER-OF-TIME-QUANTA-PER-BIT>20</MAX-NUMBER-OF-TIME-QUANTA-PER-BIT>
+                      <MAX-SAMPLE-POINT>1</MAX-SAMPLE-POINT>
+                      <MAX-SYNC-JUMP-WIDTH>20</MAX-SYNC-JUMP-WIDTH>
+                      <MIN-NUMBER-OF-TIME-QUANTA-PER-BIT>10</MIN-NUMBER-OF-TIME-QUANTA-PER-BIT>
+                      <MIN-SAMPLE-POINT>1</MIN-SAMPLE-POINT>
+                      <MIN-SYNC-JUMP-WIDTH>20</MIN-SYNC-JUMP-WIDTH>
+                    </CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS>
+                  </CAN-CONTROLLER-ATTRIBUTES>
+                </CAN-COMMUNICATION-CONTROLLER-CONDITIONAL>
+              </CAN-COMMUNICATION-CONTROLLER-VARIANTS>
+            </CAN-COMMUNICATION-CONTROLLER>
+            <CAN-COMMUNICATION-CONTROLLER>
+              <SHORT-NAME>CT_DBCNetWork_Can0</SHORT-NAME>
               <CAN-COMMUNICATION-CONTROLLER-VARIANTS>
                 <CAN-COMMUNICATION-CONTROLLER-CONDITIONAL>
                   <CAN-CONTROLLER-ATTRIBUTES>
@@ -1658,8 +1811,47 @@
                 </I-SIGNAL-PORT>
               </ECU-COMM-PORT-INSTANCES>
             </CAN-COMMUNICATION-CONNECTOR>
+            <CAN-COMMUNICATION-CONNECTOR>
+              <SHORT-NAME>CN_DBCNetWork_Can0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:BusNmType">
+                    <SD GID="CanNm">true</SD>
+                    <SD GID="OSEK_Nm">false</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMM-CONTROLLER-REF DEST="CAN-COMMUNICATION-CONTROLLER">/ECU/XB_SUP_A/CT_DBCNetWork_Can0</COMM-CONTROLLER-REF>
+              <ECU-COMM-PORT-INSTANCES>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Ecu_Receive_Msg_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Ecu_Send_Msg_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Ecu_Receive_Msg_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Ecu_Send_Msg_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+              </ECU-COMM-PORT-INSTANCES>
+            </CAN-COMMUNICATION-CONNECTOR>
           </CONNECTORS>
         </ECU-INSTANCE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Gateway</SHORT-NAME>
+      <ELEMENTS>
+        <GATEWAY>
+          <SHORT-NAME>XB_SUP_A</SHORT-NAME>
+          <ECU-REF DEST="ECU-INSTANCE">/ECU/XB_SUP_A</ECU-REF>
+        </GATEWAY>
       </ELEMENTS>
     </AR-PACKAGE>
     <AR-PACKAGE>
@@ -1709,6 +1901,30 @@
     <AR-PACKAGE>
       <SHORT-NAME>CanFrame</SHORT-NAME>
       <ELEMENTS>
+        <CAN-FRAME>
+          <SHORT-NAME>Ecu_Receive_Msg_oDBCNetWork_Can0</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Ecu_Receive_Msg</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Receive_Msg_oDBCNetWork_Can0</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Ecu_Send_Msg_oDBCNetWork_Can0</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Ecu_Send_Msg</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Send_Msg_oDBCNetWork_Can0</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
         <CAN-FRAME>
           <SHORT-NAME>Meg_FunDiag_oDBCNetWork</SHORT-NAME>
           <FRAME-LENGTH>8</FRAME-LENGTH>
@@ -2595,6 +2811,14 @@
           </I-SIGNAL-TO-PDU-MAPPINGS>
           <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
         </I-SIGNAL-I-PDU>
+        <USER-DEFINED-PDU>
+          <SHORT-NAME>Ecu_Receive_Msg_oDBCNetWork_Can0</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </USER-DEFINED-PDU>
+        <USER-DEFINED-PDU>
+          <SHORT-NAME>Ecu_Send_Msg_oDBCNetWork_Can0</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </USER-DEFINED-PDU>
         <DCM-I-PDU>
           <SHORT-NAME>Meg_FunDiag_oDBCNetWork</SHORT-NAME>
           <ADMIN-DATA>

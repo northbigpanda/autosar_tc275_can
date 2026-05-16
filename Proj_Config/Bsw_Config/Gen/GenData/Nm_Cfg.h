@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2024-01-23 23:36:26
+ *   Generation Time: 2026-05-16 22:28:41
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -29,6 +29,17 @@
  *
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ * WARNING: This code has been generated with reduced-severity errors. 
+ * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
+ * Usage of the created files happens at own risk!
+ * 
+ * [Warning] NM01500 - Conflicting 'Passive Mode Enabled' parameters. 
+ * - [Reduced Severity due to User-Defined Parameter] 'Passive Mode Enabled' parameter must not exist at the same time in NmGlobalFeatures and in NmChannelConfig containers. Please delete one of the instances.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Nm/CN_DBCNetWork_9ed72b09[0:NmPassiveModeEnabled](value=false) (DefRef: /MICROSAR/Nm/NmChannelConfig/NmPassiveModeEnabled)
+ * /ActiveEcuC/Nm/NmGlobalConfig/NmGlobalFeatures[0:NmPassiveModeEnabled](value=false) (DefRef: /MICROSAR/Nm/NmGlobalConfig/NmGlobalFeatures/NmPassiveModeEnabled)
+ *********************************************************************************************************************/
 /* \trace SPEC-19592 */
 #if !defined(NM_CFG_H)
 #define NM_CFG_H
@@ -145,7 +156,7 @@
 /*! Optimization that is turned ON if and only if every shutdown delay timer start value is equal to one (1). */
 #define NM_OPTIMIZE_ALL_SHUTDOWN_DELAY_TIMER_ARE_ONE   STD_ON
 
-#define NM_SYS_CHANNELS_PC                             1u
+#define NM_SYS_CHANNELS_PC                             2u
 #define NM_NM_CHANNELS_PC                              1u
 #define NM_COORD_PC                                    0u
 #define NM_BUSNMS_PC                                   1u
@@ -284,7 +295,8 @@
 #define NM_REMOTEWAKEUPFILTER                                         STD_OFF  /**< Deactivateable: 'Nm_RemoteWakeupFilter' Reason: 'Nm Gw Ext Enabled is turned OFF' */
 #define NM_SIZEOFCHANNELCONFIG                                        STD_ON
 #define NM_SIZEOFNMFUNCTIONTABLE                                      STD_ON
-#define NM_SYSTONMCHIND                                               STD_OFF  /**< Deactivateable: 'Nm_SysToNmChInd' Reason: 'Channel Indirection is not needed because Macro Layer Enabled is ON or the number of system channels is equal to the number of NM channels in the VARIANT-PRE-COMPILE' */
+#define NM_SIZEOFSYSTONMCHIND                                         STD_ON
+#define NM_SYSTONMCHIND                                               STD_ON
 #define NM_WAKEUPDETECTED                                             STD_OFF  /**< Deactivateable: 'Nm_WakeupDetected' Reason: 'Nm Gw Ext Enabled is turned OFF' */
 #define NM_PCCONFIG                                                   STD_ON
 #define NM_CARWAKEUPCALLBACKFCTPTROFPCCONFIG                          STD_ON
@@ -295,6 +307,18 @@
 #define NM_NMFUNCTIONTABLEOFPCCONFIG                                  STD_ON
 #define NM_SIZEOFCHANNELCONFIGOFPCCONFIG                              STD_ON
 #define NM_SIZEOFNMFUNCTIONTABLEOFPCCONFIG                            STD_ON
+#define NM_SIZEOFSYSTONMCHINDOFPCCONFIG                               STD_ON
+#define NM_SYSTONMCHINDOFPCCONFIG                                     STD_ON
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  NmPCNoReferenceDefines  Nm No Reference Defines (PRE_COMPILE)
+  \brief  These defines are used to indicate unused indexes in data relations.
+  \{
+*/ 
+#define NM_NO_SYSTONMCHIND                                            255u
 /** 
   \}
 */ 
@@ -316,9 +340,11 @@
 #define NM_ISDEF_NETWORKREQUESTOFNMFUNCTIONTABLE                      STD_OFF
 #define NM_ISDEF_PASSIVESTARTUPOFNMFUNCTIONTABLE                      STD_OFF
 #define NM_ISDEF_SETUSERDATAOFNMFUNCTIONTABLE                         STD_OFF
+#define NM_ISDEF_SYSTONMCHIND                                         STD_OFF
 #define NM_ISDEF_CARWAKEUPCALLBACKFCTPTROFPCCONFIG                    STD_ON
 #define NM_ISDEF_CHANNELCONFIGOFPCCONFIG                              STD_ON
 #define NM_ISDEF_NMFUNCTIONTABLEOFPCCONFIG                            STD_ON
+#define NM_ISDEF_SYSTONMCHINDOFPCCONFIG                               STD_ON
 /** 
   \}
 */ 
@@ -340,9 +366,11 @@
 #define NM_EQ2_NETWORKREQUESTOFNMFUNCTIONTABLE                        
 #define NM_EQ2_PASSIVESTARTUPOFNMFUNCTIONTABLE                        
 #define NM_EQ2_SETUSERDATAOFNMFUNCTIONTABLE                           
+#define NM_EQ2_SYSTONMCHIND                                           
 #define NM_EQ2_CARWAKEUPCALLBACKFCTPTROFPCCONFIG                      Nm_CarWakeUpCallbackFctPtr
 #define NM_EQ2_CHANNELCONFIGOFPCCONFIG                                Nm_ChannelConfig
 #define NM_EQ2_NMFUNCTIONTABLEOFPCCONFIG                              Nm_NmFunctionTable
+#define NM_EQ2_SYSTONMCHINDOFPCCONFIG                                 Nm_SysToNmChInd
 /** 
   \}
 */ 
@@ -440,6 +468,8 @@
 #define Nm_GetNmFunctionTableOfPCConfig()                             Nm_NmFunctionTable  /**< the pointer to Nm_NmFunctionTable */
 #define Nm_GetSizeOfChannelConfigOfPCConfig()                         1u  /**< the number of accomplishable value elements in Nm_ChannelConfig */
 #define Nm_GetSizeOfNmFunctionTableOfPCConfig()                       1u  /**< the number of accomplishable value elements in Nm_NmFunctionTable */
+#define Nm_GetSizeOfSysToNmChIndOfPCConfig()                          2u  /**< the number of accomplishable value elements in Nm_SysToNmChInd */
+#define Nm_GetSysToNmChIndOfPCConfig()                                Nm_SysToNmChInd  /**< the pointer to Nm_SysToNmChInd */
 /** 
   \}
 */ 
@@ -462,6 +492,7 @@
 #define Nm_GetNetworkRequestOfNmFunctionTable(Index)                  (Nm_GetNmFunctionTableOfPCConfig()[(Index)].NetworkRequestOfNmFunctionTable)
 #define Nm_GetPassiveStartUpOfNmFunctionTable(Index)                  (Nm_GetNmFunctionTableOfPCConfig()[(Index)].PassiveStartUpOfNmFunctionTable)
 #define Nm_GetSetUserDataOfNmFunctionTable(Index)                     (Nm_GetNmFunctionTableOfPCConfig()[(Index)].SetUserDataOfNmFunctionTable)
+#define Nm_GetSysToNmChInd(Index)                                     (Nm_GetSysToNmChIndOfPCConfig()[(Index)])
 /** 
   \}
 */ 
@@ -473,6 +504,7 @@
 */ 
 #define Nm_GetSizeOfChannelConfig()                                   Nm_GetSizeOfChannelConfigOfPCConfig()
 #define Nm_GetSizeOfNmFunctionTable()                                 Nm_GetSizeOfNmFunctionTableOfPCConfig()
+#define Nm_GetSizeOfSysToNmChInd()                                    Nm_GetSizeOfSysToNmChIndOfPCConfig()
 /** 
   \}
 */ 
@@ -499,12 +531,16 @@
 #define Nm_HasSetUserDataOfNmFunctionTable()                          (TRUE != FALSE)
 #define Nm_HasSizeOfChannelConfig()                                   (TRUE != FALSE)
 #define Nm_HasSizeOfNmFunctionTable()                                 (TRUE != FALSE)
+#define Nm_HasSizeOfSysToNmChInd()                                    (TRUE != FALSE)
+#define Nm_HasSysToNmChInd()                                          (TRUE != FALSE)
 #define Nm_HasPCConfig()                                              (TRUE != FALSE)
 #define Nm_HasCarWakeUpCallbackFctPtrOfPCConfig()                     (TRUE != FALSE)
 #define Nm_HasChannelConfigOfPCConfig()                               (TRUE != FALSE)
 #define Nm_HasNmFunctionTableOfPCConfig()                             (TRUE != FALSE)
 #define Nm_HasSizeOfChannelConfigOfPCConfig()                         (TRUE != FALSE)
 #define Nm_HasSizeOfNmFunctionTableOfPCConfig()                       (TRUE != FALSE)
+#define Nm_HasSizeOfSysToNmChIndOfPCConfig()                          (TRUE != FALSE)
+#define Nm_HasSysToNmChIndOfPCConfig()                                (TRUE != FALSE)
 /** 
   \}
 */ 
@@ -591,6 +627,9 @@ typedef uint8_least Nm_ChannelConfigIterType;
 /**   \brief  type used to iterate Nm_NmFunctionTable */
 typedef uint8_least Nm_NmFunctionTableIterType;
 
+/**   \brief  type used to iterate Nm_SysToNmChInd */
+typedef uint8_least Nm_SysToNmChIndIterType;
+
 /** 
   \}
 */ 
@@ -611,6 +650,12 @@ typedef uint8 Nm_SizeOfChannelConfigType;
 
 /**   \brief  value based type definition for Nm_SizeOfNmFunctionTable */
 typedef uint8 Nm_SizeOfNmFunctionTableType;
+
+/**   \brief  value based type definition for Nm_SizeOfSysToNmChInd */
+typedef uint8 Nm_SizeOfSysToNmChIndType;
+
+/**   \brief  value based type definition for Nm_SysToNmChInd */
+typedef uint8 Nm_SysToNmChIndType;
 
 /** 
   \}
@@ -661,6 +706,9 @@ typedef P2CONST(Nm_ChannelConfigType, TYPEDEF, NM_CONST) Nm_ChannelConfigPtrType
 
 /**   \brief  type used to point to Nm_NmFunctionTable */
 typedef P2CONST(Nm_NmFunctionTableType, TYPEDEF, NM_CONST) Nm_NmFunctionTablePtrType;
+
+/**   \brief  type used to point to Nm_SysToNmChInd */
+typedef P2CONST(Nm_SysToNmChIndType, TYPEDEF, NM_CONST) Nm_SysToNmChIndPtrType;
 
 /** 
   \}
@@ -773,6 +821,23 @@ extern CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[1];
 /*lint -restore */
 extern CONST(Nm_NmFunctionTableType, NM_CONST) Nm_NmFunctionTable[1];
 #define NM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Nm_SysToNmChInd
+**********************************************************************************************************************/
+/** 
+  \var    Nm_SysToNmChInd
+  \brief  Channel indirection: System Channel handle to NM channel handle
+*/ 
+#define NM_START_SEC_CONST_8
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[2];
+#define NM_STOP_SEC_CONST_8
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

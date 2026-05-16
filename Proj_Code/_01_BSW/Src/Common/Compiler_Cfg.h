@@ -207,8 +207,8 @@
 
 /* Copy the compiler abstraction defines for each of your configured CDDs and replace the prefix _CDD with the MSN of your configured CDD as higher case. */
 
-#define _CDD_CODE
-#define _CDD_APPL_DATA
+#define CDD_CODE
+#define CDD_APPL_DATA
 
 /* Add additional compiler abstraction defines for each of you configured CDDs here. */
 

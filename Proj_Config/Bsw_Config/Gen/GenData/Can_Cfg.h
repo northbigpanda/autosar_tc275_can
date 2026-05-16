@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2026-05-09 23:13:12
+ *   Generation Time: 2026-05-16 22:28:40
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -304,7 +304,7 @@
 #define CAN_RX_BASICCAN_OBJECTS              STD_ON
 #define CAN_EXTENDED_ID                      STD_OFF
 #define CAN_MIXED_ID                         STD_OFF
-#define CAN_ONE_CONTROLLER_OPTIMIZATION      STD_ON
+#define CAN_ONE_CONTROLLER_OPTIMIZATION      STD_OFF
 #define CAN_CHANGE_BAUDRATE_API              STD_OFF   /* CAN460_Conf */
 #define CAN_FD_HW_BUFFER_OPTIMIZATION        STD_OFF
 
@@ -327,17 +327,18 @@
  ----------------------------------------------------------------------------- */
 #ifndef C_DRV_INTERNAL
 # ifndef kCanNumberOfChannels
-#  define kCanNumberOfChannels               1u
+#  define kCanNumberOfChannels               2u
 # endif
 # ifndef kCanNumberOfHwChannels
-#  define kCanNumberOfHwChannels             1u
+#  define kCanNumberOfHwChannels             2u
 # endif
 #endif
 #ifndef kCanNumberOfUsedChannels /* ATK only */
-# define kCanNumberOfUsedChannels            1u
+# define kCanNumberOfUsedChannels            2u
 #endif
 
-#define kCanPhysToLogChannelIndex_1 
+#define kCanPhysToLogChannelIndex_0 1u
+#define kCanPhysToLogChannelIndex_1 0u
 
 #define kCanNumberOfPhysChannels             2u
 
@@ -357,8 +358,11 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define CanConf_CanController_CT_DBCNetWork_78f82e94                  0u
+#define CanConf_CanController_CT_DBCNetWork_Can0_5928070d             1u
 /**\} */
 #define CanConf_CN_DBCNetWork_9ed72b09_Tx 0u
+#define CanConf_CN_DBCNetWork_Can0_3e6cf38a_Rx 9u
+#define CanConf_CN_DBCNetWork_Can0_7c554129_Tx 8u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_Meg_FunDiag_Tp 1u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_Meg_PhyDiag_Tp 2u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_NM 7u
@@ -368,6 +372,7 @@
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupC_Function_2 3u
 
 #define CanConf_ControllerBaudrateConfig_CT_DBCNetWork_78f82e94_CanControllerBaudrateConfig 0u
+#define CanConf_ControllerBaudrateConfig_CT_DBCNetWork_Can0_5928070d_CanControllerBaudrateConfig 0u
 
 #define CanConf_MemorySection_Memory_CanCell 0u
 #define CanConf_MemorySection_Memory_CanCellR 1u
@@ -394,7 +399,7 @@
 #define CAN_MAX_HW_NODE_AMOUNT               4u
 #define CAN_MAX_MAILBOX_AMOUNT               256u
 
-#define kCanISRPrio_0                        0u
+#define kCanISRPrio_0                        10u
 #define kCanUsedCore_0                       0u
 #define kCanISRPrio_1                        10u
 #define kCanUsedCore_1                       0u
@@ -712,7 +717,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_NO_TXFULLHWSTOPOFCONTROLLERCONFIG                         255u
 #define CAN_NO_UNUSEDHWSTARTOFCONTROLLERCONFIG                        255u
 #define CAN_NO_UNUSEDHWSTOPOFCONTROLLERCONFIG                         255u
-#define CAN_NO_GLOBALINTERRUPTPENDINGMASK                             65535u
+#define CAN_NO_GLOBALINTERRUPTPENDINGMASK                             4294967295u
 #define CAN_NO_INITBT                                                 65535u
 #define CAN_NO_INITCODEH                                              65535u
 #define CAN_NO_INITCODEL                                              255u
@@ -722,10 +727,10 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_NO_NODEADR                                                4294967295u
 #define CAN_NO_NODENUM                                                255u
 #define CAN_NO_PHYSPRIO                                               255u
-#define CAN_NO_RXBASICINTERRUPTPENDINGMASK                            65535u
+#define CAN_NO_RXBASICINTERRUPTPENDINGMASK                            4294967295u
 #define CAN_NO_RXFULLINTERRUPTPENDINGMASK                             255u
 #define CAN_NO_SRCNUM                                                 255u
-#define CAN_NO_TXINTERRUPTPENDINGMASK                                 255u
+#define CAN_NO_TXINTERRUPTPENDINGMASK                                 4294967295u
 /** 
   \}
 */ 
@@ -1059,30 +1064,30 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetPlatformDll_GeneratorVersionOfPCConfig()               0x0101u
 #define Can_GetRxBasicInterruptPendingMaskOfPCConfig()                Can_RxBasicInterruptPendingMask  /**< the pointer to Can_RxBasicInterruptPendingMask */
 #define Can_GetRxFullInterruptPendingMaskOfPCConfig()                 Can_RxFullInterruptPendingMask  /**< the pointer to Can_RxFullInterruptPendingMask */
-#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     1u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
-#define Can_GetSizeOfCanIfChannelIdOfPCConfig()                       1u  /**< the number of accomplishable value elements in Can_CanIfChannelId */
-#define Can_GetSizeOfControllerConfigOfPCConfig()                     1u  /**< the number of accomplishable value elements in Can_ControllerConfig */
-#define Can_GetSizeOfGlobalInterruptPendingMaskOfPCConfig()           8u  /**< the number of accomplishable value elements in Can_GlobalInterruptPendingMask */
-#define Can_GetSizeOfInitBTOfPCConfig()                               1u  /**< the number of accomplishable value elements in Can_InitBT */
-#define Can_GetSizeOfInitCodeHOfPCConfig()                            1u  /**< the number of accomplishable value elements in Can_InitCodeH */
-#define Can_GetSizeOfInitCodeLOfPCConfig()                            1u  /**< the number of accomplishable value elements in Can_InitCodeL */
-#define Can_GetSizeOfInitMaskHOfPCConfig()                            1u  /**< the number of accomplishable value elements in Can_InitMaskH */
-#define Can_GetSizeOfInitMaskLOfPCConfig()                            1u  /**< the number of accomplishable value elements in Can_InitMaskL */
-#define Can_GetSizeOfInitObjectBaudrateOfPCConfig()                   1u  /**< the number of accomplishable value elements in Can_InitObjectBaudrate */
-#define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 2u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
-#define Can_GetSizeOfInitPortSelOfPCConfig()                          1u  /**< the number of accomplishable value elements in Can_InitPortSel */
-#define Can_GetSizeOfIsrOsIdOfPCConfig()                              1u  /**< the number of accomplishable value elements in Can_IsrOsId */
-#define Can_GetSizeOfMailboxOfPCConfig()                              9u  /**< the number of accomplishable value elements in Can_Mailbox */
+#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     2u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
+#define Can_GetSizeOfCanIfChannelIdOfPCConfig()                       2u  /**< the number of accomplishable value elements in Can_CanIfChannelId */
+#define Can_GetSizeOfControllerConfigOfPCConfig()                     2u  /**< the number of accomplishable value elements in Can_ControllerConfig */
+#define Can_GetSizeOfGlobalInterruptPendingMaskOfPCConfig()           16u  /**< the number of accomplishable value elements in Can_GlobalInterruptPendingMask */
+#define Can_GetSizeOfInitBTOfPCConfig()                               2u  /**< the number of accomplishable value elements in Can_InitBT */
+#define Can_GetSizeOfInitCodeHOfPCConfig()                            2u  /**< the number of accomplishable value elements in Can_InitCodeH */
+#define Can_GetSizeOfInitCodeLOfPCConfig()                            2u  /**< the number of accomplishable value elements in Can_InitCodeL */
+#define Can_GetSizeOfInitMaskHOfPCConfig()                            2u  /**< the number of accomplishable value elements in Can_InitMaskH */
+#define Can_GetSizeOfInitMaskLOfPCConfig()                            2u  /**< the number of accomplishable value elements in Can_InitMaskL */
+#define Can_GetSizeOfInitObjectBaudrateOfPCConfig()                   2u  /**< the number of accomplishable value elements in Can_InitObjectBaudrate */
+#define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 3u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
+#define Can_GetSizeOfInitPortSelOfPCConfig()                          2u  /**< the number of accomplishable value elements in Can_InitPortSel */
+#define Can_GetSizeOfIsrOsIdOfPCConfig()                              2u  /**< the number of accomplishable value elements in Can_IsrOsId */
+#define Can_GetSizeOfMailboxOfPCConfig()                              12u  /**< the number of accomplishable value elements in Can_Mailbox */
 #define Can_GetSizeOfMemorySectionInfoOfPCConfig()                    2u  /**< the number of accomplishable value elements in Can_MemorySectionInfo */
-#define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 20u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
-#define Can_GetSizeOfNodeAdrOfPCConfig()                              1u  /**< the number of accomplishable value elements in Can_NodeAdr */
-#define Can_GetSizeOfNodeNumOfPCConfig()                              1u  /**< the number of accomplishable value elements in Can_NodeNum */
+#define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 27u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
+#define Can_GetSizeOfNodeAdrOfPCConfig()                              2u  /**< the number of accomplishable value elements in Can_NodeAdr */
+#define Can_GetSizeOfNodeNumOfPCConfig()                              2u  /**< the number of accomplishable value elements in Can_NodeNum */
 #define Can_GetSizeOfPhysPrioOfPCConfig()                             4u  /**< the number of accomplishable value elements in Can_PhysPrio */
-#define Can_GetSizeOfRxBasicInterruptPendingMaskOfPCConfig()          8u  /**< the number of accomplishable value elements in Can_RxBasicInterruptPendingMask */
-#define Can_GetSizeOfRxFullInterruptPendingMaskOfPCConfig()           8u  /**< the number of accomplishable value elements in Can_RxFullInterruptPendingMask */
-#define Can_GetSizeOfSrcNumOfPCConfig()                               1u  /**< the number of accomplishable value elements in Can_SrcNum */
-#define Can_GetSizeOfTmpRxMsgMailboxOfPCConfig()                      1u  /**< the number of accomplishable value elements in Can_TmpRxMsgMailbox */
-#define Can_GetSizeOfTxInterruptPendingMaskOfPCConfig()               8u  /**< the number of accomplishable value elements in Can_TxInterruptPendingMask */
+#define Can_GetSizeOfRxBasicInterruptPendingMaskOfPCConfig()          16u  /**< the number of accomplishable value elements in Can_RxBasicInterruptPendingMask */
+#define Can_GetSizeOfRxFullInterruptPendingMaskOfPCConfig()           16u  /**< the number of accomplishable value elements in Can_RxFullInterruptPendingMask */
+#define Can_GetSizeOfSrcNumOfPCConfig()                               2u  /**< the number of accomplishable value elements in Can_SrcNum */
+#define Can_GetSizeOfTmpRxMsgMailboxOfPCConfig()                      2u  /**< the number of accomplishable value elements in Can_TmpRxMsgMailbox */
+#define Can_GetSizeOfTxInterruptPendingMaskOfPCConfig()               16u  /**< the number of accomplishable value elements in Can_TxInterruptPendingMask */
 #define Can_GetSrcNumOfPCConfig()                                     Can_SrcNum  /**< the pointer to Can_SrcNum */
 #define Can_GetTmpRxMsgMailboxOfPCConfig()                            Can_TmpRxMsgMailbox  /**< the pointer to Can_TmpRxMsgMailbox */
 #define Can_GetTxInterruptPendingMaskOfPCConfig()                     Can_TxInterruptPendingMask  /**< the pointer to Can_TxInterruptPendingMask */
@@ -1735,7 +1740,7 @@ typedef uint8 Can_ModeTransitionRequestOfControllerDataType;
 typedef uint8 Can_RamCheckTransitionRequestOfControllerDataType;
 
 /**   \brief  value based type definition for Can_GlobalInterruptPendingMask */
-typedef uint16 Can_GlobalInterruptPendingMaskType;
+typedef uint32 Can_GlobalInterruptPendingMaskType;
 
 /**   \brief  value based type definition for Can_InitBT */
 typedef uint16 Can_InitBTType;
@@ -1819,7 +1824,7 @@ typedef uint8 Can_PhysPrioType;
 typedef uint16 Can_PlatformDll_GeneratorVersionType;
 
 /**   \brief  value based type definition for Can_RxBasicInterruptPendingMask */
-typedef uint16 Can_RxBasicInterruptPendingMaskType;
+typedef uint32 Can_RxBasicInterruptPendingMaskType;
 
 /**   \brief  value based type definition for Can_RxFullInterruptPendingMask */
 typedef uint8 Can_RxFullInterruptPendingMaskType;
@@ -1903,7 +1908,7 @@ typedef uint8 Can_SizeOfTxInterruptPendingMaskType;
 typedef uint8 Can_SrcNumType;
 
 /**   \brief  value based type definition for Can_TxInterruptPendingMask */
-typedef uint8 Can_TxInterruptPendingMaskType;
+typedef uint32 Can_TxInterruptPendingMaskType;
 
 /** 
   \}
@@ -2142,7 +2147,7 @@ typedef Can_PCConfigType Can_ConfigType;  /**< A structure type is present for d
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[1];
+extern CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[2];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2185,7 +2190,7 @@ extern CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1];
+extern CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[2];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2198,12 +2203,12 @@ extern CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1];
   \var    Can_GlobalInterruptPendingMask
   \brief  Mask of all interrupt objects.
 */ 
-#define CAN_START_SEC_CONST_16BIT
+#define CAN_START_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_GlobalInterruptPendingMaskType, CAN_CONST) Can_GlobalInterruptPendingMask[8];
-#define CAN_STOP_SEC_CONST_16BIT
+extern CONST(Can_GlobalInterruptPendingMaskType, CAN_CONST) Can_GlobalInterruptPendingMask[16];
+#define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -2219,7 +2224,7 @@ extern CONST(Can_GlobalInterruptPendingMaskType, CAN_CONST) Can_GlobalInterruptP
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitBTType, CAN_CONST) Can_InitBT[1];
+extern CONST(Can_InitBTType, CAN_CONST) Can_InitBT[2];
 #define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2236,7 +2241,7 @@ extern CONST(Can_InitBTType, CAN_CONST) Can_InitBT[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitCodeHType, CAN_CONST) Can_InitCodeH[1];
+extern CONST(Can_InitCodeHType, CAN_CONST) Can_InitCodeH[2];
 #define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2253,7 +2258,7 @@ extern CONST(Can_InitCodeHType, CAN_CONST) Can_InitCodeH[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitCodeLType, CAN_CONST) Can_InitCodeL[1];
+extern CONST(Can_InitCodeLType, CAN_CONST) Can_InitCodeL[2];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2270,7 +2275,7 @@ extern CONST(Can_InitCodeLType, CAN_CONST) Can_InitCodeL[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitMaskHType, CAN_CONST) Can_InitMaskH[1];
+extern CONST(Can_InitMaskHType, CAN_CONST) Can_InitMaskH[2];
 #define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2287,7 +2292,7 @@ extern CONST(Can_InitMaskHType, CAN_CONST) Can_InitMaskH[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitMaskLType, CAN_CONST) Can_InitMaskL[1];
+extern CONST(Can_InitMaskLType, CAN_CONST) Can_InitMaskL[2];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2304,7 +2309,7 @@ extern CONST(Can_InitMaskLType, CAN_CONST) Can_InitMaskL[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[1];
+extern CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[2];
 #define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2321,7 +2326,7 @@ extern CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[2];
+extern CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[3];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2338,7 +2343,7 @@ extern CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[2
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitPortSelType, CAN_CONST) Can_InitPortSel[1];
+extern CONST(Can_InitPortSelType, CAN_CONST) Can_InitPortSel[2];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2355,7 +2360,7 @@ extern CONST(Can_InitPortSelType, CAN_CONST) Can_InitPortSel[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[1];
+extern CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[2];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2383,7 +2388,7 @@ extern CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[9];
+extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[12];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2426,7 +2431,7 @@ extern CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[20];
+extern CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[27];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2443,7 +2448,7 @@ extern CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[2
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_NodeAdrType, CAN_CONST) Can_NodeAdr[1];
+extern CONST(Can_NodeAdrType, CAN_CONST) Can_NodeAdr[2];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2460,7 +2465,7 @@ extern CONST(Can_NodeAdrType, CAN_CONST) Can_NodeAdr[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_NodeNumType, CAN_CONST) Can_NodeNum[1];
+extern CONST(Can_NodeNumType, CAN_CONST) Can_NodeNum[2];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2490,12 +2495,12 @@ extern CONST(Can_PhysPrioType, CAN_CONST) Can_PhysPrio[4];
   \var    Can_RxBasicInterruptPendingMask
   \brief  Mask of Rx BasicCAN interrupt objects.
 */ 
-#define CAN_START_SEC_CONST_16BIT
+#define CAN_START_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_RxBasicInterruptPendingMaskType, CAN_CONST) Can_RxBasicInterruptPendingMask[8];
-#define CAN_STOP_SEC_CONST_16BIT
+extern CONST(Can_RxBasicInterruptPendingMaskType, CAN_CONST) Can_RxBasicInterruptPendingMask[16];
+#define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -2511,7 +2516,7 @@ extern CONST(Can_RxBasicInterruptPendingMaskType, CAN_CONST) Can_RxBasicInterrup
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_RxFullInterruptPendingMaskType, CAN_CONST) Can_RxFullInterruptPendingMask[8];
+extern CONST(Can_RxFullInterruptPendingMaskType, CAN_CONST) Can_RxFullInterruptPendingMask[16];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2528,7 +2533,7 @@ extern CONST(Can_RxFullInterruptPendingMaskType, CAN_CONST) Can_RxFullInterruptP
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_SrcNumType, CAN_CONST) Can_SrcNum[1];
+extern CONST(Can_SrcNumType, CAN_CONST) Can_SrcNum[2];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2541,12 +2546,12 @@ extern CONST(Can_SrcNumType, CAN_CONST) Can_SrcNum[1];
   \var    Can_TxInterruptPendingMask
   \brief  Mask of Tx interrupt objects.
 */ 
-#define CAN_START_SEC_CONST_8BIT
+#define CAN_START_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_TxInterruptPendingMaskType, CAN_CONST) Can_TxInterruptPendingMask[8];
-#define CAN_STOP_SEC_CONST_8BIT
+extern CONST(Can_TxInterruptPendingMaskType, CAN_CONST) Can_TxInterruptPendingMask[16];
+#define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -2566,7 +2571,7 @@ extern CONST(Can_TxInterruptPendingMaskType, CAN_CONST) Can_TxInterruptPendingMa
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[1];
+extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[2];
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2596,7 +2601,7 @@ extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Can_ControllerDataType, CAN_VAR_NOINIT) Can_ControllerData[1];
+extern VAR(Can_ControllerDataType, CAN_VAR_NOINIT) Can_ControllerData[2];
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2613,7 +2618,7 @@ extern VAR(Can_ControllerDataType, CAN_VAR_NOINIT) Can_ControllerData[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(tCanTmpMsgObjStruct, CAN_VAR_NOINIT) Can_TmpRxMsgMailbox[1];
+extern VAR(tCanTmpMsgObjStruct, CAN_VAR_NOINIT) Can_TmpRxMsgMailbox[2];
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

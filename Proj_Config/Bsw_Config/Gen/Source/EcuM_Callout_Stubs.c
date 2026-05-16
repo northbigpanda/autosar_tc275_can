@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2026-05-05 14:33:41
+ *   Generation Time: 2026-05-16 22:28:40
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -54,15 +54,16 @@
  *  All configured EcuM Wakeup Sources (as bitmasks) for usage in Callouts
  *********************************************************************************************************************/
 /*
- * ECUM_WKSOURCE_NONE                   (EcuM_WakeupSourceType)(0x00000000uL) 
- * ECUM_WKSOURCE_ALL_SOURCES            (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
- * ECUM_WKSOURCE_POWER                  (EcuM_WakeupSourceType)(1uL) 
- * ECUM_WKSOURCE_RESET                  (EcuM_WakeupSourceType)(2uL) 
- * ECUM_WKSOURCE_INTERNAL_RESET         (EcuM_WakeupSourceType)(4uL) 
- * ECUM_WKSOURCE_INTERNAL_WDG           (EcuM_WakeupSourceType)(8uL) 
- * ECUM_WKSOURCE_EXTERNAL_WDG           (EcuM_WakeupSourceType)(16uL) 
- * ECUM_WKSOURCE_CN_DBCNetWork_9ed72b09 (EcuM_WakeupSourceType)(32uL) 
- * ECUM_WKSOURCE_KL15                   (EcuM_WakeupSourceType)(64uL) 
+ * ECUM_WKSOURCE_NONE                        (EcuM_WakeupSourceType)(0x00000000uL) 
+ * ECUM_WKSOURCE_ALL_SOURCES                 (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
+ * ECUM_WKSOURCE_POWER                       (EcuM_WakeupSourceType)(1uL) 
+ * ECUM_WKSOURCE_RESET                       (EcuM_WakeupSourceType)(2uL) 
+ * ECUM_WKSOURCE_INTERNAL_RESET              (EcuM_WakeupSourceType)(4uL) 
+ * ECUM_WKSOURCE_INTERNAL_WDG                (EcuM_WakeupSourceType)(8uL) 
+ * ECUM_WKSOURCE_EXTERNAL_WDG                (EcuM_WakeupSourceType)(16uL) 
+ * ECUM_WKSOURCE_CN_DBCNetWork_9ed72b09      (EcuM_WakeupSourceType)(32uL) 
+ * ECUM_WKSOURCE_KL15                        (EcuM_WakeupSourceType)(64uL) 
+ * ECUM_WKSOURCE_CN_DBCNetWork_Can0_7c554129 (EcuM_WakeupSourceType)(128uL) 
  */
 
 /**********************************************************************************************************************
