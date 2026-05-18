@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2026-05-16 22:28:40
+ *   Generation Time: 2026-05-19 00:07:01
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -361,11 +361,12 @@
 #define CanConf_CanController_CT_DBCNetWork_Can0_5928070d             1u
 /**\} */
 #define CanConf_CN_DBCNetWork_9ed72b09_Tx 0u
-#define CanConf_CN_DBCNetWork_Can0_3e6cf38a_Rx 9u
-#define CanConf_CN_DBCNetWork_Can0_7c554129_Tx 8u
+#define CanConf_CN_DBCNetWork_Can0_3e6cf38a_Rx 10u
+#define CanConf_CN_DBCNetWork_Can0_7c554129_Tx 9u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_Meg_FunDiag_Tp 1u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_Meg_PhyDiag_Tp 2u
-#define CanConf_CN_DBCNetWork_b9b38c08_Rx_NM 7u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_NM 8u
+#define CanConf_CN_DBCNetWork_b9b38c08_Rx_Route_Can1ToCan0_100ms 7u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupB_Button_Control 5u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupB_Led_Control 6u
 #define CanConf_CN_DBCNetWork_b9b38c08_Rx_SupC_Function_1 4u
@@ -1077,7 +1078,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 3u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
 #define Can_GetSizeOfInitPortSelOfPCConfig()                          2u  /**< the number of accomplishable value elements in Can_InitPortSel */
 #define Can_GetSizeOfIsrOsIdOfPCConfig()                              2u  /**< the number of accomplishable value elements in Can_IsrOsId */
-#define Can_GetSizeOfMailboxOfPCConfig()                              12u  /**< the number of accomplishable value elements in Can_Mailbox */
+#define Can_GetSizeOfMailboxOfPCConfig()                              13u  /**< the number of accomplishable value elements in Can_Mailbox */
 #define Can_GetSizeOfMemorySectionInfoOfPCConfig()                    2u  /**< the number of accomplishable value elements in Can_MemorySectionInfo */
 #define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 27u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
 #define Can_GetSizeOfNodeAdrOfPCConfig()                              2u  /**< the number of accomplishable value elements in Can_NodeAdr */
@@ -2388,7 +2389,7 @@ extern CONST(Can_IsrOsIdType, CAN_CONST) Can_IsrOsId[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[12];
+extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[13];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -53,6 +53,18 @@
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Meg_ResDiag_oDBCNetWork</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Rout_Can0ToCan1_100ms_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Rout_Can1ToCan0_100ms_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Route_Can0ToCan1_100ms_oDBCNetWork</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Route_Can1ToCan0_100ms_oDBCNetWork</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/SupA_Angle_oDBCNetWork</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -111,6 +123,18 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Send_Msg_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="USER-DEFINED-PDU">/PDU/Rout_Can0ToCan1_100ms_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="USER-DEFINED-PDU">/PDU/Rout_Can1ToCan0_100ms_oDBCNetWork_Can0</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="USER-DEFINED-PDU">/PDU/Route_Can0ToCan1_100ms_oDBCNetWork</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="USER-DEFINED-PDU">/PDU/Route_Can1ToCan0_100ms_oDBCNetWork</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Meg_FunDiag_oDBCNetWork</FIBEX-ELEMENT-REF>
@@ -595,6 +619,34 @@
                       </PDU-TRIGGERINGS>
                       <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
                       <IDENTIFIER>1873</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Route_Can0ToCan1_100ms</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/XB_SUP_A/CN_DBCNetWork/FP_Route_Can0ToCan1_100ms_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Route_Can0ToCan1_100ms_oDBCNetWork</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/DBCNetWork/CHNL/PT_Route_Can0ToCan1_100ms</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>1385</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Route_Can1ToCan0_100ms</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/XB_SUP_A/CN_DBCNetWork/FP_Route_Can1ToCan0_100ms_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Route_Can1ToCan0_100ms_oDBCNetWork</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/DBCNetWork/CHNL/PT_Route_Can1ToCan0_100ms</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>941</IDENTIFIER>
                     </CAN-FRAME-TRIGGERING>
                     <CAN-FRAME-TRIGGERING>
                       <SHORT-NAME>FT_SupA_Angle</SHORT-NAME>
@@ -1119,6 +1171,20 @@
                       <I-PDU-REF DEST="N-PDU">/PDU/Meg_ResDiag_Tp_oDBCNetWork</I-PDU-REF>
                     </PDU-TRIGGERING>
                     <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Route_Can0ToCan1_100ms</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork/PP_Route_Can0ToCan1_100ms_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="USER-DEFINED-PDU">/PDU/Route_Can0ToCan1_100ms_oDBCNetWork</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Route_Can1ToCan0_100ms</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork/PP_Route_Can1ToCan0_100ms_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="USER-DEFINED-PDU">/PDU/Route_Can1ToCan0_100ms_oDBCNetWork</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
                       <SHORT-NAME>PT_SupA_Angle</SHORT-NAME>
                       <I-PDU-PORT-REFS>
                         <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork/PP_SupA_Angle_Tx</I-PDU-PORT-REF>
@@ -1409,6 +1475,34 @@
                       <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
                       <IDENTIFIER>256</IDENTIFIER>
                     </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Rout_Can0ToCan1_100ms</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/FP_Rout_Can0ToCan1_100ms_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Rout_Can0ToCan1_100ms_oDBCNetWork_Can0</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/DBCNetWork_Can0/CHNL/PT_Rout_Can0ToCan1_100ms</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>1385</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Rout_Can1ToCan0_100ms</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/FP_Rout_Can1ToCan0_100ms_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Rout_Can1ToCan0_100ms_oDBCNetWork_Can0</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/DBCNetWork_Can0/CHNL/PT_Rout_Can1ToCan0_100ms</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>941</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
                   </FRAME-TRIGGERINGS>
                   <PDU-TRIGGERINGS>
                     <PDU-TRIGGERING>
@@ -1424,6 +1518,20 @@
                         <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/PP_Ecu_Send_Msg_Tx</I-PDU-PORT-REF>
                       </I-PDU-PORT-REFS>
                       <I-PDU-REF DEST="USER-DEFINED-PDU">/PDU/Ecu_Send_Msg_oDBCNetWork_Can0</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Rout_Can0ToCan1_100ms</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/PP_Rout_Can0ToCan1_100ms_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="USER-DEFINED-PDU">/PDU/Rout_Can0ToCan1_100ms_oDBCNetWork_Can0</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Rout_Can1ToCan0_100ms</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/XB_SUP_A/CN_DBCNetWork_Can0/PP_Rout_Can1ToCan0_100ms_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="USER-DEFINED-PDU">/PDU/Rout_Can1ToCan0_100ms_oDBCNetWork_Can0</I-PDU-REF>
                     </PDU-TRIGGERING>
                   </PDU-TRIGGERINGS>
                 </CAN-PHYSICAL-CHANNEL>
@@ -1513,6 +1621,14 @@
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
                 <FRAME-PORT>
+                  <SHORT-NAME>FP_Route_Can0ToCan1_100ms_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Route_Can1ToCan0_100ms_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
                   <SHORT-NAME>FP_SupA_Angle_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
@@ -1571,6 +1687,14 @@
                 <I-PDU-PORT>
                   <SHORT-NAME>PP_Meg_ResDiag_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Route_Can0ToCan1_100ms_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Route_Can1ToCan0_100ms_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
                 <I-PDU-PORT>
                   <SHORT-NAME>PP_SupA_Angle_Tx</SHORT-NAME>
@@ -1834,12 +1958,28 @@
                   <SHORT-NAME>FP_Ecu_Send_Msg_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Rout_Can0ToCan1_100ms_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Rout_Can1ToCan0_100ms_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
                 <I-PDU-PORT>
                   <SHORT-NAME>PP_Ecu_Receive_Msg_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
                 <I-PDU-PORT>
                   <SHORT-NAME>PP_Ecu_Send_Msg_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Rout_Can0ToCan1_100ms_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Rout_Can1ToCan0_100ms_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
               </ECU-COMM-PORT-INSTANCES>
@@ -1984,6 +2124,54 @@
               <SHORT-NAME>Meg_ResDiag_Tp</SHORT-NAME>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
               <PDU-REF DEST="N-PDU">/PDU/Meg_ResDiag_Tp_oDBCNetWork</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Rout_Can0ToCan1_100ms_oDBCNetWork_Can0</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Rout_Can0ToCan1_100ms</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="USER-DEFINED-PDU">/PDU/Rout_Can0ToCan1_100ms_oDBCNetWork_Can0</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Rout_Can1ToCan0_100ms_oDBCNetWork_Can0</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Rout_Can1ToCan0_100ms</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="USER-DEFINED-PDU">/PDU/Rout_Can1ToCan0_100ms_oDBCNetWork_Can0</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Route_Can0ToCan1_100ms_oDBCNetWork</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Route_Can0ToCan1_100ms</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="USER-DEFINED-PDU">/PDU/Route_Can0ToCan1_100ms_oDBCNetWork</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Route_Can1ToCan0_100ms_oDBCNetWork</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Route_Can1ToCan0_100ms</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="USER-DEFINED-PDU">/PDU/Route_Can1ToCan0_100ms_oDBCNetWork</PDU-REF>
               <START-POSITION>0</START-POSITION>
             </PDU-TO-FRAME-MAPPING>
           </PDU-TO-FRAME-MAPPINGS>
@@ -2826,6 +3014,22 @@
         </USER-DEFINED-PDU>
         <USER-DEFINED-PDU>
           <SHORT-NAME>Ecu_Send_Msg_oDBCNetWork_Can0</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </USER-DEFINED-PDU>
+        <USER-DEFINED-PDU>
+          <SHORT-NAME>Rout_Can0ToCan1_100ms_oDBCNetWork_Can0</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </USER-DEFINED-PDU>
+        <USER-DEFINED-PDU>
+          <SHORT-NAME>Rout_Can1ToCan0_100ms_oDBCNetWork_Can0</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </USER-DEFINED-PDU>
+        <USER-DEFINED-PDU>
+          <SHORT-NAME>Route_Can0ToCan1_100ms_oDBCNetWork</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </USER-DEFINED-PDU>
+        <USER-DEFINED-PDU>
+          <SHORT-NAME>Route_Can1ToCan0_100ms_oDBCNetWork</SHORT-NAME>
           <LENGTH>8</LENGTH>
         </USER-DEFINED-PDU>
         <DCM-I-PDU>

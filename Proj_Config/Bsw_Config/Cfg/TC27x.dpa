@@ -154,9 +154,9 @@
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
     </EcucSplitter>
     <Display LastVersion="5.20.35">
-        <FileSet Id="" CS="87f406b7">
-            <File Order="0" EcuInstance="XB_SUP_A" Hash="5486db0aa545afd4b31dd99f1afc7896" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\Vector_XWXZ_CAN1.dbc</File>
-            <File Order="2" EcuInstance="XB_SUP_A" Hash="6859f1f5ec9f88f8718af7d8760c6fd0" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\Vector_XWXZ_CAN0.dbc</File>
+        <FileSet Id="" CS="2445f947">
+            <File Order="0" EcuInstance="XB_SUP_A" Hash="baa53e3ab28c7d44da384c55e2656169" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\Vector_XWXZ_CAN1.dbc</File>
+            <File Order="2" EcuInstance="XB_SUP_A" Hash="1b5e30a5948735c48210870f96a76d87" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\Vector_XWXZ_CAN0.dbc</File>
             <Diagnostic>
                 <Description Order="1" Hash="4e2c9d815a406d038ceabf2f5c719c96">$(DpaProjectFolder)\DBC\XWXZ_UdsCdd.cdd</Description>
                 <Ecu>XB_SUP_A</Ecu>

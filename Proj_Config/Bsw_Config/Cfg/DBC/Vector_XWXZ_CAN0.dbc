@@ -36,6 +36,12 @@ BS_:
 BU_: Host XB_SUP_A
 
 
+BO_ 1385 Rout_Can0ToCan1_100ms: 8 Host
+ SG_ Route_Can0ToCan1_Signal : 7|64@0+ (1,0) [0|0] ""  XB_SUP_A
+
+BO_ 941 Rout_Can1ToCan0_100ms: 8 XB_SUP_A
+ SG_ Route_Can1ToCan0_Signal : 7|64@0+ (1,0) [0|0] ""  Host
+
 BO_ 512 Ecu_Receive_Msg: 8 Host
  SG_ Sig_Receive : 7|64@0+ (1,0) [0|2] ""  XB_SUP_A
 
@@ -256,24 +262,26 @@ BA_DEF_DEF_  "GenSigSendType" "Cyclic";
 BA_DEF_DEF_  "GenSigStartValue" 0;
 BA_DEF_DEF_  "NVM-WakeupAllowed" "";
 BA_DEF_DEF_REL_ "GenSigTimeoutTime" 0;
-BA_ "BusType" "CAN";
-BA_ "NmhBaseAddress" 1536;
-BA_ "NmhMessageCount" 256;
-BA_ "SyncJumpWidthMin" 2;
-BA_ "SyncJumpWidthMax" 4;
-BA_ "NmhTimeoutTimer" 2000;
-BA_ "NmhWaitBusSleepTimer" 2000;
-BA_ "NmhPrepareBusSleepTimer" 100;
 BA_ "NmhLongTimer" 200;
+BA_ "NmhPrepareBusSleepTimer" 100;
+BA_ "NmhWaitBusSleepTimer" 2000;
+BA_ "NmhTimeoutTimer" 2000;
+BA_ "SyncJumpWidthMax" 4;
+BA_ "SyncJumpWidthMin" 2;
+BA_ "NmhMessageCount" 256;
+BA_ "NmhBaseAddress" 1536;
+BA_ "BusType" "CAN";
 BA_ "DBName" "DBCNetWork_Can0";
 BA_ "NmStationAddress" BU_ XB_SUP_A 1;
-BA_ "GenMsgSendType" BO_ 512 0;
-BA_ "VFrameFormat" BO_ 512 0;
-BA_ "GenMsgCycleTime" BO_ 512 10;
+BA_ "GenMsgILSupport" BO_ 1385 0;
+BA_ "GenMsgILSupport" BO_ 941 0;
 BA_ "GenMsgILSupport" BO_ 512 0;
-BA_ "GenMsgSendType" BO_ 256 0;
-BA_ "VFrameFormat" BO_ 256 0;
+BA_ "GenMsgCycleTime" BO_ 512 10;
+BA_ "VFrameFormat" BO_ 512 0;
+BA_ "GenMsgSendType" BO_ 512 0;
 BA_ "GenMsgILSupport" BO_ 256 0;
+BA_ "VFrameFormat" BO_ 256 0;
+BA_ "GenMsgSendType" BO_ 256 0;
 BA_ "GenSigStartValue" SG_ 512 Sig_Receive 0;
 BA_ "GenSigStartValue" SG_ 256 Sig_Send 0;
 VAL_ 512 Sig_Receive 0 "Button_Mode1" 1 "Button_Mode2" 2 "Button_Disable" ;

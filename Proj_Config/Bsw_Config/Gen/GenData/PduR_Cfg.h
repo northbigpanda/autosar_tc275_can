@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2026-05-05 14:33:41
+ *   Generation Time: 2026-05-19 00:07:01
  *           Project: TC27x - Version 1.0
  *          Delivery: CBD1600956_D01
  *      Tool Version: DaVinci Configurator  5.20.35
@@ -142,10 +142,12 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_10b1802d                       2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_495de942                       1u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_755dbb0e                       3u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_f8af96ce                       0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu                                1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1                              0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_10b1802d                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_495de942                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_755dbb0e                       5u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_f8af96ce                       2u
 /**\} */
 
 /**
@@ -172,11 +174,13 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_SupA_Angle_oDBCNetWork_418b1596_Tx       0u
-#define PduRConf_PduRDestPdu_SupA_Button_State_oDBCNetWork_eea6565b_Tx 1u
-#define PduRConf_PduRDestPdu_SupA_Function_1_oDBCNetWork_10b79eb2_Tx  2u
-#define PduRConf_PduRDestPdu_SupA_Led_State_oDBCNetWork_e7f688d3_Tx   3u
-#define PduRConf_PduRDestPdu_SupA_PowerMode_oDBCNetWork_910ccf57_Tx   4u
+#define PduRConf_PduRDestPdu_PduRDestPdu                              0u
+#define PduRConf_PduRDestPdu_PduRDestPdu_1                            1u
+#define PduRConf_PduRDestPdu_SupA_Angle_oDBCNetWork_418b1596_Tx       2u
+#define PduRConf_PduRDestPdu_SupA_Button_State_oDBCNetWork_eea6565b_Tx 3u
+#define PduRConf_PduRDestPdu_SupA_Function_1_oDBCNetWork_10b79eb2_Tx  4u
+#define PduRConf_PduRDestPdu_SupA_Led_State_oDBCNetWork_e7f688d3_Tx   5u
+#define PduRConf_PduRDestPdu_SupA_PowerMode_oDBCNetWork_910ccf57_Tx   6u
 /**\} */
 
 /**
